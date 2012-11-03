@@ -1,4 +1,4 @@
-package org.opencv.samples.tutorial1;
+package org.object.recognition;
 
 import java.io.IOException;
 import java.util.List;

@@ -1,4 +1,4 @@
-package org.opencv.samples.tutorial1;
+package org.object.recognition;
 
 import org.opencv.android.Utils;
 import org.opencv.core.Core;
