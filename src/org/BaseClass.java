@@ -3,6 +3,7 @@ package org.opencv.samples.tutorial1;
 import java.io.IOException;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -15,7 +16,8 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-public abstract class SampleViewBase extends SurfaceView implements SurfaceHolder.Callback, Runnable {
+@SuppressLint({ "NewApi", "NewApi", "NewApi" })
+public abstract class BaseClass extends SurfaceView implements SurfaceHolder.Callback, Runnable {
     private static final String TAG = "Sample::SurfaceView";
 
     private Camera              mCamera;
@@ -27,7 +29,7 @@ public abstract class SampleViewBase extends SurfaceView implements SurfaceHolde
     private byte[]              mBuffer;
 
 
-    public SampleViewBase(Context context) {
+    public BaseClass(Context context) {
         super(context);
         mHolder = getHolder();
         mHolder.addCallback(this);
@@ -60,9 +62,9 @@ public abstract class SampleViewBase extends SurfaceView implements SurfaceHolde
 
         mCamera.setPreviewCallbackWithBuffer(new PreviewCallback() {
             public void onPreviewFrame(byte[] data, Camera camera) {
-                synchronized (SampleViewBase.this) {
+                synchronized (BaseClass.this) {
                     System.arraycopy(data, 0, mFrame, 0, data.length);
-                    SampleViewBase.this.notify(); 
+                    BaseClass.this.notify(); 
                 }
                 camera.addCallbackBuffer(mBuffer);
             }
@@ -154,7 +156,10 @@ public abstract class SampleViewBase extends SurfaceView implements SurfaceHolde
         releaseCamera();
     }
 
-    /* The bitmap returned by this method shall be owned by the child and released in onPreviewStopped() */
+    /**
+     *  The bitmap returned by this method shall be owned by the child and released in onPreviewStopped() 
+     */
+    
     protected abstract Bitmap processFrame(byte[] data);
 
     /**
@@ -172,6 +177,10 @@ public abstract class SampleViewBase extends SurfaceView implements SurfaceHolde
      */
     protected abstract void onPreviewStopped();
 
+    /**
+     * Start when device start
+     */
+    
     public void run() {
         mThreadRun = true;
         Log.i(TAG, "Starting processing thread");

@@ -12,9 +12,18 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.Log;
 
-class Sample1View extends SampleViewBase {
+/**
+ * 
+ * class ActivityFunctionality
+ * - class have many methodes, which are needed in class ActivityView
+ * 
+ * @author majko
+ *
+ */
 
-    public static final int     VIEW_MODE_RGBA  = 0;
+class ActivityFunctionality extends BaseClass {
+
+	public static final int     VIEW_MODE_RGBA  = 0;
     public static final int     VIEW_MODE_GRAY  = 1;
     public static final int     VIEW_MODE_CANNY = 2;
 
@@ -25,7 +34,7 @@ class Sample1View extends SampleViewBase {
 	private Bitmap mBitmap;
 	private int mViewMode;
 
-    public Sample1View(Context context) {
+    public ActivityFunctionality(Context context) {
         super(context);
         mViewMode = VIEW_MODE_RGBA;
     }
@@ -68,6 +77,14 @@ class Sample1View extends SampleViewBase {
         }
     }
 
+	
+	/**
+	 * major functionality
+	 * processFrame method
+	 * - it depends on selected value from menu
+	 * - work intime, with camera view
+	 */
+	
     @Override
     protected Bitmap processFrame(byte[] data) {
         mYuv.put(0, 0, data);

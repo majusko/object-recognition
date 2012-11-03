@@ -13,13 +13,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 
-public class Sample1Java extends Activity {
+/**
+ * 
+ * class ActivityView
+ * - the class who care mainly about android functionalities
+ * 
+ * @author majko
+ *
+ */
+
+public class ActivityView extends Activity {
     private static final String TAG = "Sample::Activity";
 
     private MenuItem            mItemPreviewRGBA;
     private MenuItem            mItemPreviewGray;
     private MenuItem            mItemPreviewCanny;
-    private Sample1View         mView;
+    private ActivityFunctionality         mView;
 
     private BaseLoaderCallback  mOpenCVCallBack = new BaseLoaderCallback(this) {
     	@Override
@@ -29,7 +38,7 @@ public class Sample1Java extends Activity {
 				{
 					Log.i(TAG, "OpenCV loaded successfully");
 					// Create and set View
-					mView = new Sample1View(mAppContext);
+					mView = new ActivityFunctionality(mAppContext);
 					setContentView(mView);
 					// Check native OpenCV camera
 					if( !mView.openCamera() ) {
@@ -53,7 +62,7 @@ public class Sample1Java extends Activity {
     	}
 	};
     
-    public Sample1Java() {
+    public ActivityView() {
         Log.i(TAG, "Instantiated new " + this.getClass());
     }
 
@@ -84,7 +93,10 @@ public class Sample1Java extends Activity {
 		}
 	}
 
-    /** Called when the activity is first created. */
+    /** 
+     * Called when the activity is first created. 
+     */
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         Log.i(TAG, "onCreate");
@@ -98,24 +110,36 @@ public class Sample1Java extends Activity {
         }
     }
 
+    /**
+     * set android menu front
+     */
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         Log.i(TAG, "onCreateOptionsMenu");
         mItemPreviewRGBA = menu.add("Preview RGBA");
         mItemPreviewGray = menu.add("Preview GRAY");
-        mItemPreviewCanny = menu.add("Canny");
+        mItemPreviewCanny = menu.add("Preview Canny");
         return true;
     }
+    
+    /**
+     * set android menu
+     * the values ​​are already set in class activity
+     */
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Log.i(TAG, "Menu Item selected " + item);
         if (item == mItemPreviewRGBA) {
-        	mView.setViewMode(Sample1View.VIEW_MODE_RGBA);
+        	//set value on 0
+        	mView.setViewMode(ActivityFunctionality.VIEW_MODE_RGBA);
         } else if (item == mItemPreviewGray) {
-        	mView.setViewMode(Sample1View.VIEW_MODE_GRAY);
+        	//set value on 1
+        	mView.setViewMode(ActivityFunctionality.VIEW_MODE_GRAY);
         } else if (item == mItemPreviewCanny) {
-        	mView.setViewMode(Sample1View.VIEW_MODE_CANNY);
+        	//set value on 2
+        	mView.setViewMode(ActivityFunctionality.VIEW_MODE_CANNY);
         }
         return true;
     }
