@@ -26,6 +26,7 @@ class ActivityFunctionality extends BaseClass {
 	public static final int     VIEW_MODE_RGBA  = 0;
     public static final int     VIEW_MODE_GRAY  = 1;
     public static final int     VIEW_MODE_CANNY = 2;
+    public static final int     VIEW_MODE_TRAFFIC_SIGNES = 3;
 
     private Mat mYuv;
     private Mat mRgba;
@@ -105,6 +106,10 @@ class ActivityFunctionality extends BaseClass {
             Imgproc.cvtColor(mIntermediateMat, mRgba, Imgproc.COLOR_GRAY2BGRA, 4);
             Core.putText(mRgba, "CANNY mode", new Point(10, 100), 3/* CV_FONT_HERSHEY_COMPLEX */, 2, new Scalar(255, 0, 0, 255), 3);
             break;
+        case VIEW_MODE_TRAFFIC_SIGNES:
+        	Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_YUV420sp2RGB, 4);
+        	//TODO new class TraficSignes();
+            break;
         }
 
         Bitmap bmp = mBitmap;
@@ -112,7 +117,7 @@ class ActivityFunctionality extends BaseClass {
         try {
             Utils.matToBitmap(mRgba, bmp);
         } catch(Exception e) {
-            Log.e("org.opencv.samples.tutorial1", "Utils.matToBitmap() throws an exception: " + e.getMessage());
+            Log.e("org.object.recognition", "Utils.matToBitmap() throws an exception: " + e.getMessage());
             bmp.recycle();
             bmp = null;
         }

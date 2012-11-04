@@ -28,6 +28,7 @@ public class ActivityView extends Activity {
     private MenuItem            mItemPreviewRGBA;
     private MenuItem            mItemPreviewGray;
     private MenuItem            mItemPreviewCanny;
+    private MenuItem            mItemPreviewTraficSignes;
     private ActivityFunctionality         mView;
 
     private BaseLoaderCallback  mOpenCVCallBack = new BaseLoaderCallback(this) {
@@ -111,7 +112,8 @@ public class ActivityView extends Activity {
     }
 
     /**
-     * set android menu front
+     * ---FRONT---
+     * add items to menu
      */
     
     @Override
@@ -120,12 +122,14 @@ public class ActivityView extends Activity {
         mItemPreviewRGBA = menu.add("Preview RGBA");
         mItemPreviewGray = menu.add("Preview GRAY");
         mItemPreviewCanny = menu.add("Preview Canny");
+        mItemPreviewTraficSignes = menu.add("Preview Trefic Signes");
         return true;
     }
     
     /**
+     * ---MENU ONCHANGE---
      * set android menu
-     * the values ​​are already set in class activity
+     * the values are already set in class activity
      */
 
     @Override
@@ -140,6 +144,9 @@ public class ActivityView extends Activity {
         } else if (item == mItemPreviewCanny) {
         	//set value on 2
         	mView.setViewMode(ActivityFunctionality.VIEW_MODE_CANNY);
+        } else if (item == mItemPreviewTraficSignes) {
+        	//set value on 3
+        	mView.setViewMode(ActivityFunctionality.VIEW_MODE_TRAFFIC_SIGNES);
         }
         return true;
     }
