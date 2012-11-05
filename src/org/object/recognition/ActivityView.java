@@ -28,7 +28,9 @@ public class ActivityView extends Activity {
     private MenuItem            mItemPreviewRGBA;
     private MenuItem            mItemPreviewGray;
     private MenuItem            mItemPreviewCanny;
-    private MenuItem            mItemPreviewTraficSignes;
+    private MenuItem            mItemPreviewColor;
+    private MenuItem            mItemPreviewCircles;
+    private MenuItem            mItemPreviewLines;
     private ActivityFunctionality         mView;
 
     private BaseLoaderCallback  mOpenCVCallBack = new BaseLoaderCallback(this) {
@@ -122,7 +124,9 @@ public class ActivityView extends Activity {
         mItemPreviewRGBA = menu.add("Preview RGBA");
         mItemPreviewGray = menu.add("Preview GRAY");
         mItemPreviewCanny = menu.add("Preview Canny");
-        mItemPreviewTraficSignes = menu.add("Preview Trefic Signes");
+        mItemPreviewLines = menu.add("Preview Lines");
+        mItemPreviewCircles = menu.add("Preview Circles");
+        mItemPreviewColor = menu.add("Preview Color");
         return true;
     }
     
@@ -144,9 +148,15 @@ public class ActivityView extends Activity {
         } else if (item == mItemPreviewCanny) {
         	//set value on 2
         	mView.setViewMode(ActivityFunctionality.VIEW_MODE_CANNY);
-        } else if (item == mItemPreviewTraficSignes) {
+        } else if (item == mItemPreviewLines) {
         	//set value on 3
-        	mView.setViewMode(ActivityFunctionality.VIEW_MODE_TRAFFIC_SIGNES);
+        	mView.setViewMode(ActivityFunctionality.VIEW_LINES_MODE);
+        } else if (item == mItemPreviewColor) {
+        	//set value on 3
+        	mView.setViewMode(ActivityFunctionality.VIEW_COLOR_MODE);
+        } else if (item == mItemPreviewCircles) {
+        	//set value on 3
+        	mView.setViewMode(ActivityFunctionality.VIEW_CIRCLE_MODE);
         }
         return true;
     }
