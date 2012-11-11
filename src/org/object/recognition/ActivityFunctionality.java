@@ -6,6 +6,7 @@ import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
+import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 
 import android.content.Context;
@@ -43,13 +44,13 @@ class ActivityFunctionality extends BaseClass {
 	private int minLineSize;
 	private int threshold;
 	private int mHSVThreshed;
-	private int iMinRadius;
-	private int iMaxRadius;
+	private int MinRadius;
+	private int MaxRadius;
 	private int iLineThickness;
 	private double dp;
 	private double minDist;
-	private double iCannyUpperThreshold;
-	private double iAccumulator;
+	private double param1;
+	private double param2;
 
     public ActivityFunctionality(Context context) {
         super(context);
@@ -132,14 +133,17 @@ class ActivityFunctionality extends BaseClass {
         	minLineSize = 0;
         	lineGap = 10;
         	Imgproc.Canny(mGraySubmat, mIntermediateMat, 80, 100);
+        	Imgproc.cvtColor(mIntermediateMat, mRgba, Imgproc.COLOR_GRAY2BGRA, 4);
         	Imgproc.HoughLinesP(mIntermediateMat, lines, 1, Math.PI/180, threshold, minLineSize, lineGap);
-            Imgproc.cvtColor(mIntermediateMat, mRgba, Imgproc.COLOR_GRAY2BGRA, 4);
         	for (int x = 0; x < lines.cols(); x++){
         		double[] vec = lines.get(0, x);
-                double x1 = vec[0], y1 = vec[1], x2 = vec[2], y2 = vec[3];
+                double x1 = vec[0];
+                double y1 = vec[1];
+                double x2 = vec[2];
+                double y2 = vec[3];
                 Point start = new Point(x1, y1);
                 Point end = new Point(x2, y2);
-                Core.line(mRgba, start, end, new Scalar(255,0,0), 3);
+                Core.line(mRgba, start, end, new Scalar(255,0,0,255), 3);
             }
             break;
         case VIEW_COLOR_MODE:
@@ -155,30 +159,27 @@ class ActivityFunctionality extends BaseClass {
             */
             break;
         case VIEW_CIRCLE_MODE:
-        	iCannyUpperThreshold = 100;
-        	iMinRadius = 20;
-        	iMaxRadius = 400;
-        	iAccumulator = 300;
-        	iLineThickness = 2;
+        	param1 = 200;
+        	param2 = 100;
+        	MinRadius = 0;
+        	MaxRadius = 0;
         	dp = 2;
-        	//mGraySubmat
-        	Imgproc.Canny(mGraySubmat, mIntermediateMat, 80, 100);
+        	Imgproc.cvtColor(mGraySubmat, mRgba, Imgproc.COLOR_GRAY2RGBA, 4);
+        	//Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_BGRA2GRAY, 4);
+        	Imgproc.GaussianBlur(mRgba, mIntermediateMat, new Size(9,9), 2, 2);
         	Imgproc.HoughCircles(mIntermediateMat, circles, Imgproc.CV_HOUGH_GRADIENT, 
-        			dp, (double)mIntermediateMat.rows() / 8, iCannyUpperThreshold, iAccumulator, 
-        	         iMinRadius, iMaxRadius);
-        	Imgproc.cvtColor(mIntermediateMat, mRgba, Imgproc.COLOR_GRAY2BGRA, 4);
+        			dp, mIntermediateMat.rows() / 4, param1, param2,  
+        			MinRadius, MaxRadius);
         	/*
         	if (circles.cols() > 0){
-        		
-        	    for (int x = 0; x < circles.cols(); x++){
+        	    for(int x = 0; x < circles.cols(); x++){
         	        double vCircle[] = circles.get(0,x);
-
-        	        if (vCircle == null)
+        	        
+        	        if (vCircle == null){
         	            break;
-
+        	        }
         	        Point pt = new Point(Math.round(vCircle[0]), Math.round(vCircle[1]));
         	        int radius = (int)Math.round(vCircle[2]);
-
         	        // draw the found circle
         	        Core.circle(mRgba, pt, radius, new Scalar(0,255,0), iLineThickness);
         	        Core.circle(mRgba, pt, 3, new Scalar(0,0,255), iLineThickness);
