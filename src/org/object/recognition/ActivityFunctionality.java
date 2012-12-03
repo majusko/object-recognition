@@ -1,9 +1,14 @@
 package org.object.recognition;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.opencv.android.Utils;
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
+import org.opencv.core.MatOfPoint;
+import org.opencv.core.MatOfPoint2f;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.core.Size;
@@ -34,16 +39,19 @@ class ActivityFunctionality extends BaseClass {
     private Mat mYuv;
     private Mat mHSV;
     private Mat mRgba;
+    private Mat mRgba2;
     private Mat mGraySubmat;
     private Mat mIntermediateMat;
     private Mat lines;
     private Mat circles;
+    private Mat hierarchy;
+    List<MatOfPoint> contours = new ArrayList<MatOfPoint>();
 	private Bitmap mBitmap;
 	private int mViewMode;
 	private int lineGap;
 	private int minLineSize;
 	private int threshold;
-	private int mHSVThreshed;
+	private Mat mHSVThreshed;
 	private int MinRadius;
 	private int MaxRadius;
 	private int iLineThickness;
@@ -65,9 +73,12 @@ class ActivityFunctionality extends BaseClass {
         	mGraySubmat = mYuv.submat(0, getFrameHeight(), 0, getFrameWidth());
         	
         	mRgba = new Mat();
+        	mRgba2 = new Mat();
         	mIntermediateMat = new Mat();
         	lines = new Mat();
         	mHSV = new Mat();
+        	mHSVThreshed = new Mat();
+        	hierarchy = new Mat();
 
         	mBitmap = Bitmap.createBitmap(previewWidth, previewHeight, Bitmap.Config.ARGB_8888); 
         	
@@ -130,8 +141,8 @@ class ActivityFunctionality extends BaseClass {
             break;
         case VIEW_LINES_MODE:
         	threshold = 50;
-        	minLineSize = 0;
-        	lineGap = 10;
+        	minLineSize = 10;
+        	lineGap = 5;
         	Imgproc.Canny(mGraySubmat, mIntermediateMat, 80, 100);
         	Imgproc.cvtColor(mIntermediateMat, mRgba, Imgproc.COLOR_GRAY2BGRA, 4);
         	Imgproc.HoughLinesP(mIntermediateMat, lines, 1, Math.PI/180, threshold, minLineSize, lineGap);
@@ -147,16 +158,14 @@ class ActivityFunctionality extends BaseClass {
             }
             break;
         case VIEW_COLOR_MODE:
-        	Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_YUV420sp2RGB, 4);
-        	/*
-        	mHSVThreshed = 0;
         	
-            Imgproc.cvtColor(mRgba, mHSV, Imgproc.COLOR_BGR2HSV,3);
-            Core.inRange(mHSV, new Scalar(0, 100, 30), new Scalar(5, 255, 255), mHSVThreshed);
-            Imgproc.cvtColor(mHSVThreshed, mRgba, Imgproc.COLOR_GRAY2BGR, 0);
-            Imgproc.cvtColor(mRgba, mRgba2, Imgproc.COLOR_BGR2RGBA, 0);
+        	Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_YUV420sp2RGB, 4);
+            //Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_BGR2HSV,3);
+            Core.inRange(mRgba, new Scalar(0, 100, 30), new Scalar(5, 255, 255), mHSVThreshed);
+            Imgproc.cvtColor(mHSVThreshed, mRgba, Imgproc.COLOR_GRAY2RGB, 4);
+            Imgproc.cvtColor(mRgba, mRgba2, Imgproc.COLOR_BGR2RGBA, 4);
             Bitmap bmp = Bitmap.createBitmap(mRgba2.cols(), mRgba2.rows(), Bitmap.Config.ARGB_8888);
-            */
+       
             break;
         case VIEW_CIRCLE_MODE:
         	param1 = 200;
@@ -164,13 +173,21 @@ class ActivityFunctionality extends BaseClass {
         	MinRadius = 0;
         	MaxRadius = 0;
         	dp = 2;
-        	Imgproc.cvtColor(mGraySubmat, mRgba, Imgproc.COLOR_GRAY2RGBA, 4);
-        	//Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_BGRA2GRAY, 4);
-        	Imgproc.GaussianBlur(mRgba, mIntermediateMat, new Size(9,9), 2, 2);
+        	Imgproc.Canny(mGraySubmat, mIntermediateMat, 80, 100);
+        	Imgproc.cvtColor(mIntermediateMat, mRgba, Imgproc.COLOR_GRAY2BGRA, 4);
+        	//Imgproc.GaussianBlur(mRgba, mIntermediateMat, new Size(9,9), 2, 2); //fungujuca funkcia na jemne rozmazanie obrazu (zlepsi kontury)
+        	//Imgproc.findContours(mRgba, contours, hierarchy, Imgproc.RETR_LIST, Imgproc.CHAIN_APPROX_SIMPLE, new Point(0, 0));
+        	Imgproc.findContours(mIntermediateMat, contours, new Mat(), Imgproc.RETR_LIST, Imgproc.CHAIN_APPROX_SIMPLE);
+        //	Imgproc.Canny(mIntermediateMat, mIntermediateMat, 80, 100);
+        //	Imgproc.cvtColor(mIntermediateMat, mRgba, Imgproc.COLOR_GRAY2BGRA, 4);
+        	//nefungujuca funkcia na hladanie kruhov
+        	/*
         	Imgproc.HoughCircles(mIntermediateMat, circles, Imgproc.CV_HOUGH_GRADIENT, 
         			dp, mIntermediateMat.rows() / 4, param1, param2,  
         			MinRadius, MaxRadius);
-        	/*
+        	*/
+        	/*	
+        	
         	if (circles.cols() > 0){
         	    for(int x = 0; x < circles.cols(); x++){
         	        double vCircle[] = circles.get(0,x);
