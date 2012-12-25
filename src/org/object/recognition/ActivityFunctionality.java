@@ -10,13 +10,17 @@ import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfPoint2f;
 import org.opencv.core.Point;
+import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.os.Message;
 import android.util.Log;
+
+import org.object.recognition.DetectionCore;
 
 /**
  * 
@@ -158,13 +162,32 @@ class ActivityFunctionality extends BaseClass {
             }
             break;
         case VIEW_COLOR_MODE:
-        	
         	Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_YUV420sp2RGB, 4);
+        	DetectionCore detect = new DetectionCore();
+        	List<Rect> boxList = new ArrayList<Rect>();
+        	List<Mat>  signList = new ArrayList<Mat>();
+	        detect.setData(mRgba);
+		    detect.detectAllSign();
+		    boxList.clear();
+	    	boxList=detect.getBoxList();
+	    	signList.clear();
+	    	signList=detect.getSignList();
+		    	  	    
+		    //draw 
+			int n=boxList.size();
+			      	
+			for(int i=0;i<n;i++){
+			  Rect r=boxList.get(i);
+			  Core.rectangle(mRgba, r.tl(), r.br(), new Scalar(0, 255, 0, 255), 3);
+			}
+        	
             //Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_BGR2HSV,3);
+        	/*
             Core.inRange(mRgba, new Scalar(0, 100, 30), new Scalar(5, 255, 255), mHSVThreshed);
             Imgproc.cvtColor(mHSVThreshed, mRgba, Imgproc.COLOR_GRAY2RGB, 4);
             Imgproc.cvtColor(mRgba, mRgba2, Imgproc.COLOR_BGR2RGBA, 4);
             Bitmap bmp = Bitmap.createBitmap(mRgba2.cols(), mRgba2.rows(), Bitmap.Config.ARGB_8888);
+            */
        
             break;
         case VIEW_CIRCLE_MODE:
