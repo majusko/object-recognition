@@ -2,7 +2,6 @@
 %%This is a very basic article template.
 
 %%There is just one section and two subsections.
-%%\input{bach.bib}
 
 \documentclass{article}
 
@@ -57,7 +56,6 @@ opisat nieco o houghovej transformacii
 \subsubsection{GaussianBlur}
 \subsubsection{inRange}
 \subsubsection{threshold}
-\subsubsection{bitwise\_and}
 \subsubsection{bitmapToMat}
 \subsubsection{findContours}
 \subsubsection{boundingRect}
@@ -75,7 +73,7 @@ Pri opise som sa zameral na detekciu značiek, ktoré sú na cestách najviac po
 Na cestách prevládajú dopravné značenia, ktoré sú červenej a modrej farby. Z tvarov prevládajú kruhy a trojuholníky.
 Samotné rozpoznanie bolo uskutočnené pomocou neurónových sietí. Táto metóda je najlepšia na počítačové učenie objektov.
 Na rozdiel od detekcie dopravného značenia, pre riešenie neurónových sietí použijeme už existujúcu knižnicu.
-\subsubsection{Návrh algoritmu pre detekciu červenej farby}
+\subsubsection{Návrh algoritmu pre detekciu farby}
 Ako prvý algoritmus som si vybral detekciu červenej farby. Pre detekciu farieb sa v literatúre odporúča najprv previesť vstup na farebný model HSV. 
 Vstup prichádza vo farebnom formáte RGB. Farebný model HSV je jeden z dvoch najpoužívanejších valcovo súradnicových reprezentácii bodov pre RGB model.
 \cite{hsl_hsv_wiki_en}

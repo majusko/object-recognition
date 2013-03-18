@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  18 MAR 2013 01:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  18 MAR 2013 01:30
 entering extended mode
 **bach.tex
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.tex
@@ -266,85 +266,85 @@ Now handling font encoding U ...
    defining Unicode char U+2423 (decimal 9251)
 ))
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 17.
+(Font)              <12> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 17.
+(Font)              <8> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 17.
+(Font)              <6> on input line 16.
 [1
 
 ]
-Overfull \hbox (34.30643pt too wide) in paragraph at lines 42--44
+Overfull \hbox (34.30643pt too wide) in paragraph at lines 41--43
 []\OT1/cmr/m/n/10 Nieco o opencv - tex-tik k tomu: http://simplecv.tumblr.com/
 post/19307835766/opencv-
  []
 
 [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 103.
+(Font)              <7> on input line 101.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 103.
+(Font)              <5> on input line 101.
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--118
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--118
+Underfull \hbox (badness 10000) in paragraph at lines 77--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--118
+Underfull \hbox (badness 10000) in paragraph at lines 77--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--116
 \OT1/cmr/m/n/10 pouzitie znameho fil-tra \OT1/cmr/m/it/10 Gaus-sian blur
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--118
+Underfull \hbox (badness 10000) in paragraph at lines 77--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--118
+Underfull \hbox (badness 10000) in paragraph at lines 77--116
 \OT1/cmr/m/n/10 RGBA na format RGB.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--118
+Underfull \hbox (badness 10000) in paragraph at lines 77--116
 
  []
 
 
-Overfull \hbox (10.00522pt too wide) in paragraph at lines 79--118
+Overfull \hbox (10.00522pt too wide) in paragraph at lines 77--116
 \OT1/cmr/m/n/10 - []Dalej bude na-sle-do-vat[] sa-motna kon-ver-zia ob-razu do
  HSV po-mo-cou uz spomnanej
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--118
+Underfull \hbox (badness 10000) in paragraph at lines 77--116
 \OT1/cmr/m/n/10 metody \OT1/cmr/m/it/10 cvt-Co-lor\OT1/cmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--118
+Underfull \hbox (badness 10000) in paragraph at lines 77--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--118
+Underfull \hbox (badness 10000) in paragraph at lines 77--116
 
  []
 
@@ -354,12 +354,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--118
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.aux)
  ) 
 Here is how much of TeX's memory you used:
- 927 strings out of 493922
- 10353 string characters out of 3154524
+ 926 strings out of 493922
+ 10335 string characters out of 3154524
  72251 words of memory out of 3000000
- 4262 multiletter control sequences out of 15000+200000
+ 4261 multiletter control sequences out of 15000+200000
  8848 words of font info for 31 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  24i,7n,24p,216b,213s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on bach.dvi (5 pages, 14632 bytes).
+Output written on bach.dvi (5 pages, 14564 bytes).
