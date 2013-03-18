@@ -2,43 +2,141 @@
 %%This is a very basic article template.
 
 %%There is just one section and two subsections.
+%%\input{bach.bib}
 
 \documentclass{article}
 
+\usepackage[slovak]{babel}
+\usepackage[utf8]{inputenc}
+
 \begin{document}
 
+\title{Rozpoznávanie dobravných značiek}
+\author{Mário Kapusta}
 
-\section{Trafic recognition}
+\maketitle
 
-\subsection{OpenCV library}
+\begin{abstract}
+V praci sme sa zaoberali
+\end{abstract}
 
-Some information about OpenCV library, why did I use just this library, and etc.
-Why C++ combinated with Java, why faster, and etc.
+\section{Počítačové videnie}
+Nejaký obkec o počítačovom videní
+\subsection{História počítačového videnia}
+Niečo krátke o histórii počítačového videnia
+\subsection{Hlavné témy počítačového videnia}
+Obkec o rozdelení počítačového videnia a rôznych odvetviach venovania
+\subsubsection{Transformácia}
+Niečo o trnaformácii.
+\subsubsection{Filtrovanie a kompresia}
+Niečo o kompresii.
+\subsubsection{Vylepšovanie obrazu}
+Niečo o vylepšovaní obrazu.
+\subsubsection{Rozpoznávanie objektov}
+Niečo o rozpoznávaní objektov
+\subsubsection{Pozíciovanie}
+Niečo o rozpoznávaní poziciovani
+\subsection{Technológie}
+Niečo o o technológiách rozpoznávania vo všeobecnosti
+\subsubsection{OpenCV}
+Niečo o opencv - textik k tomu:
+http://simplecv.tumblr.com/post/19307835766/opencv-vs-matlab-vs-simplecv
+\subsubsection{Matlab}
+Niečo o matlabe
+\subsubsection{SimpleCV}
+Niečo o simplecv
 
-\subsection{OpenCV basic functions}
+\section{OpenCV, Android a Java}
+Obkec o použití knižnice OpenCV a OS Android resp. jazyku Java. 
+\subsection{Funkcionalita OpenCV}
+budem opisovat najpouzivanejsie funkcie, co robia a ake algoritmy sa v nich pouzivaju
+\subsubsection{cvtColor}
+\subsubsection{Canny}
+\subsubsection{HoughLinesP}
+opisat nieco o houghovej transformacii
+\subsubsection{GaussianBlur}
+\subsubsection{inRange}
+\subsubsection{threshold}
+\subsubsection{bitwise\_and}
+\subsubsection{bitmapToMat}
+\subsubsection{findContours}
+\subsubsection{boundingRect}
+\subsubsection{drawContours}
+\subsubsection{contourArea}
+\subsubsection{fitEllipse}
 
-Some explanation about for example (onManagerConnected, )
+\section{Návrh riešenia}
+Po dôkladnom naštudovaní literatúry a potrebných algoritmov je našim cieľom vyhotoviť riešenie, ktoré by dokázalo detekovať zvislé dopravné značenia.
+Návrh bude pozostávať s návrhu algoritmov, návrhu objektov a návrhu užívateľského prostredia.
+\subsection{Návrh algoritmov}
+Ako metódu rozpoznávania som si zvolil detekciu dopravného značenia podľa tvaru a farby. 
+Algoritmy ktoré som navrhol, sú postavené na princípe rozpoznania farebného rozhrania hľadaného objektu a následné detekovanie potrebného tvaru.
+Pri opise som sa zameral na detekciu značiek, ktoré sú na cestách najviac početné.
+Na cestách prevládajú dopravné značenia, ktoré sú červenej a modrej farby. Z tvarov prevládajú kruhy a trojuholníky.
+Samotné rozpoznanie bolo uskutočnené pomocou neurónových sietí. Táto metóda je najlepšia na počítačové učenie objektov.
+Na rozdiel od detekcie dopravného značenia, pre riešenie neurónových sietí použijeme už existujúcu knižnicu.
+\subsubsection{Návrh algoritmu pre detekciu červenej farby}
+Ako prvý algoritmus som si vybral detekciu červenej farby. Pre detekciu farieb sa v literatúre odporúča najprv previesť vstup na farebný model HSV. 
+Vstup prichádza vo farebnom formáte RGB. Farebný model HSV je jeden z dvoch najpoužívanejších valcovo súradnicových reprezentácii bodov pre RGB model.
+\cite{hsl_hsv_wiki_en}
+\linebreak
+\linebreak
+- Na začiatok by sa mal vstup(bitmapa) konvertovať na binárnu maticu.
+\linebreak
+\linebreak
+- Najväčšia výhoda dopravného značenia je, že je silne kontrastné od ostatného prostredia.
+Túto vlastnosť môžeme perfektne využiť v náš prospech a pomocou pomocou rozmazania obrazu, môžeme dosieliť to,
+že sa zbavíme slabších kontú hneď na začiatku. V OpenCV je pre rozmazávanie obrazu na výber viacero metód,
+no my použijeme matódu \emph{GaussianBlur}, ktorá už názvom prezrádza použitie známeho filtra \emph{Gaussian blur}
+\linebreak
+\linebreak
+- Keďže sa snažíme dostať náš vstupný obraz do formátu HSV, o ktorú sa stará funkcionalita \emph{cvtColor} 
+potrebujeme mu nastaviť vstup tak, aby obraz vedel bez problémov spracovať. 
+Keďže na väčšine mobilných zariadení prichádza do zariadenia obraz vo formáte RGBA, ďalší krok bude nepríklad konvertovanie formátu RGBA na formát RGB.
+\linebreak
+\linebreak
+- Ďalej bude nasledovať samotná konverzia obrazu do HSV pomocou už spomínanej metódy \emph{cvtColor}.
+\linebreak
+\linebreak
+- Ďalší krok bude spracovať každý kanál farebného modelu HSV samostatne. Ako prvý spracujeme \emph{Hue} kanál, ktorý sa stará o farebný odtien každého pixelu.
+\emph{Hue} Farba sa v tomto kanáli určuje podľa stupňov. 
+Primárne sa začína na stupni 0$^\circ$, čo predstavuje zelenú farbu, postupne prechádza do modrej,
+ktorá sa nachádza na 120$^\circ$ stupňoch z kade prechádza cez červenú na 240$^\circ$ a keďže je to model kruhový, vracia sa do zelenej na 360$^\circ$.
+Pomocou funkcie \emph{inRange} by nemal byť problém určiť rozhranie stupňov, ktoré sme schopný akceptovať ako hľadanú farbu pre hľadané naše dopravné značenia.
+Ďalší kanál je \emph{Saturation}, ktorý predstavuje sýtosť farby. Táto sýtosť sa vyjadruje v percentách, kde 0\% predstavuje šedú a 100\% je plne sýta farba.\cite{hsv_wiki_cz} 
+V našom prípade je postacuje metóda \emph{threshold}. Posledný kanál \emph{Value} vyjadruje hodnotu jasu.
+Keďže v praxi znamená znižovanie jasu pridávanie čiernej do základnej farby,
+pre hľadanie červenej farby na dopravnom značení nie je potrebné s týmto kanálom pracovať, lebo červená farba použitá na dopravných značeniach je pomerne svetlá.
+Pri hľadaní modrej je túto farbu potrebné trochu stmaviť a tak použijeme opäť funkciu \emph{threshold}.
+\linebreak
+\linebreak
+- Na koniec potrebujeme dostať len kontúry hľadanej farby. 
+Najpr si budeme musieť spojiť jednotlivé kanály späť do jednej binárnej matice použitím metódy \emph{Canny}. 
+Po tomto kroku by nám mali ostať len čierny obraz a biele škvrny predstavujúce červenú farbu v požadovanom rozsahu.
+Z týchto bielych objektov, budeme potrebovať len okraje a tak použijeme metódu \emph{findContours}, ktorá sa postará o to, že dostaneme pole kontúr z celého obrazu.
+S týmito kontúrami potom ďalej pracujeme a rozoznávame z nich hľadané útvary.
+\subsubsection{Návrh algoritmu pre detekciu kruhov}
+\subsubsection{Návrh algoritmu pre detekciu trojuholnikov}
+\subsubsection{Návrh algoritmu pre detekciu štvorcov}
+\subsection{Návrh objektov - UML}
+\subsection{Návrh užívteľského prostredia}
 
-\subsection{OpenCV basic Algorithms}
+\section{Implementácia}
+\subsection{Inštalácia Opencv pre Android}
+\subsection{Android aplikácia a GUI}
+\subsection{Objekty}
+\subsubsection{Trieda 1}
+\subsubsection{Trieda 2}
+\subsubsection{Trieda 3}
 
-Some explanation about for example (gray scale, blur, )
+\section{Výsledky aplikácie}
+\subsection{Detekcia kruhových značiek}
+\subsubsection{Značky modrej farby}
+\subsubsection{Značky červenej farby}
 
-\subsubsection{OpenCV GaussianBlur algorithm}
-GaussianBlur algorithm is one kind of filter which the smoothing
-GaussianBlur algorithm is a simple image processing operation. 
-GaussianBlur algorithm is based on smoothing with reducing noise.
+\section{Záver}
 
- frequently used 
-
-Smoothing, also called blurring, is a simple and frequently used image processing operation.
-
-
-\subsection{OpenCV for Android}
-
-Some specific information whitch are special for android development
-
-\subsection{Trafic signes recognition}
-
-
+\bibliography{bach}
+\bibliographystyle{plain}
 
 \end{document}

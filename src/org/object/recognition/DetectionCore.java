@@ -187,7 +187,7 @@ public class DetectionCore {
 	    lHSV.set(0, mTemp); //set the result as first chanel of image
 	    
 	    //Filter S channel
-	    mTemp=new Mat();
+	    mTemp = new Mat();
 	    Imgproc.threshold(lHSV.get(1), mTemp, i, 255, Imgproc.THRESH_BINARY);
 	    lHSV.set(1, mTemp);
 	    Core.bitwise_and(lHSV.get(0), lHSV.get(1), mTemp);
