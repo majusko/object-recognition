@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  31 MAR 2013 19:51
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  31 MAR 2013 21:20
 entering extended mode
 **bach.tex
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.tex
@@ -15,8 +15,8 @@ an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
 (D:\miktex\tex\latex\base\article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(D:\miktex\tex\latex\base\size10.clo
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(D:\miktex\tex\latex\base\size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -461,207 +461,215 @@ Package pdfpages Warning: I will use a dummy \includepdf command
 \WF@everypar=\toks23
 Package: wrapfig 2003/01/31  v 3.6
 )
+(C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\setspace\setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(D:\miktex\tex\latex\geometry\geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(D:\miktex\tex\generic\oberdiek\ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(D:\miktex\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count115
+\Gm@cntv=\count116
+\c@Gm@tempcnt=\count117
+\Gm@bindingoffset=\dimen119
+\Gm@wd@mp=\dimen120
+\Gm@odd@mp=\dimen121
+\Gm@even@mp=\dimen122
+\Gm@layoutwidth=\dimen123
+\Gm@layoutheight=\dimen124
+\Gm@layouthoffset=\dimen125
+\Gm@layoutvoffset=\dimen126
+\Gm@dimlist=\toks24
+
+(D:\miktex\tex\latex\geometry\geometry.cfg))
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 \AtBeginShipoutBox=\box31
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(99.58464pt, 457.80486pt, 56.9055pt)
+* v-part:(T,H,B)=(72.2698pt, 650.43037pt, 72.2698pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=457.80486pt
+* \textheight=650.43037pt
+* \oddsidemargin=27.31465pt
+* \evensidemargin=27.31465pt
+* \topmargin=-37.00018pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 [1
 
-]
-Overfull \hbox (34.30975pt too wide) in paragraph at lines 47--49
-[]\OT1/cmr/m/n/10 Nieco o opencv - tex-tik k tomu: http://simplecv.tumblr.com/
-post/19307835766/opencv-
- []
+] [2
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 84--123
+] [3
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--123
-
+] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 97--136
+\OT1/cmr/m/n/12 suradnicovych re-pre-zentacii bo-dov pre RGB mo-del. [[]]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--123
-\OT1/cmr/m/n/10 pouzitie znameho fil-tra \OT1/cmr/m/it/10 Gaus-sian blur
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--123
+Underfull \hbox (badness 10000) in paragraph at lines 97--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--123
-\OT1/cmr/m/n/10 RGBA na format RGB.
+Underfull \hbox (badness 10000) in paragraph at lines 97--136
+\OT1/cmr/m/n/12 - Na zaciatok by sa mal vstup(bitmapa) kon-ver-to-vat[] na bin
+arnu ma-ticu.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--123
-
- []
-
-
-Overfull \hbox (10.00522pt too wide) in paragraph at lines 84--123
-\OT1/cmr/m/n/10 - []Dalej bude na-sle-do-vat[] sa-motna kon-ver-zia ob-razu do
- HSV po-mo-cou uz spomnanej
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--123
-\OT1/cmr/m/n/10 metody \OT1/cmr/m/it/10 cvt-Co-lor\OT1/cmr/m/n/10 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--123
+Underfull \hbox (badness 10000) in paragraph at lines 97--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--123
+Underfull \hbox (badness 10000) in paragraph at lines 97--136
+\OT1/cmr/m/n/12 ktora uz nazvom prezradza pouzitie znameho fil-tra \OT1/c
+mr/m/it/12 Gaus-sian blur
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--136
 
  []
 
-[3]
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--136
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--136
+\OT1/cmr/m/n/12 metody \OT1/cmr/m/it/12 cvt-Co-lor\OT1/cmr/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--136
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--136
+\OT1/cmr/m/n/12 tak pouzijeme op[]at[] fun-kciu \OT1/cmr/m/it/12 th-res-hold\O
+T1/cmr/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--136
+
+ []
+
+[5] [6]
 File: hladanie_kruhov.jpg Graphic file (type eps)
  <hladanie_kruhov.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 124--135
-\OT1/cmr/m/n/10 vi-diet[] na orazku c. 1[]
- []
 
-[4]
-Underfull \hbox (badness 3690) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 farby, m^ozeme po-kracovat[] od
- []
+LaTeX Warning: Float too large for page by 46.69386pt on input line 157.
 
 
-Overfull \hbox (5.06364pt too wide) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 cyk-lus, ktorym bu-deme prechadzat[]
+Overfull \hbox (8.03482pt too wide) in paragraph at lines 137--174
+\OT1/cmr/m/n/12 poznavan si je po-trene uve-do-mit[], ze na ob-jekt sa po-
+zerame z r^oznych uhlov. Tato skutocnost[]
  []
 
 
-Underfull \hbox (badness 4819) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 vysledky. Tento ukon vy-kona
+Underfull \hbox (badness 10000) in paragraph at lines 137--174
+\OT1/cmr/m/n/12 su to elipsy. Cely al-go-rit-mus je mozne vi-diet[] na ora
+zku c. 1[]
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 rej bu-deme po-sie-lat[] na d[]alsie
- []
-
-
-Underfull \hbox (badness 1590) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 spra-co-va-nie len kontury v[]acsie
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 ako 500 pi-xe-lov.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--153
+Underfull \hbox (badness 10000) in paragraph at lines 137--174
 
  []
 
 
-Underfull \hbox (badness 5667) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 ukon vy-konava metoda \OT1/cmr/m/it/10 fi-tEl-
+Underfull \hbox (badness 10000) in paragraph at lines 137--174
+\OT1/cmr/m/n/12 v[]acsie ako 500 pi-xe-lov.
  []
 
 
-Underfull \hbox (badness 7944) in paragraph at lines 135--153
-\OT1/cmr/m/it/10 lipse\OT1/cmr/m/n/10 , ktora uprav kos-tr-bate
- []
-
-
-Underfull \hbox (badness 4156) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 kontury, ktore sa aspon tro-
- []
-
-
-Underfull \hbox (badness 3386) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 chu po-do-baju elipse, na ma-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 te-ma-ticky presnu elipsu.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--153
+Underfull \hbox (badness 10000) in paragraph at lines 137--174
 
  []
 
 
-Underfull \hbox (badness 5548) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 - Ked[] uz mame de-te-ko-vane
- []
-
-
-Underfull \hbox (badness 2894) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 ktoru vyhl[]adavam. Tato to-le-
- []
-
-
-Underfull \hbox (badness 5091) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 pres-nosti, pri vypocte Lu-dol-
- []
-
-
-Underfull \hbox (badness 1394) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 fovho csla. []Dalsm kro-kom je
- []
-
-
-Underfull \hbox (badness 1442) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 dol-fovho csla a nasledne ove-
- []
-
-
-Underfull \hbox (badness 2903) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 re-nie jeho ne-pres-nosti. Po-kial[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--153
-\OT1/cmr/m/n/10 sa presne jedna.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--153
+Underfull \hbox (badness 10000) in paragraph at lines 137--174
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 163--172
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--174
+\OT1/cmr/m/n/12 aku znacku sa presne jedna.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--174
 
  []
 
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 184--193
+\OT1/cmr/m/n/12 zerame na do-pravne znacenie z prliz vel[]keho uhlu.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--193
+
+ []
+
+[9]
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.bbl
-[6]) [7]
+[10]) [11]
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.aux)
  ) 
 Here is how much of TeX's memory you used:
- 3655 strings out of 493922
- 46705 string characters out of 3154524
- 127537 words of memory out of 3000000
- 6885 multiletter control sequences out of 15000+200000
- 9976 words of font info for 36 fonts, out of 3000000 for 9000
+ 4169 strings out of 493922
+ 54303 string characters out of 3154524
+ 142918 words of memory out of 3000000
+ 7384 multiletter control sequences out of 15000+200000
+ 10888 words of font info for 39 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  37i,10n,39p,229b,235s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on bach.dvi (7 pages, 22580 bytes).
+Output written on bach.dvi (11 pages, 23700 bytes).

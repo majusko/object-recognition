@@ -3,7 +3,7 @@
 
 %%There is just one section and two subsections.
 
-\documentclass{article}
+\documentclass[12pt]{article}
 
 \usepackage[slovak]{babel}
 \usepackage[utf8]{inputenc}
@@ -13,18 +13,28 @@
 \usepackage{bmpsize}
 \usepackage{pdfpages}
 \usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage[top=2.54cm, bottom=2.54cm, left=3.5cm, right=2.0cm]{geometry}
+
+\setstretch{1.5}
 
 \begin{document}
 
 \title{Rozpoznávanie dobravných značiek}
+
 \author{Mário Kapusta}
-
+%% titulka s informaciami
 \maketitle
+\thispagestyle{empty}
+\clearpage
 
+%% astrakt
 \begin{abstract}
 V praci sme sa zaoberali
 \end{abstract}
+\clearpage
 
+%% zaciatok prace
 \section{Počítačové videnie}
 Nejaký obkec o počítačovom videní
 \subsection{História počítačového videnia}
@@ -51,8 +61,11 @@ Niečo o matlabe
 \subsubsection{SimpleCV}
 Niečo o simplecv
 
+\section{Rozpoznávanie ojektov}
+
 \section{OpenCV, Android a Java}
-Obkec o použití knižnice OpenCV a OS Android resp. jazyku Java. 
+Cieľom je vypracovať komplexný návrh riešenia pre vyhľadávanie a rozpoznávanie dopravného značenia a taktiež vytvoriť funkčnú aplikáciu, ktorá
+bude schopná rozpoznať zvislé dopravné značenia.
 \subsection{Funkcionalita OpenCV}
 budem opisovat najpouzivanejsie funkcie, co robia a ake algoritmy sa v nich pouzivaju
 \subsubsection{cvtColor}
@@ -71,7 +84,7 @@ opisat nieco o houghovej transformacii
 
 \section{Návrh riešenia}
 Po dôkladnom naštudovaní literatúry a potrebných algoritmov je našim cieľom vyhotoviť riešenie, ktoré by dokázalo detekovať zvislé dopravné značenia.
-Návrh bude pozostávať s návrhu algoritmov, návrhu objektov a návrhu užívateľského prostredia.
+Návrh bude pozostávať z návrhu algoritmov, návrhu objektov a návrhu užívateľského prostredia.
 \subsection{Návrh algoritmov}
 Ako metódu rozpoznávania som si zvolil detekciu dopravného značenia podľa tvaru a farby. 
 Algoritmy ktoré som navrhol, sú postavené na princípe rozpoznania farebného rozhrania hľadaného objektu a následné detekovanie potrebného tvaru.
@@ -124,16 +137,24 @@ S týmito kontúrami potom ďalej pracujeme a rozoznávame z nich hľadané útv
 - Pri detekcii dopravného značenia v tvare kruhu, je dôležité počítať s tým, že nehľadáme úplný kruh. Kruhové dopravné značenia sú vyrábané ako dokonalý kruh,
 no pri ich rozpoznávaní si je potrené uvedomiť, že na objekt sa pozeráme z rôznych uhlov. Táto skutočnosť nám prináša do prolematiky dôležitý fakt,
 že v skutočnosti to nie sú kruhy čo hľadáme, ale sú to elipsy. Celý algoritmus je možné vidieť na orázku č. \ref{hladanie_kruhov}
-\begin{wrapfigure}{r}{0.55\textwidth}
-	\begin{center}
-		\includegraphics[width=0.41\textwidth,natwidth=318,natheight=1164]{hladanie_kruhov.jpg}
-	\end{center}
-	\vspace{-20pt}
-  	\caption{Algoritmus vyhľadávania kruhov}
-  	\vspace{-10pt}
-  	\label{hladanie_kruhov}
-\end{wrapfigure}
-%%TODO Spravenie vyvojoveho/stavoveho diagramu
+\linebreak
+\linebreak
+%% otekanie textu
+%%\begin{wrapfigure}{r}{0.55\textwidth}
+%%	\begin{center}
+%%		\includegraphics[width=0.4\textwidth,natwidth=318,natheight=1164]{hladanie_kruhov.jpg}
+%%	\end{center}
+%%	\vspace{-20pt}
+%%  	\caption{Algoritmus vyhľadávania kruhov}
+%%  	\vspace{-10pt}
+%%  	\label{hladanie_kruhov}
+%%\end{wrapfigure}
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.4\textwidth,natwidth=318,natheight=1164]{hladanie_kruhov.jpg}
+\caption{Algoritmus vyhľadávania kruhov}
+\label{hladanie_kruhov}
+\end{figure}
 - Keďže v predchádzajúcej kapitole sme si navrhli riešenie, ktoré nám vracia len kontúry hľadanej farby, môžeme pokračovať od tohto bodu.
 Ako prvé si spravíme cyklus, ktorým budeme prechádzať všetky naše vyhľadané kontúry farieb. Aby sme eliminovali počet prebytočných kontúr, 
 je potrené spracovávať čo najrelevantnejšie výsledky. Tento úkon vykoná metóda \emph{contourArea}, vďaka ktorej budeme posielať na ďalšie spracovanie len kontúry väčšie ako 500 pixelov.
