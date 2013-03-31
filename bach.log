@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  29 MAR 2013 15:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  31 MAR 2013 19:51
 entering extended mode
 **bach.tex
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.tex
@@ -347,6 +347,56 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 \Gin@req@height=\dimen113
 \Gin@req@width=\dimen114
 )
+(D:\miktex\tex\latex\oberdiek\bmpsize.sty
+Package: bmpsize 2009/09/04 v1.6 Extract size/resolution from bitmap files (HO)
+
+
+(D:\miktex\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+(D:\miktex\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(D:\miktex\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(D:\miktex\tex\generic\oberdiek\ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(D:\miktex\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+)
+(D:\miktex\tex\latex\oberdiek\bmpsize-base.sty
+Package: bmpsize-base 2009/09/04 v1.6 Basic part of bmpsize (HO)
+
+(C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-basic.sty
+Package: fp-basic 1996/05/13
+
+`Basic Fixed Point Arithmetic',  Version 1.2d (C) Michael Mehlich             
+\FP@xs=\count101
+\FP@xia=\count102
+\FP@xib=\count103
+\FP@xfa=\count104
+\FP@xfb=\count105
+\FP@rega=\count106
+\FP@regb=\count107
+\FP@regs=\count108
+\FP@times=\count109
+) (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-snap.sty
+Package: fp-snap 1995/04/05
+
+`Fixed Point Snap Off',          Version 1.0a (C) Michael Mehlich             )
+) (D:\miktex\tex\latex\oberdiek\bmpsize-dvips.def
+File: bmpsize-dvips.def 2009/09/04 v1.6 Graphics bitmap driver for dvips (HO)
+))
 (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pdfpages.sty
 Package: pdfpages 2012/08/31 v0.4t Insert pages of external PDF documents (AM)
 
@@ -354,15 +404,15 @@ Package: pdfpages 2012/08/31 v0.4t Insert pages of external PDF documents (AM)
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 ) (D:\miktex\tex\latex\tools\calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count101
-\calc@Bcount=\count102
+\calc@Acount=\count110
+\calc@Bcount=\count111
 \calc@Adimen=\dimen115
 \calc@Bdimen=\dimen116
 \calc@Askip=\skip46
 \calc@Bskip=\skip47
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count103
+\calc@Ccount=\count112
 \calc@Cskip=\skip48
 )
 (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
@@ -370,17 +420,7 @@ Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
 
 (D:\miktex\tex\generic\oberdiek\atbegshi.sty
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
-
-(D:\miktex\tex\generic\oberdiek\infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(D:\miktex\tex\generic\oberdiek\ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-(D:\miktex\tex\generic\oberdiek\ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
-))
 (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
@@ -411,125 +451,217 @@ Package pdfpages Warning: I will use a dummy \includepdf command
 ))
 \AM@pagebox=\box28
 \AM@toc@title=\toks22
-\c@AM@survey=\count104
+\c@AM@survey=\count113
 \AM@templatesizebox=\box29
+) (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
+\wrapoverhang=\dimen117
+\WF@size=\dimen118
+\c@WF@wrappedlines=\count114
+\WF@box=\box30
+\WF@everypar=\toks23
+Package: wrapfig 2003/01/31  v 3.6
 )
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-\AtBeginShipoutBox=\box30
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+\AtBeginShipoutBox=\box31
 [1
 
 ]
-Overfull \hbox (34.30975pt too wide) in paragraph at lines 44--46
+Overfull \hbox (34.30975pt too wide) in paragraph at lines 47--49
 []\OT1/cmr/m/n/10 Nieco o opencv - tex-tik k tomu: http://simplecv.tumblr.com/
 post/19307835766/opencv-
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
+Underfull \hbox (badness 10000) in paragraph at lines 84--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
+Underfull \hbox (badness 10000) in paragraph at lines 84--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
+Underfull \hbox (badness 10000) in paragraph at lines 84--123
 \OT1/cmr/m/n/10 pouzitie znameho fil-tra \OT1/cmr/m/it/10 Gaus-sian blur
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
+Underfull \hbox (badness 10000) in paragraph at lines 84--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
+Underfull \hbox (badness 10000) in paragraph at lines 84--123
 \OT1/cmr/m/n/10 RGBA na format RGB.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
+Underfull \hbox (badness 10000) in paragraph at lines 84--123
 
  []
 
 
-Overfull \hbox (10.00522pt too wide) in paragraph at lines 81--120
+Overfull \hbox (10.00522pt too wide) in paragraph at lines 84--123
 \OT1/cmr/m/n/10 - []Dalej bude na-sle-do-vat[] sa-motna kon-ver-zia ob-razu do
  HSV po-mo-cou uz spomnanej
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
+Underfull \hbox (badness 10000) in paragraph at lines 84--123
 \OT1/cmr/m/n/10 metody \OT1/cmr/m/it/10 cvt-Co-lor\OT1/cmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
+Underfull \hbox (badness 10000) in paragraph at lines 84--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
+Underfull \hbox (badness 10000) in paragraph at lines 84--123
 
  []
 
 [3]
-File: hladanie_kruhov.pdf Graphic file (type eps)
- <hladanie_kruhov.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 121--148
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--148
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--148
-\OT1/cmr/m/n/10 ma-ticky presnu elipsu.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--148
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--148
-
+File: hladanie_kruhov.jpg Graphic file (type eps)
+ <hladanie_kruhov.jpg>
+Underfull \hbox (badness 10000) in paragraph at lines 124--135
+\OT1/cmr/m/n/10 vi-diet[] na orazku c. 1[]
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 158--167
+Underfull \hbox (badness 3690) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 farby, m^ozeme po-kracovat[] od
+ []
+
+
+Overfull \hbox (5.06364pt too wide) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 cyk-lus, ktorym bu-deme prechadzat[]
+ []
+
+
+Underfull \hbox (badness 4819) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 vysledky. Tento ukon vy-kona
+ []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 rej bu-deme po-sie-lat[] na d[]alsie
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 spra-co-va-nie len kontury v[]acsie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 ako 500 pi-xe-lov.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--153
+
+ []
+
+
+Underfull \hbox (badness 5667) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 ukon vy-konava metoda \OT1/cmr/m/it/10 fi-tEl-
+ []
+
+
+Underfull \hbox (badness 7944) in paragraph at lines 135--153
+\OT1/cmr/m/it/10 lipse\OT1/cmr/m/n/10 , ktora uprav kos-tr-bate
+ []
+
+
+Underfull \hbox (badness 4156) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 kontury, ktore sa aspon tro-
+ []
+
+
+Underfull \hbox (badness 3386) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 chu po-do-baju elipse, na ma-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 te-ma-ticky presnu elipsu.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--153
+
+ []
+
+
+Underfull \hbox (badness 5548) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 - Ked[] uz mame de-te-ko-vane
+ []
+
+
+Underfull \hbox (badness 2894) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 ktoru vyhl[]adavam. Tato to-le-
+ []
+
+
+Underfull \hbox (badness 5091) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 pres-nosti, pri vypocte Lu-dol-
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 fovho csla. []Dalsm kro-kom je
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 dol-fovho csla a nasledne ove-
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 re-nie jeho ne-pres-nosti. Po-kial[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--153
+\OT1/cmr/m/n/10 sa presne jedna.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--153
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 163--172
 
  []
 
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.bbl
-[5]) [6] [7]
+[6]) [7]
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.aux)
  ) 
 Here is how much of TeX's memory you used:
- 3249 strings out of 493922
- 40879 string characters out of 3154524
- 114128 words of memory out of 3000000
- 6505 multiletter control sequences out of 15000+200000
+ 3655 strings out of 493922
+ 46705 string characters out of 3154524
+ 127537 words of memory out of 3000000
+ 6885 multiletter control sequences out of 15000+200000
  9976 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  37i,10n,39p,229b,235s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on bach.dvi (7 pages, 22128 bytes).
+Output written on bach.dvi (7 pages, 22580 bytes).

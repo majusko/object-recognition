@@ -8,8 +8,11 @@
 \usepackage[slovak]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+%%\usepackage[dvipdfm]{graphicx}
 \usepackage{graphicx}
+\usepackage{bmpsize}
 \usepackage{pdfpages}
+\usepackage{wrapfig}
 
 \begin{document}
 
@@ -120,14 +123,16 @@ S týmito kontúrami potom ďalej pracujeme a rozoznávame z nich hľadané útv
 \subsubsection{Návrh algoritmu pre detekciu kruhov}
 - Pri detekcii dopravného značenia v tvare kruhu, je dôležité počítať s tým, že nehľadáme úplný kruh. Kruhové dopravné značenia sú vyrábané ako dokonalý kruh,
 no pri ich rozpoznávaní si je potrené uvedomiť, že na objekt sa pozeráme z rôznych uhlov. Táto skutočnosť nám prináša do prolematiky dôležitý fakt,
-že v skutočnosti to nie sú kruhy čo hľadáme, ale sú to elipsy.
-\linebreak
-\linebreak
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{hladanie_kruhov.pdf}
-\caption{IDEF0}
-\end{figure} 
+že v skutočnosti to nie sú kruhy čo hľadáme, ale sú to elipsy. Celý algoritmus je možné vidieť na orázku č. \ref{hladanie_kruhov}
+\begin{wrapfigure}{r}{0.55\textwidth}
+	\begin{center}
+		\includegraphics[width=0.41\textwidth,natwidth=318,natheight=1164]{hladanie_kruhov.jpg}
+	\end{center}
+	\vspace{-20pt}
+  	\caption{Algoritmus vyhľadávania kruhov}
+  	\vspace{-10pt}
+  	\label{hladanie_kruhov}
+\end{wrapfigure}
 %%TODO Spravenie vyvojoveho/stavoveho diagramu
 - Keďže v predchádzajúcej kapitole sme si navrhli riešenie, ktoré nám vracia len kontúry hľadanej farby, môžeme pokračovať od tohto bodu.
 Ako prvé si spravíme cyklus, ktorým budeme prechádzať všetky naše vyhľadané kontúry farieb. Aby sme eliminovali počet prebytočných kontúr, 
@@ -135,13 +140,13 @@ je potrené spracovávať čo najrelevantnejšie výsledky. Tento úkon vykoná 
 \linebreak
 \linebreak
 - Vzhľadom na to, že výsledky, ktoré dostávame ešte nemôžeme nazvať elipsami, musíme si naše kontúry na elipsy upraviť.
-Tento úkon vykonáva metóda \emph{fitEllipse}, ktorá upraví kostrbaté kontúry, ktoré sa aspoň trochu podobajú na matematicky presnú elipsu.
+Tento úkon vykonáva metóda \emph{fitEllipse}, ktorá upraví kostrbaté kontúry, ktoré sa aspoň trochu podobajú elipse, na matematicky presnú elipsu.
 \linebreak
 \linebreak
 - Keď už máme detekované elipsy, nastáva posledný krok, a tým krokom je, určiť si toleranciu elipsy dopravného značenia, ktorú vyhľadávam.
 Táto tolerancia, je vlastne tolerancia nepresnosti, pri výpočte Ludolfovho čísla. 
 Ďalším krokom je tak výpočet už spomínaného ludolfovho čísla a následné overenie jeho nepresnosti. 
-Pokiaľ je výsledná hodnota vyhovujúca, nájdený ojekt vyrežeme, a zasielame na rozpoznanie neurónovej sieti, ktorá zistí o akú značku sa presne jedná.
+Pokiaľ je výsledná hodnota vyhovujúca, nájdený objekt vyrežeme, a zasielame na rozpoznanie neurónovej sieti, ktorá zistí o akú značku sa presne jedná.
 \linebreak
 \linebreak
 Výpočet Ludolfovho čísla:
