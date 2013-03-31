@@ -7,6 +7,9 @@
 
 \usepackage[slovak]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{pdfpages}
 
 \begin{document}
 
@@ -74,6 +77,7 @@ Na cestách prevládajú dopravné značenia, ktoré sú červenej a modrej farb
 Samotné rozpoznanie bolo uskutočnené pomocou neurónových sietí. Táto metóda je najlepšia na počítačové učenie objektov.
 Na rozdiel od detekcie dopravného značenia, pre riešenie neurónových sietí použijeme už existujúcu knižnicu.
 \subsubsection{Návrh algoritmu pre detekciu farby}
+%%TODO Spravenie vyvojoveho/stavoveho diagramu
 Ako prvý algoritmus som si vybral detekciu červenej farby. Pre detekciu farieb sa v literatúre odporúča najprv previesť vstup na farebný model HSV. 
 Vstup prichádza vo farebnom formáte RGB. Farebný model HSV je jeden z dvoch najpoužívanejších valcovo súradnicových reprezentácii bodov pre RGB model.
 \cite{hsl_hsv_wiki_en}
@@ -114,6 +118,58 @@ Po tomto kroku by nám mali ostať len čierny obraz a biele škvrny predstavuj�
 Z týchto bielych objektov, budeme potrebovať len okraje a tak použijeme metódu \emph{findContours}, ktorá sa postará o to, že dostaneme pole kontúr z celého obrazu.
 S týmito kontúrami potom ďalej pracujeme a rozoznávame z nich hľadané útvary.
 \subsubsection{Návrh algoritmu pre detekciu kruhov}
+- Pri detekcii dopravného značenia v tvare kruhu, je dôležité počítať s tým, že nehľadáme úplný kruh. Kruhové dopravné značenia sú vyrábané ako dokonalý kruh,
+no pri ich rozpoznávaní si je potrené uvedomiť, že na objekt sa pozeráme z rôznych uhlov. Táto skutočnosť nám prináša do prolematiky dôležitý fakt,
+že v skutočnosti to nie sú kruhy čo hľadáme, ale sú to elipsy.
+\linebreak
+\linebreak
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{hladanie_kruhov.pdf}
+\caption{IDEF0}
+\end{figure} 
+%%TODO Spravenie vyvojoveho/stavoveho diagramu
+- Keďže v predchádzajúcej kapitole sme si navrhli riešenie, ktoré nám vracia len kontúry hľadanej farby, môžeme pokračovať od tohto bodu.
+Ako prvé si spravíme cyklus, ktorým budeme prechádzať všetky naše vyhľadané kontúry farieb. Aby sme eliminovali počet prebytočných kontúr, 
+je potrené spracovávať čo najrelevantnejšie výsledky. Tento úkon vykoná metóda \emph{contourArea}, vďaka ktorej budeme posielať na ďalšie spracovanie len kontúry väčšie ako 500 pixelov.
+\linebreak
+\linebreak
+- Vzhľadom na to, že výsledky, ktoré dostávame ešte nemôžeme nazvať elipsami, musíme si naše kontúry na elipsy upraviť.
+Tento úkon vykonáva metóda \emph{fitEllipse}, ktorá upraví kostrbaté kontúry, ktoré sa aspoň trochu podobajú na matematicky presnú elipsu.
+\linebreak
+\linebreak
+- Keď už máme detekované elipsy, nastáva posledný krok, a tým krokom je, určiť si toleranciu elipsy dopravného značenia, ktorú vyhľadávam.
+Táto tolerancia, je vlastne tolerancia nepresnosti, pri výpočte Ludolfovho čísla. 
+Ďalším krokom je tak výpočet už spomínaného ludolfovho čísla a následné overenie jeho nepresnosti. 
+Pokiaľ je výsledná hodnota vyhovujúca, nájdený ojekt vyrežeme, a zasielame na rozpoznanie neurónovej sieti, ktorá zistí o akú značku sa presne jedná.
+\linebreak
+\linebreak
+Výpočet Ludolfovho čísla:
+\begin{align*}
+          \pi = \frac{o}{d} \\
+\end{align*}
+Úprava výpočtu Ludolfovho čísla pre elipsu:
+\begin{align*}
+          p = \frac{o}{d} = \frac{o}{(\frac{1}{2} y) * ( \frac{1}{2} x)} \\
+\end{align*}
+Získanie tolerancie:
+\begin{align*}
+          \pi - p < 0.03 \\
+\end{align*}
+%%vzorec
+%%citacie z knih matematiky
+- Pre určovanie tolerancie elipsy, je možné použiť ešte jednu metódu, a tou je overovanie podľa osí. 
+Pokiaľ je x-ová os dvoj-násobne väčšia ako y-ová, ide už o elipsu, ktorú by sme ďalej len ťažko identifikovali. 
+Takýto nežiaduci stav môže nastať, pokiaľ sa na značku pozeráme na dopravné značenie z príliž veľkého uhlu.
+\linebreak
+\linebreak
+Dva nežiaduce stavy tvaru dopravného značenia:
+\begin{align*}
+		  \text{ 1.) }
+          \frac{\frac{1}{2} x}{\frac{1}{2} y} > 2  \\
+          \text{ 2.) }
+          \frac{\frac{1}{2} y}{\frac{1}{2} x} > 2  \\
+\end{align*}
 \subsubsection{Návrh algoritmu pre detekciu trojuholnikov}
 \subsubsection{Návrh algoritmu pre detekciu štvorcov}
 \subsection{Návrh objektov - UML}
