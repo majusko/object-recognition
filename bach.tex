@@ -62,12 +62,30 @@ Niečo o matlabe
 Niečo o simplecv
 
 \section{Rozpoznávanie ojektov}
-
 \section{OpenCV, Android a Java}
-Cieľom je vypracovať komplexný návrh riešenia pre vyhľadávanie a rozpoznávanie dopravného značenia a taktiež vytvoriť funkčnú aplikáciu, ktorá
-bude schopná rozpoznať zvislé dopravné značenia.
+Cieľom práce je vypracovať komplexný návrh riešenia pre vyhľadávanie a rozpoznávanie dopravného značenia a taktiež vytvoriť funkčnú aplikáciu, ktorá
+bude schopná rozpoznať zvislé dopravné značenia. Táto aplikácia bude naprogramovaná v jazyku Java a bude spustiteľná na
+ operačnom systéme Android 2.3, ktorý je určený pre mobilné zariadenia. Computer vision (počítačové videnie), nám zaručí open-source knižnica OpenCV.
 \subsection{Funkcionalita OpenCV}
-budem opisovat najpouzivanejsie funkcie, co robia a ake algoritmy sa v nich pouzivaju
+OpenCV je open source knižnica počítačového videnia. Knižnica je napísaná v programovacích jazykoch C a C++. Aktívne sa pracuje na
+rozhraniach pre Python, Ruby, Matlab, Javu a iných programovacích jazykoch. V našej práci sme sa sústredili na verzii pre programovací jazyk Java.
+\cite{learning_opencv}
+\linebreak
+\linebreak
+OpenCV knižnica bola navrhnutá tak, aby funkcie použité v tejto knižnici, boli čo najefektívnejšie a čo najviac zamerané na real-time aplikácie.
+Knižnica je napísaná v optimalizovanom jazyku C a tak môže jednoducho využiť aj silu viacjadrových procesorov.
+Taktiež existujú špeciálne knižnice určené pre procesory Intel. IPP (Integrated Performance Primitives) knižnice  sa skladajú z nízko levelových 
+optimalizovaných postupov a rôznych algoritmických olastí, ktoré pracujú na procesoroch s architektúrou Intel oveľa efektívnejšie.
+\cite{learning_opencv}
+\linebreak
+\linebreak
+Jeden z hlavných cieľov OpenCV je sprístupniť jednoducho použiteľné prostredie ktoré pomôže developerom ľahko a rýchlo budovať aplikácie s použitím počítačového videnia
+pre rôzne použitia v oblasti, medicíny, bezpečnosti, robotiky, dopravy, priemyselnej výroby a iných, pre ktoré ma OpenCV dokonca aj špecifické funkcionality.
+\cite{learning_opencv}
+\linebreak
+\linebreak
+Pre olasť rozpoznávania ojektov sú taktiež mnohé špecifické funkcionality.
+Pri prolematike rozpoznávania zvislích dopravných značení sme niektoré z nich použili a preto je potrené si pre lepšie pochopenie problematiky tieto funkcie vysveliť podronejšie.
 \subsubsection{cvtColor}
 \subsubsection{Canny}
 \subsubsection{HoughLinesP}
@@ -151,8 +169,10 @@ no pri ich rozpoznávaní si je potrené uvedomiť, že na objekt sa pozeráme z
 %%\end{wrapfigure}
 \begin{figure}[p]
 \centering
-\includegraphics[width=0.4\textwidth,natwidth=318,natheight=1164]{hladanie_kruhov.jpg}
+\includegraphics[width=0.38\textwidth,natwidth=318,natheight=1164]{hladanie_kruhov.jpg}
+\vspace{-20pt}
 \caption{Algoritmus vyhľadávania kruhov}
+\vspace{-10pt}
 \label{hladanie_kruhov}
 \end{figure}
 - Keďže v predchádzajúcej kapitole sme si navrhli riešenie, ktoré nám vracia len kontúry hľadanej farby, môžeme pokračovať od tohto bodu.

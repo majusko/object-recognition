@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{learning_opencv}
+A.~Bradski, G. a~Kaehler.
+\newblock {\em Learning OpenCV: Computer Vision with the OpenCV Library}.
+\newblock O’Reilly Media, Inc., Gravenstein Highway North, Sebastopol, CA,
+  2008.
+
 \bibitem{hsl_hsv_wiki_en}
 Wikipedia contributors.
 \newblock Hsl and hsv, February 2013.
