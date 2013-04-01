@@ -20,7 +20,7 @@
 
 \begin{document}
 
-\title{Rozpoznávanie dobravných značiek}
+\title{Rozpoznávanie dopravných značiek}
 
 \author{Mário Kapusta}
 %% titulka s informaciami
@@ -118,13 +118,14 @@ cez mnohé farebné filtre. Vstupné parametre je možné pozorovať pri tabuľk
   	\label{cvtColorPar}
 \end{table}
 \paragraph{}
-Pri používaní funkcie \emph{cvtColor}, je potrené si určiť o akú konverziu ide. OpenCV, už má k dispozícii predpripravené konštanty, ktoré konverziu lepšie vyjadrujú.
+Pri používaní funkcie \emph{cvtColor}, je potrebné si určiť o akú konverziu ide. OpenCV, už má k dispozícii predpripravené konštanty, ktoré konverziu lepšie vyjadrujú.
 Matematický prepočet si OpenCV už spraví v jadre. Konverzií je v OpenCV naprogramovaných už mnoho, my si predstavíme matematický model konverzie,
 ktorú v našom prípade rálne využijeme. Jedná sa o konverziu z BGR(pri OpenCV je poradie kanálov pre model RGB zoradený opačne) do farebného modelu HSV a späť.
 \cite{cvtColor}
 \cite{OpenCVDoc}
 \paragraph{} 
-V prípade 8 a 16 bitového orazu je potrené jednotlivé kanály R,G a B previesť do formátu s plávajúcou desatinou čiarkou a zmenšiť rozsah od 0 do 1.
+V prípade 8 a 16 bitového obrazu je potrené jednotlivé kanály R,G a B previesť do formátu s plávajúcou desatinou čiarkou a zmenšiť rozsah od 0 do 1.
+\begin{table}
 \begin{align*}
 BGR \leftrightarrow HSV
 \end{align*}
@@ -147,7 +148,37 @@ H \leftarrow \begin{cases} \frac{60(G - B)}{V - min(R,G,B)}, & \text{ pokiaľ } 
 \text{ Na výstup pôjde } 0 \le V \le 1, 0 \le S \le 1, 0 \le H \le 1
 \cite{cvtColor}
 \end{align*}
+\caption{Konverzia RGB modelu na HSV\cite{hsv_wiki_cz}\cite{cvtColor}\cite{OpenCVDoc}}
+\label{cvtColorEquals}
+\end{table}
 \subsubsection{Canny}
+\paragraph{}
+Hlavná úloha funkcie \emph{Canny} je vyhľadávať okraje, alebo hrany všetkých ojektov. Pri kombinácii s rôznymi filtrami, môžeme docieliť, vyhľadanie hrán úmyselného objektu.
+Na rozoznávanie sa využíva algoritmus \emph{Canny86}.
+\cite{canny}
+\cite{OpenCVDoc}
+\cite{JCanny}
+\cite{canny_wiki_en}
+\paragraph{}
+Vstupné parametre je možné pozorovať pri tabuľke \ref{cannyPar}.
+Najmenšia hodnota medzi \emph{threshold1} a \emph{threshold2} je použitá na prepájanie kontúr. Tá najväčšia hodnota je použitá ako začínajúci segment najsilnejších kontúr.
+Pri správnom nastavení, sa dá dosiahnuť pomerne kvalitné odstránenie nepotrených kontúr.
+\cite{canny}
+\cite{OpenCVDoc}
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    Premenná & Dátový typ & Popis \\ \hline
+    image & Mat & Vstup je 8-bitový obraz s jedným farebným kanálom. \\ \hline
+    edges & Mat & Výstup je mapa všetkých nájdených kontúr. \\ \hline
+    threshold1 & double & Prvá prahová hodnota (threshold). \\ \hline
+    threshold2 & double & Druhá prahová hodnota (threshold). \\
+    \hline
+    \end{tabular}
+  	\caption{Tabulka znázorňuje vstupy funkcie canny}
+  	\label{cannyPar}
+\end{table}
 \subsubsection{HoughLinesP}
 opisat nieco o houghovej transformacii
 \subsubsection{GaussianBlur}

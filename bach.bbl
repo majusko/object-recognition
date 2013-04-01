@@ -6,6 +6,15 @@ A.~Bradski, G. a~Kaehler.
 \newblock O’Reilly Media, Inc., Gravenstein Highway North, Sebastopol, CA,
   2008.
 
+\bibitem{JCanny}
+J.~Canny.
+\newblock A computational approach to edge detection.
+\newblock 1986.
+
+\bibitem{canny_wiki_en}
+Wikipedia contributors.
+\newblock Canny edge detector, March 2013.
+
 \bibitem{hsl_hsv_wiki_en}
 Wikipedia contributors.
 \newblock Hsl and hsv, February 2013.
@@ -18,8 +27,12 @@ Wikipedia contributors.
 opencv~dev team.
 \newblock cvtcolor, March 2013.
 
+\bibitem{canny}
+opencv~dev team.
+\newblock cvtcolor, March 2013.
+
 \bibitem{OpenCVDoc}
 opencv~dev team.
-\newblock Opencv documentation, March 2013.
+\newblock {\em Opencv documentation}, March 2013.
 
 \end{thebibliography}

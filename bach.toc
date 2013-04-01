@@ -24,50 +24,52 @@
 \contentsline {paragraph}{}{9}
 \contentsline {paragraph}{}{9}
 \contentsline {paragraph}{}{10}
-\contentsline {subsubsection}{\numberline {3.1.2}Canny}{11}
+\contentsline {subsubsection}{\numberline {3.1.2}Canny}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {paragraph}{}{11}
 \contentsline {subsubsection}{\numberline {3.1.3}HoughLinesP}{11}
-\contentsline {subsubsection}{\numberline {3.1.4}GaussianBlur}{11}
-\contentsline {subsubsection}{\numberline {3.1.5}inRange}{11}
-\contentsline {subsubsection}{\numberline {3.1.6}threshold}{11}
-\contentsline {subsubsection}{\numberline {3.1.7}bitmapToMat}{11}
-\contentsline {subsubsection}{\numberline {3.1.8}findContours}{11}
-\contentsline {subsubsection}{\numberline {3.1.9}boundingRect}{11}
-\contentsline {subsubsection}{\numberline {3.1.10}drawContours}{11}
-\contentsline {subsubsection}{\numberline {3.1.11}contourArea}{11}
-\contentsline {subsubsection}{\numberline {3.1.12}fitEllipse}{11}
-\contentsline {section}{\numberline {4}N\IeC {\'a}vrh rie\IeC {\v s}enia}{11}
-\contentsline {paragraph}{}{11}
-\contentsline {subsection}{\numberline {4.1}N\IeC {\'a}vrh algoritmov}{11}
-\contentsline {paragraph}{}{11}
-\contentsline {subsubsection}{\numberline {4.1.1}N\IeC {\'a}vrh algoritmu pre detekciu farby}{12}
+\contentsline {subsubsection}{\numberline {3.1.4}GaussianBlur}{12}
+\contentsline {subsubsection}{\numberline {3.1.5}inRange}{12}
+\contentsline {subsubsection}{\numberline {3.1.6}threshold}{12}
+\contentsline {subsubsection}{\numberline {3.1.7}bitmapToMat}{12}
+\contentsline {subsubsection}{\numberline {3.1.8}findContours}{12}
+\contentsline {subsubsection}{\numberline {3.1.9}boundingRect}{12}
+\contentsline {subsubsection}{\numberline {3.1.10}drawContours}{12}
+\contentsline {subsubsection}{\numberline {3.1.11}contourArea}{12}
+\contentsline {subsubsection}{\numberline {3.1.12}fitEllipse}{12}
+\contentsline {section}{\numberline {4}N\IeC {\'a}vrh rie\IeC {\v s}enia}{12}
 \contentsline {paragraph}{}{12}
+\contentsline {subsection}{\numberline {4.1}N\IeC {\'a}vrh algoritmov}{12}
 \contentsline {paragraph}{}{12}
-\contentsline {paragraph}{}{12}
-\contentsline {paragraph}{}{12}
-\contentsline {paragraph}{}{12}
-\contentsline {paragraph}{}{12}
-\contentsline {paragraph}{}{13}
-\contentsline {subsubsection}{\numberline {4.1.2}N\IeC {\'a}vrh algoritmu pre detekciu kruhov}{13}
+\contentsline {subsubsection}{\numberline {4.1.1}N\IeC {\'a}vrh algoritmu pre detekciu farby}{13}
 \contentsline {paragraph}{}{13}
 \contentsline {paragraph}{}{13}
-\contentsline {paragraph}{}{15}
-\contentsline {paragraph}{}{15}
-\contentsline {paragraph}{}{15}
-\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{14}
+\contentsline {subsubsection}{\numberline {4.1.2}N\IeC {\'a}vrh algoritmu pre detekciu kruhov}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{}{14}
 \contentsline {paragraph}{}{16}
-\contentsline {subsubsection}{\numberline {4.1.3}N\IeC {\'a}vrh algoritmu pre detekciu trojuholnikov}{17}
-\contentsline {subsubsection}{\numberline {4.1.4}N\IeC {\'a}vrh algoritmu pre detekciu \IeC {\v s}tvorcov}{17}
-\contentsline {subsection}{\numberline {4.2}N\IeC {\'a}vrh objektov - UML}{17}
-\contentsline {subsection}{\numberline {4.3}N\IeC {\'a}vrh u\IeC {\v z}\IeC {\'\i }vte\IeC {\v l}sk\IeC {\'e}ho prostredia}{17}
-\contentsline {section}{\numberline {5}Implement\IeC {\'a}cia}{17}
-\contentsline {subsection}{\numberline {5.1}In\IeC {\v s}tal\IeC {\'a}cia Opencv pre Android}{17}
-\contentsline {subsection}{\numberline {5.2}Android aplik\IeC {\'a}cia a GUI}{17}
-\contentsline {subsection}{\numberline {5.3}Objekty}{17}
-\contentsline {subsubsection}{\numberline {5.3.1}Trieda 1}{17}
-\contentsline {subsubsection}{\numberline {5.3.2}Trieda 2}{17}
-\contentsline {subsubsection}{\numberline {5.3.3}Trieda 3}{17}
-\contentsline {section}{\numberline {6}V\IeC {\'y}sledky aplik\IeC {\'a}cie}{17}
-\contentsline {subsection}{\numberline {6.1}Detekcia kruhov\IeC {\'y}ch zna\IeC {\v c}iek}{17}
-\contentsline {subsubsection}{\numberline {6.1.1}Zna\IeC {\v c}ky modrej farby}{17}
-\contentsline {subsubsection}{\numberline {6.1.2}Zna\IeC {\v c}ky \IeC {\v c}ervenej farby}{17}
-\contentsline {section}{\numberline {7}Z\IeC {\'a}ver}{17}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{17}
+\contentsline {subsubsection}{\numberline {4.1.3}N\IeC {\'a}vrh algoritmu pre detekciu trojuholnikov}{18}
+\contentsline {subsubsection}{\numberline {4.1.4}N\IeC {\'a}vrh algoritmu pre detekciu \IeC {\v s}tvorcov}{18}
+\contentsline {subsection}{\numberline {4.2}N\IeC {\'a}vrh objektov - UML}{18}
+\contentsline {subsection}{\numberline {4.3}N\IeC {\'a}vrh u\IeC {\v z}\IeC {\'\i }vte\IeC {\v l}sk\IeC {\'e}ho prostredia}{18}
+\contentsline {section}{\numberline {5}Implement\IeC {\'a}cia}{18}
+\contentsline {subsection}{\numberline {5.1}In\IeC {\v s}tal\IeC {\'a}cia Opencv pre Android}{18}
+\contentsline {subsection}{\numberline {5.2}Android aplik\IeC {\'a}cia a GUI}{18}
+\contentsline {subsection}{\numberline {5.3}Objekty}{18}
+\contentsline {subsubsection}{\numberline {5.3.1}Trieda 1}{18}
+\contentsline {subsubsection}{\numberline {5.3.2}Trieda 2}{18}
+\contentsline {subsubsection}{\numberline {5.3.3}Trieda 3}{18}
+\contentsline {section}{\numberline {6}V\IeC {\'y}sledky aplik\IeC {\'a}cie}{18}
+\contentsline {subsection}{\numberline {6.1}Detekcia kruhov\IeC {\'y}ch zna\IeC {\v c}iek}{18}
+\contentsline {subsubsection}{\numberline {6.1.1}Zna\IeC {\v c}ky modrej farby}{18}
+\contentsline {subsubsection}{\numberline {6.1.2}Zna\IeC {\v c}ky \IeC {\v c}ervenej farby}{18}
+\contentsline {section}{\numberline {7}Z\IeC {\'a}ver}{18}

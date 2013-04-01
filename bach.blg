@@ -2,15 +2,14 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: bach.aux
 The style file: plain.bst
 Database file #1: bach.bib
 Warning--entry type for "hsl_hsv_wiki_en" isn't style-file defined
---line 21 of file bach.bib
+--line 27 of file bach.bib
 Warning--entry type for "hsv_wiki_cz" isn't style-file defined
---line 29 of file bach.bib
-Warning--entry type for "OpenCVDoc" isn't style-file defined
---line 37 of file bach.bib
+--line 35 of file bach.bib
+Warning--entry type for "canny_wiki_en" isn't style-file defined
+--line 43 of file bach.bib
 Warning--entry type for "cvtColor" isn't style-file defined
---line 45 of file bach.bib
-Repeated entry---line 53 of file bach.bib
- : @online{cvtColor
- :                 ,
-I'm skipping whatever remains of this entry
-(There was 1 error message)
+--line 59 of file bach.bib
+Warning--entry type for "canny" isn't style-file defined
+--line 67 of file bach.bib
+Warning--empty journal in JCanny
+(There were 6 warnings)
