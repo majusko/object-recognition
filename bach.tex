@@ -75,30 +75,78 @@ Niečo o simplecv
 
 \section{Rozpoznávanie ojektov}
 \section{OpenCV, Android a Java}
+\paragraph{}
 Cieľom práce je vypracovať komplexný návrh riešenia pre vyhľadávanie a rozpoznávanie dopravného značenia a taktiež vytvoriť funkčnú aplikáciu, ktorá
 bude schopná rozpoznať zvislé dopravné značenia. Táto aplikácia bude naprogramovaná v jazyku Java a bude spustiteľná na
  operačnom systéme Android 2.3, ktorý je určený pre mobilné zariadenia. Computer vision (počítačové videnie), nám zaručí open-source knižnica OpenCV.
 \subsection{Funkcionalita OpenCV}
+\paragraph{}
 OpenCV je open source knižnica počítačového videnia. Knižnica je napísaná v programovacích jazykoch C a C++. Aktívne sa pracuje na
-rozhraniach pre Python, Ruby, Matlab, Javu a iných programovacích jazykoch. V našej práci sme sa sústredili na verzii pre programovací jazyk Java.
+rozhraniach pre Python, Ruby, Matlab, Javu a iných programovacích jazykoch. V našej práci sme sa sústredili na verziu pre programovací jazyk Java,
+ktorý sa používa pri tvore aplikácii pre Android OS.
 \cite{learning_opencv}
-\linebreak
-\linebreak
+\paragraph{}
 OpenCV knižnica bola navrhnutá tak, aby funkcie použité v tejto knižnici, boli čo najefektívnejšie a čo najviac zamerané na real-time aplikácie.
 Knižnica je napísaná v optimalizovanom jazyku C a tak môže jednoducho využiť aj silu viacjadrových procesorov.
-Taktiež existujú špeciálne knižnice určené pre procesory Intel. IPP (Integrated Performance Primitives) knižnice  sa skladajú z nízko levelových 
+Taktiež existujú knižnice, špeciálne určené pre procesory s architektúrou Intel. IPP (Integrated Performance Primitives) knižnice  sa skladajú z nízko levelových 
 optimalizovaných postupov a rôznych algoritmických olastí, ktoré pracujú na procesoroch s architektúrou Intel oveľa efektívnejšie.
 \cite{learning_opencv}
-\linebreak
-\linebreak
+\paragraph{}
 Jeden z hlavných cieľov OpenCV je sprístupniť jednoducho použiteľné prostredie ktoré pomôže developerom ľahko a rýchlo budovať aplikácie s použitím počítačového videnia
 pre rôzne použitia v oblasti, medicíny, bezpečnosti, robotiky, dopravy, priemyselnej výroby a iných, pre ktoré ma OpenCV dokonca aj špecifické funkcionality.
 \cite{learning_opencv}
-\linebreak
-\linebreak
+\paragraph{}
 Pre olasť rozpoznávania ojektov sú taktiež mnohé špecifické funkcionality.
-Pri prolematike rozpoznávania zvislích dopravných značení sme niektoré z nich použili a preto je potrené si pre lepšie pochopenie problematiky tieto funkcie vysveliť podronejšie.
+Pri problematike rozpoznávania zvislích dopravných značení sme niektoré z nich použili a preto je potrebné si pre lepšie pochopenie problematiky tieto funkcie vysveliť podrobnejšie.
 \subsubsection{cvtColor}
+\paragraph{}
+Funkcia \emph{cvtColor} prevedie obraz z jedného farebného spektra do iného. Je to jedna z najpoužívanejších funkcií, keďže na rozpoznávanie objektov je potrené si obraz pripraviť
+cez mnohé farebné filtre. Vstupné parametre je možné pozorovať pri tabuľke \ref{cvtColorPar}.
+\cite{cvtColor}
+\cite{OpenCVDoc}
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    Premenná & Dátový typ & Popis \\ \hline
+    src & Mat & Vstup je 8-bitový, 16-bitový obraz alebo formát čísla s plávajúcou desatinou čiarkou. \\ \hline
+    dst & Mat & Výstupný obraz s rovnakými parametrami ako na vstupe. \\ \hline
+    code & int & Farebné spektrum ktoré do ktorého požadujeme obraz previesť. \\
+    \hline
+    \end{tabular}
+  	\caption{Tabulka znázorňuje vstupy funkcie cvtColor}
+  	\label{cvtColorPar}
+\end{table}
+\paragraph{}
+Pri používaní funkcie \emph{cvtColor}, je potrené si určiť o akú konverziu ide. OpenCV, už má k dispozícii predpripravené konštanty, ktoré konverziu lepšie vyjadrujú.
+Matematický prepočet si OpenCV už spraví v jadre. Konverzií je v OpenCV naprogramovaných už mnoho, my si predstavíme matematický model konverzie,
+ktorú v našom prípade rálne využijeme. Jedná sa o konverziu z BGR(pri OpenCV je poradie kanálov pre model RGB zoradený opačne) do farebného modelu HSV a späť.
+\cite{cvtColor}
+\cite{OpenCVDoc}
+\paragraph{} 
+V prípade 8 a 16 bitového orazu je potrené jednotlivé kanály R,G a B previesť do formátu s plávajúcou desatinou čiarkou a zmenšiť rozsah od 0 do 1.
+\begin{align*}
+BGR \leftrightarrow HSV
+\end{align*}
+\begin{align*}
+V \leftarrow max(R,G,B)
+\end{align*}
+\begin{align*}
+S \leftarrow \begin{cases} \frac{V - min(R,G,B)}{V}, & \text{ pokiaľ } V \neq 0 \\ 0, & \text{ pokiaľ } V = 0 \end{cases} \\
+\end{align*}
+\begin{align*}
+H \leftarrow \begin{cases} \frac{60(G - B)}{V - min(R,G,B)}, & \text{ pokiaľ } V = R \\ \frac{120 + 60(B - R)}{V - min(R,G,B)}, & \text{ pokiaľ } V = G \\ \frac{240 + 60(R - G)}{V - min(R,G,B)}, & \text{ pokiaľ } V = B \end{cases} 
+\cite{cvtColor}
+\cite{hsv_wiki_cz}
+\end{align*}
+\begin{align*}
+\text{ Pokiaľ } H < 0, & \text{ tak } H = H + 360
+\cite{cvtColor}
+\end{align*}
+\begin{align*}
+\text{ Na výstup pôjde } 0 \le V \le 1, 0 \le S \le 1, 0 \le H \le 1
+\cite{cvtColor}
+\end{align*}
 \subsubsection{Canny}
 \subsubsection{HoughLinesP}
 opisat nieco o houghovej transformacii
@@ -113,9 +161,11 @@ opisat nieco o houghovej transformacii
 \subsubsection{fitEllipse}
 
 \section{Návrh riešenia}
+\paragraph{}
 Po dôkladnom naštudovaní literatúry a potrebných algoritmov je našim cieľom vyhotoviť riešenie, ktoré by dokázalo detekovať zvislé dopravné značenia.
 Návrh bude pozostávať z návrhu algoritmov, návrhu objektov a návrhu užívateľského prostredia.
 \subsection{Návrh algoritmov}
+\paragraph{}
 Ako metódu rozpoznávania som si zvolil detekciu dopravného značenia podľa tvaru a farby. 
 Algoritmy ktoré som navrhol, sú postavené na princípe rozpoznania farebného rozhrania hľadaného objektu a následné detekovanie potrebného tvaru.
 Pri opise som sa zameral na detekciu značiek, ktoré sú na cestách najviac početné.
@@ -124,29 +174,25 @@ Samotné rozpoznanie bolo uskutočnené pomocou neurónových sietí. Táto met�
 Na rozdiel od detekcie dopravného značenia, pre riešenie neurónových sietí použijeme už existujúcu knižnicu.
 \subsubsection{Návrh algoritmu pre detekciu farby}
 %%TODO Spravenie vyvojoveho/stavoveho diagramu
+\paragraph{}
 Ako prvý algoritmus som si vybral detekciu červenej farby. Pre detekciu farieb sa v literatúre odporúča najprv previesť vstup na farebný model HSV. 
 Vstup prichádza vo farebnom formáte RGB. Farebný model HSV je jeden z dvoch najpoužívanejších valcovo súradnicových reprezentácii bodov pre RGB model.
 \cite{hsl_hsv_wiki_en}
-\linebreak
-\linebreak
-- Na začiatok by sa mal vstup(bitmapa) konvertovať na binárnu maticu.
-\linebreak
-\linebreak
-- Najväčšia výhoda dopravného značenia je, že je silne kontrastné od ostatného prostredia.
+\paragraph{}
+Na začiatok by sa mal vstup(bitmapa) konvertovať na binárnu maticu.
+\paragraph{}
+Najväčšia výhoda dopravného značenia je, že je silne kontrastné od ostatného prostredia.
 Túto vlastnosť môžeme perfektne využiť v náš prospech a pomocou pomocou rozmazania obrazu, môžeme dosieliť to,
 že sa zbavíme slabších kontú hneď na začiatku. V OpenCV je pre rozmazávanie obrazu na výber viacero metód,
 no my použijeme matódu \emph{GaussianBlur}, ktorá už názvom prezrádza použitie známeho filtra \emph{Gaussian blur}
-\linebreak
-\linebreak
-- Keďže sa snažíme dostať náš vstupný obraz do formátu HSV, o ktorú sa stará funkcionalita \emph{cvtColor} 
+\paragraph{}
+Keďže sa snažíme dostať náš vstupný obraz do formátu HSV, o ktorú sa stará funkcionalita \emph{cvtColor} 
 potrebujeme mu nastaviť vstup tak, aby obraz vedel bez problémov spracovať. 
 Keďže na väčšine mobilných zariadení prichádza do zariadenia obraz vo formáte RGBA, ďalší krok bude nepríklad konvertovanie formátu RGBA na formát RGB.
-\linebreak
-\linebreak
-- Ďalej bude nasledovať samotná konverzia obrazu do HSV pomocou už spomínanej metódy \emph{cvtColor}.
-\linebreak
-\linebreak
-- Ďalší krok bude spracovať každý kanál farebného modelu HSV samostatne. Ako prvý spracujeme \emph{Hue} kanál, ktorý sa stará o farebný odtien každého pixelu.
+\paragraph{}
+Ďalej bude nasledovať samotná konverzia obrazu do HSV pomocou už spomínanej metódy \emph{cvtColor}.
+\paragraph{}
+Ďalší krok bude spracovať každý kanál farebného modelu HSV samostatne. Ako prvý spracujeme \emph{Hue} kanál, ktorý sa stará o farebný odtien každého pixelu.
 \emph{Hue} Farba sa v tomto kanáli určuje podľa stupňov. 
 Primárne sa začína na stupni 0$^\circ$, čo predstavuje zelenú farbu, postupne prechádza do modrej,
 ktorá sa nachádza na 120$^\circ$ stupňoch z kade prechádza cez červenú na 240$^\circ$ a keďže je to model kruhový, vracia sa do zelenej na 360$^\circ$.
@@ -156,19 +202,18 @@ V našom prípade je postacuje metóda \emph{threshold}. Posledný kanál \emph{
 Keďže v praxi znamená znižovanie jasu pridávanie čiernej do základnej farby,
 pre hľadanie červenej farby na dopravnom značení nie je potrebné s týmto kanálom pracovať, lebo červená farba použitá na dopravných značeniach je pomerne svetlá.
 Pri hľadaní modrej je túto farbu potrebné trochu stmaviť a tak použijeme opäť funkciu \emph{threshold}.
-\linebreak
-\linebreak
-- Na koniec potrebujeme dostať len kontúry hľadanej farby. 
+\paragraph{}
+Na koniec potrebujeme dostať len kontúry hľadanej farby. 
 Najpr si budeme musieť spojiť jednotlivé kanály späť do jednej binárnej matice použitím metódy \emph{Canny}. 
 Po tomto kroku by nám mali ostať len čierny obraz a biele škvrny predstavujúce červenú farbu v požadovanom rozsahu.
 Z týchto bielych objektov, budeme potrebovať len okraje a tak použijeme metódu \emph{findContours}, ktorá sa postará o to, že dostaneme pole kontúr z celého obrazu.
 S týmito kontúrami potom ďalej pracujeme a rozoznávame z nich hľadané útvary.
 \subsubsection{Návrh algoritmu pre detekciu kruhov}
-- Pri detekcii dopravného značenia v tvare kruhu, je dôležité počítať s tým, že nehľadáme úplný kruh. Kruhové dopravné značenia sú vyrábané ako dokonalý kruh,
+\paragraph{}
+Pri detekcii dopravného značenia v tvare kruhu, je dôležité počítať s tým, že nehľadáme úplný kruh. Kruhové dopravné značenia sú vyrábané ako dokonalý kruh,
 no pri ich rozpoznávaní si je potrené uvedomiť, že na objekt sa pozeráme z rôznych uhlov. Táto skutočnosť nám prináša do prolematiky dôležitý fakt,
 že v skutočnosti to nie sú kruhy čo hľadáme, ale sú to elipsy. Celý algoritmus je možné vidieť na orázku č. \ref{hladanie_kruhov}
-\linebreak
-\linebreak
+
 %% otekanie textu
 %%\begin{wrapfigure}{r}{0.55\textwidth}
 %%	\begin{center}
@@ -187,21 +232,22 @@ no pri ich rozpoznávaní si je potrené uvedomiť, že na objekt sa pozeráme z
 \vspace{-10pt}
 \label{hladanie_kruhov}
 \end{figure}
-- Keďže v predchádzajúcej kapitole sme si navrhli riešenie, ktoré nám vracia len kontúry hľadanej farby, môžeme pokračovať od tohto bodu.
+
+\paragraph{}
+Keďže v predchádzajúcej kapitole sme si navrhli riešenie, ktoré nám vracia len kontúry hľadanej farby, môžeme pokračovať od tohto bodu.
 Ako prvé si spravíme cyklus, ktorým budeme prechádzať všetky naše vyhľadané kontúry farieb. Aby sme eliminovali počet prebytočných kontúr, 
 je potrené spracovávať čo najrelevantnejšie výsledky. Tento úkon vykoná metóda \emph{contourArea}, vďaka ktorej budeme posielať na ďalšie spracovanie len kontúry väčšie ako 500 pixelov.
-\linebreak
-\linebreak
-- Vzhľadom na to, že výsledky, ktoré dostávame ešte nemôžeme nazvať elipsami, musíme si naše kontúry na elipsy upraviť.
+\paragraph{}
+Vzhľadom na to, že výsledky, ktoré dostávame ešte nemôžeme nazvať elipsami, musíme si naše kontúry na elipsy upraviť.
 Tento úkon vykonáva metóda \emph{fitEllipse}, ktorá upraví kostrbaté kontúry, ktoré sa aspoň trochu podobajú elipse, na matematicky presnú elipsu.
 \linebreak
 \linebreak
-- Keď už máme detekované elipsy, nastáva posledný krok, a tým krokom je, určiť si toleranciu elipsy dopravného značenia, ktorú vyhľadávam.
+\paragraph{}
+Keď už máme detekované elipsy, nastáva posledný krok, a tým krokom je, určiť si toleranciu elipsy dopravného značenia, ktorú vyhľadávam.
 Táto tolerancia, je vlastne tolerancia nepresnosti, pri výpočte Ludolfovho čísla. 
 Ďalším krokom je tak výpočet už spomínaného ludolfovho čísla a následné overenie jeho nepresnosti. 
 Pokiaľ je výsledná hodnota vyhovujúca, nájdený objekt vyrežeme, a zasielame na rozpoznanie neurónovej sieti, ktorá zistí o akú značku sa presne jedná.
-\linebreak
-\linebreak
+\paragraph{}
 Výpočet Ludolfovho čísla:
 \begin{align*}
           \pi = \frac{o}{d} \\
@@ -216,11 +262,11 @@ Získanie tolerancie:
 \end{align*}
 %%vzorec
 %%citacie z knih matematiky
-- Pre určovanie tolerancie elipsy, je možné použiť ešte jednu metódu, a tou je overovanie podľa osí. 
+\paragraph{}
+Pre určovanie tolerancie elipsy, je možné použiť ešte jednu metódu, a tou je overovanie podľa osí. 
 Pokiaľ je x-ová os dvoj-násobne väčšia ako y-ová, ide už o elipsu, ktorú by sme ďalej len ťažko identifikovali. 
 Takýto nežiaduci stav môže nastať, pokiaľ sa na značku pozeráme na dopravné značenie z príliž veľkého uhlu.
-\linebreak
-\linebreak
+\paragraph{}
 Dva nežiaduce stavy tvaru dopravného značenia:
 \begin{align*}
 		  \text{ 1.) }

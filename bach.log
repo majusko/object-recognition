@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  1 APR 2013 03:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  1 APR 2013 18:41
 entering extended mode
 **bach.tex
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.tex
@@ -558,156 +558,55 @@ LaTeX Font Info:    ... okay on input line 21.
 
 ] [7
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 82--101
-\OT1/cmr/m/n/12 mo-vac ja-zyk Java. [[]]
+] [8]
+Underfull \hbox (badness 3281) in paragraph at lines 112--112
+\OT1/cmr/m/n/12 ob-raz alebo format csla
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--101
-
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+\OT1/cmr/m/n/12 s plavajucou de-sa-ti-nou
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--101
-
+Underfull \hbox (badness 10000) in paragraph at lines 113--113
+[][]\OT1/cmr/m/n/12 Vystupny ob-raz s rov-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--101
-\OT1/cmr/m/n/12 inych, pre ktore ma OpenCV do-konca aj specificke fun-kci-o
-na-lity. [[]]
+Underfull \hbox (badness 3657) in paragraph at lines 113--113
+\OT1/cmr/m/n/12 nakymi pa-ra-met-rami ako
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--101
-
- []
-
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 127--166
-\OT1/cmr/m/n/12 suradnicovych re-pre-zentacii bo-dov pre RGB mo-del. [[]]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--166
-\OT1/cmr/m/n/12 - Na zaciatok by sa mal vstup(bitmapa) kon-ver-to-vat[] na bin
-arnu ma-ticu.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--166
-\OT1/cmr/m/n/12 ktora uz nazvom prezradza pouzitie znameho fil-tra \OT1/c
-mr/m/it/12 Gaus-sian blur
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--166
-\OT1/cmr/m/n/12 metody \OT1/cmr/m/it/12 cvt-Co-lor\OT1/cmr/m/n/12 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--166
-\OT1/cmr/m/n/12 tak pouzijeme op[]at[] fun-kciu \OT1/cmr/m/it/12 th-res-hold\O
-T1/cmr/m/n/12 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--166
-
- []
-
-[10] [11]
-File: hladanie_kruhov.jpg Graphic file (type eps)
- <hladanie_kruhov.jpg>
-Overfull \hbox (8.03482pt too wide) in paragraph at lines 167--206
+[9] [10] [11] [12]
+Overfull \hbox (8.03482pt too wide) in paragraph at lines 213--216
 \OT1/cmr/m/n/12 poznavan si je po-trene uve-do-mit[], ze na ob-jekt sa po-
 zerame z r^oznych uhlov. Tato skutocnost[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--206
-\OT1/cmr/m/n/12 su to elipsy. Cely al-go-rit-mus je mozne vi-diet[] na ora
-zku c. 1[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--206
+File: hladanie_kruhov.jpg Graphic file (type eps)
+<hladanie_kruhov.jpg>
+Underfull \hbox (badness 10000) in paragraph at lines 241--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--206
-\OT1/cmr/m/n/12 v[]acsie ako 500 pi-xe-lov.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--206
+Underfull \hbox (badness 10000) in paragraph at lines 241--245
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--206
-\OT1/cmr/m/n/12 aku znacku sa presne jedna.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--206
-
- []
-
-[12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 216--225
-\OT1/cmr/m/n/12 zerame na do-pravne znacenie z prliz vel[]keho uhlu.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--225
-
- []
-
-[14]
+[13] [14] [15]
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.bbl
-[15] [16]) [17]
+[16] [17]) [18]
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.aux)
  ) 
 Here is how much of TeX's memory you used:
- 4179 strings out of 493922
- 54794 string characters out of 3154524
- 142918 words of memory out of 3000000
- 7385 multiletter control sequences out of 15000+200000
+ 4182 strings out of 493922
+ 54828 string characters out of 3154524
+ 138918 words of memory out of 3000000
+ 7388 multiletter control sequences out of 15000+200000
  10888 words of font info for 39 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 37i,10n,39p,229b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,17n,39p,246b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on bach.dvi (17 pages, 48976 bytes).
+Output written on bach.dvi (18 pages, 56348 bytes).

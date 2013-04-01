@@ -5,4 +5,12 @@ Warning--entry type for "hsl_hsv_wiki_en" isn't style-file defined
 --line 21 of file bach.bib
 Warning--entry type for "hsv_wiki_cz" isn't style-file defined
 --line 29 of file bach.bib
-(There were 2 warnings)
+Warning--entry type for "OpenCVDoc" isn't style-file defined
+--line 37 of file bach.bib
+Warning--entry type for "cvtColor" isn't style-file defined
+--line 45 of file bach.bib
+Repeated entry---line 53 of file bach.bib
+ : @online{cvtColor
+ :                 ,
+I'm skipping whatever remains of this entry
+(There was 1 error message)

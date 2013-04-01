@@ -14,4 +14,12 @@ Wikipedia contributors.
 Wikipedia contributors.
 \newblock Hsv, March 2013.
 
+\bibitem{cvtColor}
+opencv~dev team.
+\newblock cvtcolor, March 2013.
+
+\bibitem{OpenCVDoc}
+opencv~dev team.
+\newblock Opencv documentation, March 2013.
+
 \end{thebibliography}
