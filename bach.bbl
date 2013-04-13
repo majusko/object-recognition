@@ -33,20 +33,24 @@ Wikipedia contributors.
 \newblock Hsv, March 2013.
 
 \bibitem{canny}
-opencv~dev team.
+OpenCV dev team.
 \newblock canny, March 2013.
 
 \bibitem{cvtColor}
-opencv~dev team.
+OpenCV dev team.
 \newblock cvtcolor, March 2013.
+
+\bibitem{inrange_doc}
+OpenCV dev team.
+\newblock inrange, March 2013.
+
+\bibitem{OpenCVDoc}
+OpenCV dev team.
+\newblock {\em Opencv documentation}, March 2013.
 
 \bibitem{gaussianblur_doc}
 opencv~dev team.
 \newblock gaussianblur, March 2013.
-
-\bibitem{OpenCVDoc}
-opencv~dev team.
-\newblock {\em Opencv documentation}, March 2013.
 
 \bibitem{gaussianblur}
 Daniel Rákos.

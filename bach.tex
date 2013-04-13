@@ -79,7 +79,7 @@ Niečo o simplecv
 Cieľom práce je vypracovať komplexný návrh riešenia pre vyhľadávanie a rozpoznávanie dopravného značenia a taktiež vytvoriť funkčnú aplikáciu, ktorá
 bude schopná rozpoznať zvislé dopravné značenia. Táto aplikácia bude naprogramovaná v jazyku Java a bude spustiteľná na
  operačnom systéme Android 2.3, ktorý je určený pre mobilné zariadenia. Computer vision (počítačové videnie), nám zaručí open-source knižnica OpenCV.
-\subsection{Matematická terminológia}
+\subsection{Matematické metódy}
 \paragraph{}
 Mnoho matematických metód sa bude priamo vysvetlovať pri predstavovaní danej OpenCV funkcionality.
 V tejto sekcii si predstavíme také matematické metódy ktoré nám pomůžu lepšie sa orientovať pri opise konkrétnych funkcionalít OpenCV.
@@ -230,7 +230,8 @@ Pri správnom nastavení, sa dá dosiahnuť pomerne kvalitné odstránenie nepot
 Vyhladzuje obraz pomocou \emph{GaussianBlur} filtra.
 \cite{gaussianblur_doc}
 \cite{OpenCVDoc}
-\emph{GaussianBlur} filter funguje na princípe \emph{N x N} konvolúcie pri ktorej sa každý pixel prehodnotí na základe \emph{Gaussian} funkcie.
+\paragraph{}
+\emph{GaussianBlur} filter funguje na princípe \emph{N * N} konvolúcie pri ktorej sa každý pixel prehodnotí na základe \emph{Gaussian} funkcie.
 Táto funkcia tak prevedie rozostrenie pre každý pixel obrazu.
 \cite{gaussianblur}
 \begin{align*}
@@ -263,6 +264,39 @@ Veľkosť matice pri konvolúcii ovplivní rozostrenie. Čím väčšiu maticu p
   	\label{gaussianblurPar}
 \end{table}
 \subsubsection{inRange}
+\paragraph{}
+Funkcia \emph{inRange} zisťuje, či sa prvky poľa nachádzajú medzi prvkami ďalších dvoch polí.
+\paragraph{}
+Funkcia kontroluje rozsah nasledujúco:
+\begin{itemize}
+  \item Pre každý prvok vstupného pola s jedným kanálom
+	\begin{align*}
+	dst(I) = lowerb(I)_0 \le src(I)_0 \le upperb(I)_0
+	\end{align*}
+  \item Pre každý prvok vstupného pola s dvomi kanálmy
+  	\begin{align*}
+	dst(I) = lowerb(I)_0 \le src(I)_0 \le upperb(I)_0 \wedge lowerb(I)_1 \le src(I)_1 \le upperb(I)_1
+	\end{align*}
+  \item A tak ďaľej\ldots
+\end{itemize}
+\paragraph{}
+Vstupné parametre pre \emph{inRange} je možné pozorovať pri tabuľke \ref{inRangePar}. 
+\cite{inrange_doc}
+\cite{OpenCVDoc}
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    Premenná & Dátový typ & Popis \\ \hline
+    src & Mat & Vstupné zdrjové pole. \\ \hline
+    lowerb & Scalar & Spodná hranica poľa alebo skalárna veličina. \\ \hline
+    upperb & Scalar & Vrchná hranica poľa alebo skalárna veličina. \\ \hline
+    dst & Mat & Výsledné pole, rovnako veľké ako vstup. \\
+    \hline
+    \end{tabular}
+  	\caption{Tabulka znázorňuje vstupy funkcie inRange}
+  	\label{inRangePar}
+\end{table}
 \subsubsection{threshold}
 \subsubsection{bitmapToMat}
 \subsubsection{findContours}

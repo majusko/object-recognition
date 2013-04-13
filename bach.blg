@@ -11,13 +11,15 @@ Warning--entry type for "cvtColor" isn't style-file defined
 --line 60 of file bach.bib
 Warning--entry type for "canny" isn't style-file defined
 --line 68 of file bach.bib
-Warning--entry type for "convolution" isn't style-file defined
+Warning--entry type for "inrange_doc" isn't style-file defined
 --line 76 of file bach.bib
+Warning--entry type for "convolution" isn't style-file defined
+--line 84 of file bach.bib
 Warning--entry type for "gaussianblur_doc" isn't style-file defined
---line 83 of file bach.bib
-Warning--entry type for "gaussianblur" isn't style-file defined
 --line 91 of file bach.bib
-Warning--entry type for "DIP" isn't style-file defined
+Warning--entry type for "gaussianblur" isn't style-file defined
 --line 99 of file bach.bib
+Warning--entry type for "DIP" isn't style-file defined
+--line 107 of file bach.bib
 Warning--empty journal in JCanny
-(There were 10 warnings)
+(There were 11 warnings)

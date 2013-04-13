@@ -3,3 +3,4 @@
 \contentsline {table}{\numberline {2}{\ignorespaces Konverzia RGB modelu na HSV\cite {hsv_wiki_cz}\cite {cvtColor}\cite {OpenCVDoc}}}{11}
 \contentsline {table}{\numberline {3}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie canny}}{13}
 \contentsline {table}{\numberline {4}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie GaussianBlur}}{14}
+\contentsline {table}{\numberline {5}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie inRange}}{14}
