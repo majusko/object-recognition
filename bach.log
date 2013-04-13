@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  1 APR 2013 23:12
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  13 APR 2013 21:57
 entering extended mode
 **bach.tex
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.tex
@@ -558,60 +558,92 @@ LaTeX Font Info:    ... okay on input line 21.
 
 ] [7
 
-] [8]
-Underfull \hbox (badness 3281) in paragraph at lines 112--112
+]
+Overfull \hbox (11.96005pt too wide) in paragraph at lines 84--86
+ [] []\OT1/cmr/m/n/12 Mnoho ma-te-ma-tickych metod sa bude priamo vy-svet-lo-
+vat[] pri pred-sta-vo-van da-nej OpenCV
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
+
+ []
+
+
+Overfull \hbox (11.2524pt too wide) in paragraph at lines 100--104
+\OT1/cmr/bx/n/12 Linearne metody \OT1/cmr/m/n/12 { novu ja-sovu hod-notu bo
+du poctaju ako linearnu kom-binaciu vstupnych
+ []
+
+[9]
+Underfull \hbox (badness 3281) in paragraph at lines 134--134
 \OT1/cmr/m/n/12 ob-raz alebo format csla
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--112
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
 \OT1/cmr/m/n/12 s plavajucou de-sa-ti-nou
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--113
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 [][]\OT1/cmr/m/n/12 Vystupny ob-raz s rov-
  []
 
 
-Underfull \hbox (badness 3657) in paragraph at lines 113--113
+Underfull \hbox (badness 3657) in paragraph at lines 135--135
 \OT1/cmr/m/n/12 nakymi pa-ra-met-rami ako
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+[10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 [][]\OT1/cmr/m/n/12 Druha pra-hova hod-nota
  []
 
-[10] [11] [12] [13]
-Overfull \hbox (8.03482pt too wide) in paragraph at lines 244--247
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
+[][]\OT1/cmr/m/n/12 Vstup je ob-raz s
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
+\OT1/cmr/m/n/12 l[]ubovolnym poctom fa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--257
+[][]\OT1/cmr/m/n/12 Vel[]kost[] Gaus-sian jadra.
+ []
+
+[13] [14] [15]
+Overfull \hbox (8.03482pt too wide) in paragraph at lines 324--327
 \OT1/cmr/m/n/12 poznavan si je po-trene uve-do-mit[], ze na ob-jekt sa po-
 zerame z r^oznych uhlov. Tato skutocnost[]
  []
 
 File: hladanie_kruhov.jpg Graphic file (type eps)
-<hladanie_kruhov.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 272--276
+<hladanie_kruhov.jpg> [16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 352--356
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--276
+Underfull \hbox (badness 10000) in paragraph at lines 352--356
 
  []
 
-[14] [15] [16]
+[18]
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.bbl
-[17] [18]) [19]
+[19] [20]) [21]
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.aux)
  ) 
 Here is how much of TeX's memory you used:
- 4187 strings out of 493922
- 54884 string characters out of 3154524
+ 4195 strings out of 493922
+ 54975 string characters out of 3154524
  140918 words of memory out of 3000000
- 7393 multiletter control sequences out of 15000+200000
+ 7401 multiletter control sequences out of 15000+200000
  10888 words of font info for 39 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  37i,20n,39p,246b,319s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on bach.dvi (19 pages, 61312 bytes).
+Output written on bach.dvi (21 pages, 73824 bytes).

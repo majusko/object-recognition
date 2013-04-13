@@ -74,11 +74,33 @@ Niečo o matlabe
 Niečo o simplecv
 
 \section{Rozpoznávanie ojektov}
-\section{OpenCV, Android a Java}
+\section{OpenCV, Android a Java - inak to nazvat}
 \paragraph{}
 Cieľom práce je vypracovať komplexný návrh riešenia pre vyhľadávanie a rozpoznávanie dopravného značenia a taktiež vytvoriť funkčnú aplikáciu, ktorá
 bude schopná rozpoznať zvislé dopravné značenia. Táto aplikácia bude naprogramovaná v jazyku Java a bude spustiteľná na
  operačnom systéme Android 2.3, ktorý je určený pre mobilné zariadenia. Computer vision (počítačové videnie), nám zaručí open-source knižnica OpenCV.
+\subsection{Matematická terminológia}
+\paragraph{}
+Mnoho matematických metód sa bude priamo vysvetlovať pri predstavovaní danej OpenCV funkcionality.
+V tejto sekcii si predstavíme také matematické metódy ktoré nám pomůžu lepšie sa orientovať pri opise konkrétnych funkcionalít OpenCV.
+\subsubsection{Konvolúcia}
+\paragraph{}
+Konvolúcia je matematická metóda, ktorá systematicky prechádza celý obraz a na výpočet novej hodnoty bodu využíva malé okolie O reprezentatívneho bodu. 
+Táto hodnota je zapísaná do nového obrazu. Diskrétna konvolúcia má tvar:
+\begin{align*}
+g(x,y) = \sum_{(m,n)} \sum_{(e^0)} h(x - m,y - n)f(m,n)
+\end{align*}
+kde f predstavuje obrazovú funkciu pôvodného obrazu, g predstavuje obrazovú funkciu nového obrazu, h predstavuje konvolučnú masku alebo konvolučné jadro, h nám udáva koeficienty jednotlivých bodov v okolí O.
+Najčastejšie sa používajú  obdĺžníkové masky s nepárnym počtom riadkov a stĺpcov, pretože v tom prípade môže reprezentatívny bod ležať v strede masky.
+\paragraph{}
+Transformácie v lokálnom okolí bodu sa delia na dve skupiny: \\
+\textbf{Vyhladzovanie} – tieto metódy sa snažia potlačiť šum v obraze, ale rozostrujú hrany. \\
+\textbf{Ostrenie} – detekcia hrán a čiar, ale zosilňuje šum. \\
+\paragraph{}
+Podľa matematických vlastností môžeme metódy predspracovania rozdeliť na \\
+\textbf{Lineárne metódy} – novú jasovú hodnotu bodu počítajú ako lineárnu kombináciu vstupných bodov. Napr.: priemerovací filter \\
+\textbf{Nelineárne metódy} – berú do úvahy len body s určitými vlastnosťami. Napr.: mediánový filter.
+\cite{DIP}
 \subsection{Funkcionalita OpenCV}
 \paragraph{}
 OpenCV je open source knižnica počítačového videnia. Knižnica je napísaná v programovacích jazykoch C a C++. Aktívne sa pracuje na
@@ -137,26 +159,48 @@ S \leftarrow \begin{cases} \frac{V - min(R,G,B)}{V}, & \text{ pokiaľ } V \neq 0
 \end{align*}
 \begin{align*}
 H \leftarrow \begin{cases} \frac{60(G - B)}{V - min(R,G,B)}, & \text{ pokiaľ } V = R \\ \frac{120 + 60(B - R)}{V - min(R,G,B)}, & \text{ pokiaľ } V = G \\ \frac{240 + 60(R - G)}{V - min(R,G,B)}, & \text{ pokiaľ } V = B \end{cases} 
-\cite{cvtColor}
-\cite{hsv_wiki_cz}
 \end{align*}
 \begin{align*}
 \text{ Pokiaľ } H < 0, & \text{ tak } H = H + 360
-\cite{cvtColor}
 \end{align*}
 \begin{align*}
 \text{ Na výstup pôjde } 0 \le V \le 1, 0 \le S \le 1, 0 \le H \le 1
-\cite{cvtColor}
 \end{align*}
 \caption{Konverzia RGB modelu na HSV\cite{hsv_wiki_cz}\cite{cvtColor}\cite{OpenCVDoc}}
 \label{cvtColorEquals}
 \end{table}
 \subsubsection{Canny}
 \paragraph{}
-Hlavná úloha funkcie \emph{Canny} je vyhľadávať okraje, alebo hrany všetkých ojektov. Pri kombinácii s rôznymi filtrami, môžeme docieliť, vyhľadanie hrán úmyselného objektu.
+Hlavná úloha funkcie \emph{Canny} je vyhľadávať okraje, kontúry a hrany všetkých objektov. Pri kombinácii s rôznymi filtrami, môžeme docieliť, vyhľadanie hrán úmyselného objektu.
 Na rozoznávanie sa využíva algoritmus \emph{Canny86}.
 \cite{canny}
 \cite{OpenCVDoc}
+\paragraph{}
+Kontúrový alebo hranový detektor by mal spĺňať tri kritéria, ktoré určil John Canny.
+\begin{enumerate}
+  \item Detekčné kritérium, detektor nesmie zabudnúť na významnú hranu a na jednu hranu môže byť maximálne jedna odozva.
+  \item Lokalizačné kritérium, rozdiel medzi skutočnou a nájdenou hranou má byť minimálny.
+  \item Kritérium jednej odozvy.
+\end{enumerate}
+Cannyho detektor využíva konvolúciu s dvojrozmerným Gaussianom a deriváciu v smere gradientu.
+Poskytuje informácie o smere a veľkosti hrany. Nech G je dvojrozmerný Gaussian. Nech Gn je prvá derivácia G v smere gradientu
+\begin{align*}
+G_n = \frac{\delta G}{\delta n} = n\bigtriangledown G
+\end{align*}
+kde n je smer gradientu, ktorý dostaneme nasledovne
+\begin{align*}
+n = \frac{\bigtriangledown(G * f)}{|\bigtriangledown(G * f)|}
+\end{align*}
+Hranu dostaneme v bode, kde funkcia \begin{math}\ G_n *f  \end{math} dosiahne lokálne maximum, a druhá derivácia sa rovná nule.
+\begin{align*}
+\frac{\delta^2}{\delta n^2} G * f = 0
+\end{align*}
+Pre silu hrany platí:
+\begin{align*}
+|G_n * f| = |\bigtriangledown (G * f)|
+\end{align*}
+Kritérium jednej odozvy sa dosahuje následne prahovaním. 
+\cite{DIP}
 \cite{JCanny}
 \cite{canny_wiki_en}
 \paragraph{}
@@ -179,9 +223,45 @@ Pri správnom nastavení, sa dá dosiahnuť pomerne kvalitné odstránenie nepot
   	\caption{Tabulka znázorňuje vstupy funkcie canny}
   	\label{cannyPar}
 \end{table}
-\subsubsection{HoughLinesP}
-opisat nieco o houghovej transformacii
+%%\subsubsection{HoughLinesP}
+%%nebolo v praci pouzite
 \subsubsection{GaussianBlur}
+\paragraph{}
+Vyhladzuje obraz pomocou \emph{GaussianBlur} filtra.
+\cite{gaussianblur_doc}
+\cite{OpenCVDoc}
+\emph{GaussianBlur} filter funguje na princípe \emph{N x N} konvolúcie pri ktorej sa každý pixel prehodnotí na základe \emph{Gaussian} funkcie.
+Táto funkcia tak prevedie rozostrenie pre každý pixel obrazu.
+\cite{gaussianblur}
+\begin{align*}
+H(x,y) = \frac{1}{2\pi\sigma^2}e^{\frac{(x^2)+(y^2)}{2\sigma^2}}
+\end{align*}
+\paragraph{}
+Princíp konvolúcie 2D obrazu je postavený na tom, že sa systematicky snažíme spracovávať okolie pixelu a dostať výslednú hodnotu z okolia reprezentatívneho bodu.
+Konvolúcia sa často používa pri spracovávaní obrazu, ako je vyhladzovanie obrazu, ostrenie, detekcia hrán a obrázkov.
+\cite{convolution}
+\cite{DIP}
+\paragraph{}
+Vstupné parametre pre \emph{GaussianBlur} je možné pozorovať pri tabuľke \ref{gaussianblurPar}. 
+Pri premennej \emph{ksize} si môžeme napríklad nastaviť veľkosť matice, ktorá sa bude pri konvolúcii používať.
+Veľkosť matice pri konvolúcii ovplivní rozostrenie. Čím väčšiu maticu používame, tím väčšie rozostrenie dostaneme.
+\cite{gaussianblur_doc}
+\cite{OpenCVDoc}
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    Premenná & Dátový typ & Popis \\ \hline
+    src & Mat & Vstup je obraz s ľubovolným počtom farebných kanálov. \\ \hline
+    dst & Mat & Výstup s rovnakými parametrami ako bol vstup. \\ \hline
+    ksize & Size & Veľkosť Gaussian jadra. Matica konvolúcie. \\ \hline
+    sigmaX & double & Smerodajná odchýlka Gaussian jadra v smere X. \\ \hline
+    sigmaY & double & Smerodajná odchýlka Gaussian jadra v smere Y. \\
+    \hline
+    \end{tabular}
+  	\caption{Tabulka znázorňuje vstupy funkcie GaussianBlur}
+  	\label{gaussianblurPar}
+\end{table}
 \subsubsection{inRange}
 \subsubsection{threshold}
 \subsubsection{bitmapToMat}

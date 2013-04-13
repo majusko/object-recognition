@@ -1,4 +1,13 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{convolution}
+Song~Ho Ahn.
+\newblock Convolution, 2005.
+
+\bibitem{DIP}
+Gábor Blázsovit.
+\newblock Digital image processing - interaktívna učebnica spracovania
+  obrazu, February 2006.
 
 \bibitem{learning_opencv}
 A.~Bradski, G. a~Kaehler.
@@ -23,16 +32,24 @@ Wikipedia contributors.
 Wikipedia contributors.
 \newblock Hsv, March 2013.
 
+\bibitem{canny}
+opencv~dev team.
+\newblock canny, March 2013.
+
 \bibitem{cvtColor}
 opencv~dev team.
 \newblock cvtcolor, March 2013.
 
-\bibitem{canny}
+\bibitem{gaussianblur_doc}
 opencv~dev team.
-\newblock cvtcolor, March 2013.
+\newblock gaussianblur, March 2013.
 
 \bibitem{OpenCVDoc}
 opencv~dev team.
 \newblock {\em Opencv documentation}, March 2013.
+
+\bibitem{gaussianblur}
+Daniel Rákos.
+\newblock canny, September 2010.
 
 \end{thebibliography}
