@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  14 APR 2013 00:43
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  21 APR 2013 22:15
 entering extended mode
 **bach.tex
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.tex
@@ -559,103 +559,179 @@ LaTeX Font Info:    ... okay on input line 21.
 ] [7
 
 ]
-Overfull \hbox (11.96005pt too wide) in paragraph at lines 84--86
+Overfull \hbox (11.96005pt too wide) in paragraph at lines 83--85
  [] []\OT1/cmr/m/n/12 Mnoho ma-te-ma-tickych metod sa bude priamo vy-svet-lo-
 vat[] pri pred-sta-vo-van da-nej OpenCV
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 96--99
+Underfull \hbox (badness 10000) in paragraph at lines 95--98
 
  []
 
 
-Overfull \hbox (11.2524pt too wide) in paragraph at lines 100--104
+Overfull \hbox (11.2524pt too wide) in paragraph at lines 99--103
 \OT1/cmr/bx/n/12 Linearne metody \OT1/cmr/m/n/12 { novu ja-sovu hod-notu bo
 du poctaju ako linearnu kom-binaciu vstupnych
  []
 
 [9]
-Underfull \hbox (badness 3281) in paragraph at lines 134--134
+Underfull \hbox (badness 3281) in paragraph at lines 137--137
 \OT1/cmr/m/n/12 ob-raz alebo format csla
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--134
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
 \OT1/cmr/m/n/12 s plavajucou de-sa-ti-nou
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--135
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
 [][]\OT1/cmr/m/n/12 Vystupny ob-raz s rov-
  []
 
 
-Underfull \hbox (badness 3657) in paragraph at lines 135--135
+Underfull \hbox (badness 3657) in paragraph at lines 138--138
 \OT1/cmr/m/n/12 nakymi pa-ra-met-rami ako
  []
 
-[10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
+[10] [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 [][]\OT1/cmr/m/n/12 Druha pra-hova hod-nota
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
 [][]\OT1/cmr/m/n/12 Vstup je ob-raz s
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
 \OT1/cmr/m/n/12 l[]ubovolnym poctom fa-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--258
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
 [][]\OT1/cmr/m/n/12 Vel[]kost[] Gaus-sian jadra.
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 272.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 275.
 
 (D:\miktex\tex\latex\base\omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 272.
- [13]
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 275.
+ [14]
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
 [][]\OT1/cmr/m/n/12 Vysledne pole, rov-nako
  []
 
-[14] [15] [16]
-Overfull \hbox (8.03482pt too wide) in paragraph at lines 358--361
+[15] [16]
+Underfull \hbox (badness 2717) in paragraph at lines 357--357
+\OT1/cmr/m/n/12 m^oze pouzit[] na nie-ktore
+ []
+
+
+Overfull \hbox (1.25334pt too wide) in paragraph at lines 366--370
+\OT1/cmr/m/n/12 vyhl[]adavanie ciar v binarnom ob-raze. Vyhl[]adane ob-rysy
+ su vel[]mi uzitocne pri roz-poznavan
+ []
+
+
+Underfull \hbox (badness 4217) in paragraph at lines 381--381
+[][]\OT1/cmr/m/n/12 Vstup je 8-bitovy ob-raz
+ []
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 384--384
+\OT1/cmr/m/n/12 ktore bu-deme chciet[] roz-
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 402--403
+[][]\OT1/cmr/m/n/12 Zoskupenie 2D bo-dov vo
+ []
+
+[17]
+Underfull \hbox (badness 5119) in paragraph at lines 420--420
+[][]\OT1/cmr/m/n/12 Obraz do ktoreho budu
+ []
+
+
+Underfull \hbox (badness 6658) in paragraph at lines 421--421
+[][]\OT1/cmr/m/n/12 Zoznam vsetkych kontur
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 421--421
+\OT1/cmr/m/n/12 ktore chceme vy-kres-lit[].
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 422--422
+\OT1/cmr/m/n/12 konturu chceme vy-kres-lit[].
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 422--422
+\OT1/cmr/m/n/12 Ne-gatvne cslo ho-vor o
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 422--422
+\OT1/cmr/m/n/12 tom, ze chceme vy-kres-lit[]
+ []
+
+
+Underfull \hbox (badness 7981) in paragraph at lines 427--427
+[][]\OT1/cmr/m/n/12 Maximalny le-vel vy-kres-
+ []
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 427--427
+\OT1/cmr/m/n/12 lenych kontur. Tento pa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 448--449
+[][]\OT1/cmr/m/n/12 Kontura ktoru chceme
+ []
+
+[18] [19]
+Underfull \hbox (badness 6236) in paragraph at lines 469--470
+[][]\OT1/cmr/m/n/12 Vektor 2D bo-dov okolo
+ []
+
+[20] [21]
+Overfull \hbox (8.03482pt too wide) in paragraph at lines 525--528
 \OT1/cmr/m/n/12 poznavan si je po-trene uve-do-mit[], ze na ob-jekt sa po-
 zerame z r^oznych uhlov. Tato skutocnost[]
  []
 
 File: hladanie_kruhov.jpg Graphic file (type eps)
-<hladanie_kruhov.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 386--390
+<hladanie_kruhov.jpg> [22] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 553--557
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--390
+Underfull \hbox (badness 10000) in paragraph at lines 553--557
 
  []
 
-[17] [18] [19]
+[24]
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.bbl
-[20] [21]) [22]
+[25] [26]) [27]
 (D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.aux)
  ) 
 Here is how much of TeX's memory you used:
- 4216 strings out of 493922
- 55280 string characters out of 3154524
- 140918 words of memory out of 3000000
- 7419 multiletter control sequences out of 15000+200000
+ 4232 strings out of 493922
+ 55526 string characters out of 3154524
+ 145918 words of memory out of 3000000
+ 7435 multiletter control sequences out of 15000+200000
  10888 words of font info for 39 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  37i,20n,39p,246b,319s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on bach.dvi (22 pages, 78268 bytes).
+Output written on bach.dvi (27 pages, 105144 bytes).

@@ -32,13 +32,41 @@ Wikipedia contributors.
 Wikipedia contributors.
 \newblock Hsv, March 2013.
 
+\bibitem{bitwise_not_doc}
+OpenCV dev team.
+\newblock bitwise\_not, March 2013.
+
+\bibitem{boundingrect_doc}
+OpenCV dev team.
+\newblock boundingrect, March 2013.
+
 \bibitem{canny}
 OpenCV dev team.
 \newblock canny, March 2013.
 
+\bibitem{contourarea_doc}
+OpenCV dev team.
+\newblock contourarea, March 2013.
+
 \bibitem{cvtColor}
 OpenCV dev team.
 \newblock cvtcolor, March 2013.
+
+\bibitem{drawcontours_doc}
+OpenCV dev team.
+\newblock drawcontours, March 2013.
+
+\bibitem{findContours_doc}
+OpenCV dev team.
+\newblock findcontours, March 2013.
+
+\bibitem{fitellipse_doc}
+OpenCV dev team.
+\newblock fitellipse, March 2013.
+
+\bibitem{gaussianblur_doc}
+OpenCV dev team.
+\newblock gaussianblur, March 2013.
 
 \bibitem{inrange_doc}
 OpenCV dev team.
@@ -48,12 +76,13 @@ OpenCV dev team.
 OpenCV dev team.
 \newblock {\em Opencv documentation}, March 2013.
 
-\bibitem{gaussianblur_doc}
-opencv~dev team.
-\newblock gaussianblur, March 2013.
-
 \bibitem{gaussianblur}
 Daniel Rákos.
-\newblock canny, September 2010.
+\newblock Gaussian blur, September 2010.
+
+\bibitem{suzuky}
+S.~Suzuky.
+\newblock A computational approach to edge detection.
+\newblock 1983.
 
 \end{thebibliography}

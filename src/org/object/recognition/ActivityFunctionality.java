@@ -18,6 +18,7 @@ import android.graphics.Bitmap;
 import android.util.Log;
 
 import org.object.recognition.DetectionCore;
+import org.object.recognition.Traffic;
 
 /**
  * 
@@ -54,6 +55,7 @@ class ActivityFunctionality extends BaseClass {
 	private int minLineSize;
 	private int threshold;
 	private DetectionCore detect;
+	private Traffic traffic;
 
 
     public ActivityFunctionality(Context context) {
@@ -79,6 +81,8 @@ class ActivityFunctionality extends BaseClass {
         	signList = new ArrayList<Mat>();
         	
         	detect = new DetectionCore();
+        	
+        	traffic = new Traffic();
         	
     	    }
 	}
@@ -154,12 +158,12 @@ class ActivityFunctionality extends BaseClass {
             
         case DETECT_RED_CIRCLE_TS:
         	Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_YUV420sp2RGB, 4);
-	        detect.setData(mRgba);
-		    detect.detectRedCircleSign();
+	        traffic.setData(mRgba);
+	        traffic.detectRedCircleSign();
 		    boxList.clear();
-	    	boxList = detect.getBoxList();
+	    	boxList = traffic.getBoxList();
 	    	signList.clear();
-	    	signList = detect.getSignList();
+	    	signList = traffic.getSignList();
 		    //draw 
 			for(int i = 0; i < boxList.size(); i++){
 			  Rect r=boxList.get(i);

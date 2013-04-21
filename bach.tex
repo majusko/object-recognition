@@ -72,9 +72,8 @@ http://simplecv.tumblr.com/post/19307835766/opencv-vs-matlab-vs-simplecv
 Niečo o matlabe
 \subsubsection{SimpleCV}
 Niečo o simplecv
-
 \section{Rozpoznávanie ojektov}
-\section{OpenCV, Android a Java - inak to nazvat}
+\section{Výskum}
 \paragraph{}
 Cieľom práce je vypracovať komplexný návrh riešenia pre vyhľadávanie a rozpoznávanie dopravného značenia a taktiež vytvoriť funkčnú aplikáciu, ktorá
 bude schopná rozpoznať zvislé dopravné značenia. Táto aplikácia bude naprogramovaná v jazyku Java a bude spustiteľná na
@@ -85,7 +84,7 @@ Mnoho matematických metód sa bude priamo vysvetlovať pri predstavovaní danej
 V tejto sekcii si predstavíme také matematické metódy ktoré nám pomůžu lepšie sa orientovať pri opise konkrétnych funkcionalít OpenCV.
 \subsubsection{Konvolúcia}
 \paragraph{}
-Konvolúcia je matematická metóda, ktorá systematicky prechádza celý obraz a na výpočet novej hodnoty bodu využíva malé okolie O reprezentatívneho bodu. 
+Konvolúcia je matematická metóda, ktorá systematicky prechádza celý obraz a na výpočet novej hodnoty bodu využíva malé okolie \emph{O} reprezentatívneho bodu. 
 Táto hodnota je zapísaná do nového obrazu. Diskrétna konvolúcia má tvar:
 \begin{align*}
 g(x,y) = \sum_{(m,n)} \sum_{(e^0)} h(x - m,y - n)f(m,n)
@@ -101,6 +100,10 @@ Podľa matematických vlastností môžeme metódy predspracovania rozdeliť na 
 \textbf{Lineárne metódy} – novú jasovú hodnotu bodu počítajú ako lineárnu kombináciu vstupných bodov. Napr.: priemerovací filter \\
 \textbf{Nelineárne metódy} – berú do úvahy len body s určitými vlastnosťami. Napr.: mediánový filter.
 \cite{DIP}
+\subsubsection{Aproximácia}
+nieco o aproximaacii
+\subsubsection{Greenové vzorce}
+nieco o greenových vzorcoch - nejaké integrály
 \subsection{Funkcionalita OpenCV}
 \paragraph{}
 OpenCV je open source knižnica počítačového videnia. Knižnica je napísaná v programovacích jazykoch C a C++. Aktívne sa pracuje na
@@ -297,14 +300,178 @@ Vstupné parametre pre \emph{inRange} je možné pozorovať pri tabuľke \ref{in
   	\caption{Tabulka znázorňuje vstupy funkcie inRange}
   	\label{inRangePar}
 \end{table}
+\subsubsection{bitwise\_not}
+\paragraph{}
+Je jednoduchá funkcia, ktorá invertuje všetky bity v poli ktoré jej pošlete. Taktiež má aj jednoduché vstupné parametre, ktoré vidieť aj v tauľke \ref{bitwisePar}.
+\cite{bitwise_not_doc}
+\cite{OpenCVDoc}
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    Premenná & Dátový typ & Popis \\ \hline
+    src & Array & Vstupné pole plné bitov. \\ \hline
+    dst & Array & Výstupné pole plné invetovaných bitov \\
+    \hline
+    \end{tabular}
+  	\caption{Tabulka znázorňuje vstupy funkcie bitwise\_not}
+  	\label{bitwisePar}
+\end{table}
 \subsubsection{threshold}
-\subsubsection{bitmapToMat}
+\paragraph{}
+Aplikuje pevnú prahovú úrovní pre každý prvok poľa. Zvyčajne sa používa na získanie binárnej úrovne obrazu v odtieňoch sivej, alebo pre odstránenie šumu.
+Funkcia \emph{treshold} funguje na princípe filtrovania pixelov ktoré majú príliž veľkú, alebo príliž malú hodnotu. Existuje niekoľko možností ako tento šum odstrániť.
+\begin{itemize}
+  \item THRESH\_BINARY
+	\begin{align*}
+	dst(x,y) = \begin{cases} maxval, & \text{ pokiaľ } src(x,y) > tresh \\ 0, & \text{ inak } \end{cases} \\
+	\end{align*}
+  \item THRESH\_BINARY\_INV
+  	\begin{align*}
+	dst(x,y) = \begin{cases} 0, & \text{ pokiaľ } src(x,y) > tresh \\ maxval, & \text{ inak } \end{cases} \\
+	\end{align*}
+  \item THRESH\_TRUNC
+  	\begin{align*}
+	dst(x,y) = \begin{cases} trashold, & \text{ pokiaľ } src(x,y) > tresh \\ src(x,y), & \text{ inak } \end{cases} \\
+	\end{align*}
+  \item THRESH\_TOZERO
+  	\begin{align*}
+	dst(x,y) = \begin{cases}  src(x,y), & \text{ pokiaľ } src(x,y) > tresh \\ 0, & \text{ inak } \end{cases} \\
+	\end{align*}
+  \item THRESH\_TOZERO\_INV
+  	\begin{align*}
+	dst(x,y) = \begin{cases} 0, & \text{ pokiaľ } src(x,y) > tresh \\  src(x,y), & \text{ inak } \end{cases} \\
+	\end{align*}
+\end{itemize}
+Parametre ktoré táto funkcia akceptuje a s ktorými pracuje sú viditeľné v tauľke \ref{thresholdPar}
+\cite{bitwise_not_doc}
+\cite{OpenCVDoc}
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    Premenná & Dátový typ & Popis \\ \hline
+    src & Mat & Vstupný 8-bitový obraz s jedným kanálom. \\ \hline
+    dst & Mat & Výstupný 8-bitový obraz s jedným kanálom. \\ \hline
+    thresh & double & Prahová hodnota \\ \hline
+    maxval & double & Maximálna hodnota ktorú môže použiť na niektoré typy výpočtu. \\ \hline
+    type & int & Typ výpočtu \\
+    \hline
+    \end{tabular}
+  	\caption{Tabulka znázorňuje vstupy funkcie threshold}
+  	\label{thresholdPar}
+\end{table}
 \subsubsection{findContours}
+\paragraph{}
+Funkcia \emph{findContours} je prepracovaná metóda hľadania obrysov. Jednoducho nájde obrysy, aleo kontúry v binárnom obraze pomocou algoritmu od Satoshi Suzukiho pre vyhľadávanie čiar v binárnom obraze.
+Vyhľadané obrysy sú veľmi užitočné pri rozpoznávaní tvarov a objektov. Pri rozpoznávaní dopravných značení je našou snahou taktiež rozpoznať napríklad kruhové tvary zákazových dopravných značení.
+\cite{findContours_doc}
+\cite{OpenCVDoc}
+\paragraph{}
+%%suzuky algoritmus
+obkec o suzuky algoritme - musim si nastudovat jeho pracu
+\cite{suzuky}
+\paragraph{}
+Parametre funkcie vidiet v tabuľke \ref{findContoursPar}
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    Premenná & Dátový typ & Popis \\ \hline
+    image & Mat & Vstup je 8-bitový obraz ktorý má len jeden kanál, kde všetky hodnoty tohoto kanála ktoré sú väčšie ako 0, sa správajú ako keby mali hodnotu 1. \\ \hline
+    contours & List:MatOfPoint & Výstup je zoznam kontúr. Každá kontúra je uložená ako vektor bodov. \\ \hline
+    hierarchy & Mat & Voliteľný výstupný vektor obsahujúci informácie o typológii obrazu. Pre každú kontúru obsahuje množstvo elementov. \\ \hline
+    mode & int & mód, aleo skôr typ kontúr ktoré budeme chcieť rozpoznávať. \\ \hline
+    method & int & Metóda aproximácie. \\
+    \hline
+    \end{tabular}
+  	\caption{Tabulka znázorňuje vstupy funkcie findContours}
+  	\label{findContoursPar}
+\end{table}
 \subsubsection{boundingRect}
+\paragraph{}
+Funkcia \emph{boundingRect} je ďalšia jednoduchá funkcia. Dokáže jednoducho vypočítať a ohraničiť nejaké zoskupenie bodov do odĺžnika.
+V našom prípade funkciu využijeme na to, aby sme vedeli získať výrez dopravného značenia. Vstup pre funkciu je len samotné zoskupenie bodov, ako vidieť aj na tabuľke \ref{boundingRectPar}.
+\cite{boundingrect_doc}
+\cite{OpenCVDoc}
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    Premenná & Dátový typ & Popis \\ \hline
+    points & MatOfPoint & Zoskupenie 2D bodov vo vektore. \\ 
+    \hline
+    \end{tabular}
+  	\caption{Tabulka znázorňuje vstupy funkcie boundingRect}
+  	\label{boundingRectPar}
+\end{table}
 \subsubsection{drawContours}
+\paragraph{}
+Funkcia \emph{drawContours} je vykreslovacia funkcia. Kreslenie kontúr pracuje s maticami. Dokáže vykresliť akýkoľvek tvar, ktorý je definovaný vektorom.
+\cite{drawcontours_doc}
+\cite{OpenCVDoc}
+\paragraph{}
+Funkcia je pomerne zložitá na parametre. Podrobnejšie je rozobratá v tabuľke \ref{drawcontoursPar}
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    Premenná & Dátový typ & Popis \\ \hline
+    image & Mat & Obraz do ktorého budú kontúry vkreslené. \\ \hline
+    contours & List:MatOfPoint & Zoznam všetkých kontúr ktoré chceme vykresliť. Každá kontúra je uložená ako vektor bodov. \\ \hline
+    contourIdx & int & Index, ktorý určuje ktorú kontúru chceme vykresliť. Negatívne číslo hovorí o tom, že chceme vykresliť všetky kontúry. \\ \hline
+    color & Scalar & Farba vykreslenej kontúry. \\ \hline
+    thickness & int & Šírka kontúry. \\ \hline
+    lineType & int & Typ vykreslenej čiary. \\ \hline
+    hierarchy & Mat & Voliteľný výstupný vektor obsahujúci informácie o typológii obrazu. Pre každú kontúru obsahuje množstvo elementov. \\ \hline
+    maxLevel & int & Maximalný level vykreslených kontúr. Tento parameter je funkčný, len v prípade že je použitá hierarchia. \\ \hline
+    offset & Point & Voliteľný parameter posunov. Posunie všetky kontúry podľa zadaných súradníc. \\
+    \hline
+    \end{tabular}
+  	\caption{Tabulka znázorňuje vstupy funkcie drawcontours}
+  	\label{drawcontoursPar}
+\end{table}
 \subsubsection{contourArea}
+\paragraph{}
+Jednoduchá funkcia, ktorá prepočítava veľkosť kontúry.
+Túto veľkosť sa dá jednoducho využiť pri eliminácii malých kontúr, ktoré pri rozpoznávaní dopravného značenia nevyužijeme.
+Pri výpočte sú použité greenové vzorce. Funkcia nám vracia počet pixelov, ktoré kontúra obsahuje. Sú to pixely ktoré nemajú nulovú hodnotu.
+Obsahuje len jeden parameter, ktorý je opísaný v tabuľke \ref{contourAreaPar}.
+%%Also, the function will most certainly give a wrong results for contours with self-intersections
+\cite{contourarea_doc}
+\cite{OpenCVDoc}
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    Premenná & Dátový typ & Popis \\ \hline
+    contour & Mat & Kontúra ktorú chceme prepočítať. \\ 
+    \hline
+    \end{tabular}
+  	\caption{Tabulka znázorňuje vstupy funkcie contourArea}
+  	\label{contourAreaPar}
+\end{table}
 \subsubsection{fitEllipse}
-
+\paragraph{}
+Funkcia \emph{fitEllipse} opäť patrí medzi ľahšie použiteľné funkcie. Jej hlavnou úlohou je vykresliť elipsu okolo skupiny 2D bodov.
+Pri vykreslení sa snaží o to, aby bola vykreslená najmenšia možná elipsa pri čom využíva algoritmus Fitzgibbon95.
+Parametre funkcie je vidieť v tabuľke \ref{fitEllipsePar}.
+\paragraph{}
+Obkec o Fitzgibbon95 algoritme.
+%%Fitzgibbon95
+\cite{fitellipse_doc}
+\cite{OpenCVDoc}
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | p{5cm} |}
+    \hline
+    Premenná & Dátový typ & Popis \\ \hline
+    points & MatOfPoint2f & Vektor 2D bodov okolo ktorých chceme elipsu vykresliť. \\ 
+    \hline
+    \end{tabular}
+  	\caption{Tabulka znázorňuje vstupy funkcie fitEllipse}
+  	\label{fitEllipsePar}
+\end{table}
 \section{Návrh riešenia}
 \paragraph{}
 Po dôkladnom naštudovaní literatúry a potrebných algoritmov je našim cieľom vyhotoviť riešenie, ktoré by dokázalo detekovať zvislé dopravné značenia.

@@ -146,12 +146,6 @@ public class DetectionCore {
 	    lHSV.set(2, mTemp);
 	    Core.bitwise_and(lHSV.get(0), lHSV.get(2), mTemp);
 	    
-	    //Use Canny
-	    //dilates the source image (just trying)
-	    //Imgproc.dilate(mTemp, mTemp, new Mat(), new Point(-1, -1), 1);
-	    //erodes the source image using (just trying)
-	    //Imgproc.erode(mTemp, mTemp, new Mat(), new Point(-1, -1), 1);
-	    //Use Canny
 	    Imgproc.Canny(mTemp, mTemp, 100, 50);
 	    
 	    //Find contour
@@ -176,37 +170,21 @@ public class DetectionCore {
 	    Imgproc.cvtColor(mRGB,mTemp,Imgproc.COLOR_RGB2HSV);
 	    Core.split(mTemp,lHSV); //split to channels
 	    
-	    //Filter the 3 channels HSV to get red mask
-	    //hue is starting primary from red at 0 degrees -> green at 120 d -> blue at 240 d -> red again at 360 d.
-	    //http://en.wikipedia.org/wiki/HSV_color_space
-	    
-	    //Filter H channel
+	    //filtruje sa H kan·l
 	    mTemp=new Mat();
 	    Core.inRange(lHSV.get(0), new Scalar(10), new Scalar(170), mTemp); //check channel for color
 	    Core.bitwise_not(mTemp, mTemp);
 	    lHSV.set(0, mTemp); //set the result as first chanel of image
 	    
-	    //Filter S channel
+	    //filtruje sa S kan·l
 	    mTemp = new Mat();
 	    Imgproc.threshold(lHSV.get(1), mTemp, i, 255, Imgproc.THRESH_BINARY);
 	    lHSV.set(1, mTemp);
 	    Core.bitwise_and(lHSV.get(0), lHSV.get(1), mTemp);
-	    
-	    //Filter V channel
-	    //lHSV.set(0, mTemp);
-	    //mTemp=new Mat();
-	    //Imgproc.threshold(lHSV.get(2), mTemp, 150, 255, Imgproc.THRESH_BINARY);
-	    //lHSV.set(2, mTemp);
-	    //Core.bitwise_and(lHSV.get(0), lHSV.get(2), mTemp);
-	    
-	    //dilates the source image (just trying)
-	    //Imgproc.dilate(mTemp, mTemp, new Mat(), new Point(-1, -1), 3);
-	    //erodes the source image using (just trying)
-	    //Imgproc.erode(mTemp, mTemp, new Mat(), new Point(-1, -1), 3);
-	    //Use Canny
+
 	    Imgproc.Canny(mTemp, mTemp, 100, 50);
 	    
-	    //Find contour
+	    //n·jdu sa kont˙ry n·jden˝ch Ëerven˝ch oblastÌ
 	    hierarchy = new Mat();
 	    Imgproc.findContours(mTemp, contours, hierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
 	    
@@ -217,57 +195,62 @@ public class DetectionCore {
 		int i = index;
 		Mat mRGBA = new Mat();
 	    Utils.bitmapToMat(image, mRGBA);
+	    //cyklus s podmienkou na konci
     	do{
     		int buff[] = new int[4];
 		    hierarchy.get(0, i, buff);
 		    
 		    //Get contour form list
 		    Mat contour = contours.get(i);
+		    
+		    //id kont˙ry
 		    int id = i;
-		    //Get the next id contour
+		    
+		    //dostaneme Ôaæöie id kont˙ry
 		    i = buff[0];
 		    
-		    //Check if this is a circle
-		    //http://en.wikipedia.org/wiki/Green's_theorem - good for rounds
+		    //zisùujeme Ëi m·me dostatoËne veæk˙ kont˙ru aby sme sa Úou vÙbec zaoberali
 		    if(Imgproc.contourArea(contour) > 500){
-		    	//Get all the point of this contour
+		    	
 		    	List<Point> points = new ArrayList<Point>();
-		    	int num = (int)contour.total(); 
-		    	int temp[] = new int[num * 2]; 
+		    	
+		    	//dostaneme celkov˝ poËet kont˙r
+		    	int num = (int)contour.total();
+		    	
+		    	//vytvorÌme si pole o dvojn·sobnej veækosti
+		    	int temp[] = new int[num * 2];
+		    	
+		    	//naËÌtame si kont˙ru do doËasnej premennej
 		    	contour.get(0, 0, temp);
 		    	
-		    	//converting List<Point> to MatOfPoint2f because of fitEllipse
+		    	//konvertujeme  List<Point> do MatOfPoint2f pre pouûitie fitEllipse
 		    	for(int j = 0; j < num * 2; j = j + 2){
 		    		points.add(new Point(temp[j], temp[j+1]));
 		    	}
 		    	MatOfPoint2f specialPointMtx = new MatOfPoint2f(points.toArray(new Point[0])); 
-		 
-		    	//Get the bound of eclipse
-		    	//example http://docs.opencv.org/doc/tutorials/imgproc/shapedescriptors/bounding_rotated_ellipses/bounding_rotated_ellipses.html
-		    	//minAreaRect -Finds a rotated rectangle of the minimum area enclosing the input 2D point set
+		    	
+		    	//do premennej bound uklad·me dokonal˙ elipsu
 		    	RotatedRect bound = Imgproc.fitEllipse(specialPointMtx);
-		    	//count the pi value
-		    	//http://en.wikipedia.org/wiki/Pi
-		    	//http://en.wikipedia.org/wiki/Ellipse
+		    	
+		    	//VypoËÌta sa hodnota pi
 		    	double pi = Imgproc.contourArea(contour) / ((bound.size.height / 2) * (bound.size.width / 2));
 		    	
-		    	//Check if pi ~ 3.14
+		    	//zisùujeme toleranciu pi - zaoplenie
                 if (Math.abs(pi - 3.14) > 0.03){
-                	//there is no parent contour
-                	int k = buff[2]; //
+                	int k = buff[2];
+                	//zisùujeme Ëi existuje nejak˝ rodiË kont˙ry
                 	if (k != -1){
                         FindCircle(contours, k);
                 	}
                     continue;
                 }
                 
-                //converting MatOfPoint2f to MatOfPoint  because of fitEllipse - difference is in 32-bit float and 32-bit int 
+                //konvertujeme MatOfPoint2f do MatOfPoint  pre funckiu fitEllipse - rozdieæ je len v 32-bit float a 32-bit int 
 		    	MatOfPoint  NewMtx = new MatOfPoint(specialPointMtx.toArray());
                 
-                //Get the bound of contour - get rectangle which is above the elipse
+                //dostaneme s˙radnice najmenöieho moûnÈho ötvorca
                 Rect box = Imgproc.boundingRect(NewMtx);
                 
-                //set data for NEURON NETWORK
                 //load image again
                 Mat mat_for_count = new Mat();
                 Utils.bitmapToMat(image, mat_for_count);
@@ -300,7 +283,7 @@ public class DetectionCore {
 	            }
 	            
             }
-		 //there are no next contour
+		 //zisùuje sa Ëi je tam eöte ÔalöÌ kandid·t
 	    }while(i != -1);
 	}
 	
