@@ -73,8 +73,28 @@ http://simplecv.tumblr.com/post/19307835766/opencv-vs-matlab-vs-simplecv
 Niečo o matlabe
 \subsubsection{SimpleCV}
 Niečo o simplecv
-\section{Rozpoznávanie ojektov}
+\section{Rozpoznávanie objektov}
+\paragraph{}
+Rozpoznávanie objektov v počítačovom videní sa zaoberá problematikou rozpoznania už bežne známych objektov v reálnom svete, pomocou technológií.
+Táto úloha je prekvapivo ťažká. Ľudia vedia rozpoznávať objekty reálneho sveta bez námahy a okamžite. Problém nastáva však pri algoritmickom opise tejto úlohy, ktorej by chápali stroje.
+\cite{machine_vission}
+\paragraph{}
+Okrem zložitého algoritmického problému, tu existuje aj skutočnosť, že pre kvalitné rozpoznanie akéhokoľvek objektu sme taktiež závislí na hardware.
+Keďže rozpoznávame z obrazu, tento obraz je potrebné zachytávať kamerou. Čím lepšie vie kamera pracovať so svetlom a má kvalitnejšie parametre, tým je väčšia šanca že rozpoznanie objektu bude kvalitnejšie.
+Pri rozpoznávaní objektov je veľmi dôležité aj umiestnenie kamery. Tam platí, čím kolmejšie k objektu je kamera smerovaná, tým je objekt viac viditeľný a tak aj ľahšie rozpoznateľný. 
+\cite{machine_vission}
+\paragraph{}
+Problematika rozpoznávania objektov sa ďaľej delí na konkrétnejšie problémy. V našom prípade sa jedná o problematiku rozpoznávania dopravných značení.
+\cite{machine_vission}
+%%http://www.cse.usf.edu/~r1k/MachineVisionBook/MachineVision.files/MachineVision_Chapter15.pdf
 \subsection{Rozpoznávanie dopravných značení}
+\paragraph{}
+Problematika rozpoznávania dopravných značení je pomerne nová a pri písaní práce som tak mohol čerpať len z veľmi malého počtu literatúry, zaoberajúcou sa touto témou.
+Bol som donútený študovať prolematiku podrobne a vytvoriť riešenie, hlavne na poznatkoch z rozpoznávania iných objektov.
+Popri tvorbe práce, vznikali rôzne ďaľšie práce a publikácie zaoberajúce sa konkrétne témou rozpoznávania dopravných značení.
+Nebolo však možné sledovať všetky nové objavy a zistenia v tejto oblasti, ktoré vznikali popri tvorbe tejto bakalárksej práci.
+Rozbor témy rozpoznávania dopravných značení je tak postavený hlavne na informáciách z jesene 2012.
+%%nieco odbornejsie este
 \subsection{Rozpoznávanie iných objektov}
 \subsubsection{Rozpoznávanie tvárí}
 \section{Výskum}
@@ -144,14 +164,16 @@ V našej práci budeme využívať aproximáciu nepriamo. Väčšinou pôjde o a
 \cite{aproximacia}
 \subsubsection{Greenová veta}
 \paragraph{}
-Greenová veta bude použitá v práci opäť nepriamo. Bude ju používať OpenCV knižnica napríklad na výpočet veľkosti nejakej kontúry. Greenová veta nám umožnuje previesť výpočet krivkového integrálu druhého druhu po jednoduchej uzavretej krivke na výpočet dvojného integrálu.
-	\begin{itemize}
-	  \item 
-	  	\textbf{Prvá formulácia} - \emph{Nech \begin{math}D \subset R^2 \end{math} je regulárna uzavrená oblasť, \begin{math}\partial \vv{D} \end{math} kladne orientovaná hranica oblasti}
-	  \item 
-	  	\textbf{Druhá formulácia} - Funkcia \emph{f(x)} a jej aproximácia majú pri tomto type aproximácie podobný obsah pod krivkou.
-	\end{itemize}
-\cite{mat_an_2}
+Greenová veta bude použitá v práci opäť nepriamo. Bude ju používať OpenCV knižnica napríklad na výpočet veľkosti ľubovolnej kontúry. Greenová veta nám umožnuje previesť výpočet krivkového integrálu druhého druhu po jednoduchej uzavretej krivke na výpočet dvojného integrálu.
+\cite{mat_an_2}	\\ \\
+	  	\textbf{Formulácia} - \emph{Nech \begin{math}D \subset R^2 \end{math} je regulárna uzavrená oblasť, \begin{math}\partial \vv{D} \end{math} kladne orientovaná hranica oblasti D. Nech \begin{math} F = (F_1,F_2) \end{math} je vektorové  pole triedy \begin{math} c^1 \end{math} v D. Potom platí:}
+	  	\begin{align*}
+		\int_{\partial \vv{D}} F d\vv{s} = \int\int_{D} \text{rot} F d \mu \text{,}
+		\end{align*}
+		\emph{kde \begin{math} \mu \end{math} značí Jordanovú mieru. V zložkovom tvare.} 
+		\begin{align*}
+		\int_{\partial \vv{D}} F_1 d x + F_2 d y = \int\int_{D} \left ( \frac{\partial f_2}{\partial x} - \frac{\partial f_1}{\partial y} \right ) dxdy \text{. \cite{mat_an_2}}
+		\end{align*}
 \subsection{Funkcionalita OpenCV}
 \paragraph{}
 OpenCV je open source knižnica počítačového videnia. Knižnica je napísaná v programovacích jazykoch C a C++. Aktívne sa pracuje na

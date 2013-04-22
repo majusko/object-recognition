@@ -4,37 +4,43 @@ Database file #1: bach.bib
 Warning--entry type for "aproximacia" isn't style-file defined
 --line 42 of file bach.bib
 Warning--entry type for "hsl_hsv_wiki_en" isn't style-file defined
---line 57 of file bach.bib
+--line 66 of file bach.bib
 Warning--entry type for "hsv_wiki_cz" isn't style-file defined
---line 65 of file bach.bib
+--line 74 of file bach.bib
 Warning--entry type for "canny_wiki_en" isn't style-file defined
---line 73 of file bach.bib
+--line 82 of file bach.bib
 Warning--entry type for "cvtColor" isn't style-file defined
---line 89 of file bach.bib
+--line 98 of file bach.bib
 Warning--entry type for "canny" isn't style-file defined
---line 97 of file bach.bib
+--line 106 of file bach.bib
 Warning--entry type for "inrange_doc" isn't style-file defined
---line 105 of file bach.bib
+--line 114 of file bach.bib
 Warning--entry type for "convolution" isn't style-file defined
---line 113 of file bach.bib
+--line 122 of file bach.bib
 Warning--entry type for "gaussianblur_doc" isn't style-file defined
---line 120 of file bach.bib
+--line 129 of file bach.bib
 Warning--entry type for "bitwise_not_doc" isn't style-file defined
---line 128 of file bach.bib
+--line 137 of file bach.bib
 Warning--entry type for "findContours_doc" isn't style-file defined
---line 136 of file bach.bib
+--line 145 of file bach.bib
 Warning--entry type for "gaussianblur" isn't style-file defined
---line 144 of file bach.bib
+--line 153 of file bach.bib
 Warning--entry type for "drawcontours_doc" isn't style-file defined
---line 152 of file bach.bib
+--line 161 of file bach.bib
 Warning--entry type for "boundingrect_doc" isn't style-file defined
---line 160 of file bach.bib
+--line 169 of file bach.bib
 Warning--entry type for "contourarea_doc" isn't style-file defined
---line 168 of file bach.bib
+--line 177 of file bach.bib
 Warning--entry type for "fitellipse_doc" isn't style-file defined
---line 176 of file bach.bib
+--line 185 of file bach.bib
 Warning--entry type for "DIP" isn't style-file defined
---line 184 of file bach.bib
+--line 193 of file bach.bib
+Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
+while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
@@ -56,5 +62,11 @@ while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Bradski, G., Kaehler, A." for entry learning_opencv
 while executing---line 1090 of file plain.bst
 Warning--empty journal in JCanny
+Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
+while executing---line 1090 of file plain.bst
 Warning--empty journal in suzuky
-(There were 10 error messages)
+(There were 16 error messages)

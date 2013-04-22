@@ -78,6 +78,11 @@ OpenCV dev team.
 OpenCV dev team.
 \newblock inrange, March 2013.
 
+\bibitem{machine_vission}
+Rangachar K. Brian~S. Ramesh, J.
+\newblock {\em Machine Vision}.
+\newblock MIT Press and McGraw-Hill, Inc., USA, 1995.
+
 \bibitem{gaussianblur}
 Daniel Rákos.
 \newblock Gaussian blur, September 2010.
