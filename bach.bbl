@@ -4,13 +4,23 @@
 Song~Ho Ahn.
 \newblock Convolution, 2005.
 
+\bibitem{num_metody}
+Slodička M. Weisz~J. Babušíková, J.
+\newblock {\em Numerické Metódy}.
+\newblock Univerzita Komenského v Bratislave, Bratislava, SK, 1998.
+
 \bibitem{DIP}
 Gábor Blázsovit.
 \newblock Digital image processing - interaktívna učebnica spracovania
   obrazu, February 2006.
 
+\bibitem{mat_an_2}
+Hrůza~B. Brabec~J.
+\newblock {\em Matematická analýza II}.
+\newblock SNTL, Praha, 1986.
+
 \bibitem{learning_opencv}
-A.~Bradski, G. a~Kaehler.
+Kaehler~A. Bradski, G.
 \newblock {\em Learning OpenCV: Computer Vision with the OpenCV Library}.
 \newblock O’Reilly Media, Inc., Gravenstein Highway North, Sebastopol, CA,
   2008.
@@ -21,16 +31,20 @@ J.~Canny.
 \newblock 1986.
 
 \bibitem{canny_wiki_en}
-Wikipedia contributors.
+Wikipedia Contributors.
 \newblock Canny edge detector, March 2013.
 
 \bibitem{hsl_hsv_wiki_en}
-Wikipedia contributors.
+Wikipedia Contributors.
 \newblock Hsl and hsv, February 2013.
 
 \bibitem{hsv_wiki_cz}
-Wikipedia contributors.
+Wikipedia Contributors.
 \newblock Hsv, March 2013.
+
+\bibitem{aproximacia}
+Claudia Csollárová.
+\newblock Aproximácia, July 2005.
 
 \bibitem{bitwise_not_doc}
 OpenCV dev team.
@@ -40,17 +54,9 @@ OpenCV dev team.
 OpenCV dev team.
 \newblock boundingrect, March 2013.
 
-\bibitem{canny}
-OpenCV dev team.
-\newblock canny, March 2013.
-
 \bibitem{contourarea_doc}
 OpenCV dev team.
 \newblock contourarea, March 2013.
-
-\bibitem{cvtColor}
-OpenCV dev team.
-\newblock cvtcolor, March 2013.
 
 \bibitem{drawcontours_doc}
 OpenCV dev team.
@@ -72,10 +78,6 @@ OpenCV dev team.
 OpenCV dev team.
 \newblock inrange, March 2013.
 
-\bibitem{OpenCVDoc}
-OpenCV dev team.
-\newblock {\em Opencv documentation}, March 2013.
-
 \bibitem{gaussianblur}
 Daniel Rákos.
 \newblock Gaussian blur, September 2010.
@@ -84,5 +86,17 @@ Daniel Rákos.
 S.~Suzuky.
 \newblock A computational approach to edge detection.
 \newblock 1983.
+
+\bibitem{canny}
+OpenCV~Dev Team.
+\newblock canny, March 2013.
+
+\bibitem{cvtColor}
+OpenCV~Dev Team.
+\newblock cvtcolor, March 2013.
+
+\bibitem{OpenCVDoc}
+OpenCV~Dev Team.
+\newblock {\em Opencv documentation}, March 2013.
 
 \end{thebibliography}

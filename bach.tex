@@ -14,6 +14,7 @@
 \usepackage{pdfpages}
 \usepackage{wrapfig}
 \usepackage{setspace}
+\usepackage{esvect}
 \usepackage[top=2.54cm, bottom=2.54cm, left=3.5cm, right=2.0cm]{geometry}
 
 \setstretch{1.5}
@@ -42,7 +43,7 @@
 \clearpage
 %% astrakt
 \begin{abstract}
-V praci sme sa zaoberali
+V praci sme sa zaoberali\ldots
 \end{abstract}
 \clearpage
 
@@ -73,6 +74,9 @@ Niečo o matlabe
 \subsubsection{SimpleCV}
 Niečo o simplecv
 \section{Rozpoznávanie ojektov}
+\subsection{Rozpoznávanie dopravných značení}
+\subsection{Rozpoznávanie iných objektov}
+\subsubsection{Rozpoznávanie tvárí}
 \section{Výskum}
 \paragraph{}
 Cieľom práce je vypracovať komplexný návrh riešenia pre vyhľadávanie a rozpoznávanie dopravného značenia a taktiež vytvoriť funkčnú aplikáciu, ktorá
@@ -101,9 +105,53 @@ Podľa matematických vlastností môžeme metódy predspracovania rozdeliť na 
 \textbf{Nelineárne metódy} – berú do úvahy len body s určitými vlastnosťami. Napr.: mediánový filter.
 \cite{DIP}
 \subsubsection{Aproximácia}
-nieco o aproximaacii
-\subsubsection{Greenové vzorce}
-nieco o greenových vzorcoch - nejaké integrály
+\paragraph{}
+Aproximácia je matematická metóda pri ktorej sa snažíme vyjadriť zložitú funkciu jednoducho. Túto metódu sa snažíme uskutočniť aritmetickými operáciami, ktoré dokze uskutočniť počítač.
+Jednou z najlepšou metódou vyjadrenia funkcie jednoduchšie je cez polynómy, čo sú vlastne najjednoduchšie funkcie, ktoré možno na počítači vypočítať priamo. Taktiež sa dajú ľahko integrovať a derivovať a vo všeobecnosti sa s nimi jednoducho zaobchádza.
+Každá aproximácia je presná na určitom intervale, mimo intervalu sú funkcie odlišné.
+\cite{aproximacia}
+\paragraph{}
+Predstavme si, že našou úlohou je opísať rozloženie pôdneho znečistenia istou chemikáliou. K dispozícii máme samozrejme meracie prístroje. Jednotlivými vrtmi odoberáme vzorky pôdy, ktoré potom podrobíme analýze.
+Prolém spočíva v tom, že nie je možné, aby sme takto zmapovali celú oblesť dokonale, keďze sme časovo aj finančne obmedzení. Takže našou úlohou bude dostať dostatočne presný opis znečistenia celého územia z konečného počtu meráni.
+Musíme tak nejakým spôsobom preniesť namerané hodnoty na celú oblasť. O toto sa nám stará aproximácia. Existuje mnoho spôsobov ako tento prenos uskutočniť. Voľba metódy závisí od konkrétnej situácie.
+\cite{num_metody}
+\paragraph{}
+Existuje niekoľko delení aproximácie, predstavíme si niekoľko základných typov a delení. Výber danej metódy závisí od konkrétneho problému.
+\begin{enumerate}
+  \item Rozdelenie aproximácií podľa aproximačnej funkcie
+	\begin{itemize}
+	  \item \textbf{Lineárny typ}
+		\begin{align*}
+		f(x) \approx a_0 g_0(x) + a_1 g_1(x) + \ldots + a_m g_m(x)
+		\end{align*}
+	  \item \textbf{Racionálny typ}
+	  	\begin{align*}
+		f(x) \approx \frac{a_0 g_0(x) + a_1 g_1(x) + \ldots + a_m g_m(x)}{b_0 g_0(x) + b_1 g_1(x) + \ldots + b_m g_m(x)}
+		\end{align*}
+	\end{itemize}
+  \item Rozdelenie aproximácií podľa zvolených konštánt
+  	\begin{itemize}
+	  \item 
+	  	\textbf{Interpolačná aproximácia} - Pri interpolácii si vyberieme nejaké body na vzore, čo je vlastne zložitá funkcia, z ktorej chceme dostať jednoduchšiu, napríklad obraz.
+	  	Obraz musí tými bodmi na vzore prechádzať. Funkcie musia mať rovnakú deriváciu v danom bode.
+	  \item 
+	  	\textbf{Aproximácia metódou najmenších štvorcov} - Funkcia \emph{f(x)} a jej aproximácia majú pri tomto type aproximácie podobný obsah pod krivkou.
+	  \item 
+	  	\textbf{Čerbyševova aproximácia} - Tento typ aproximácie sa snaží o najmenší rozdiel medzi funkciou \emph{f(x)} a jej aproximáciou v určitom intervale.
+	\end{itemize}
+\end{enumerate}
+V našej práci budeme využívať aproximáciu nepriamo. Väčšinou pôjde o aproximáciu pomocou bodov a teda interpoláciu.
+\cite{aproximacia}
+\subsubsection{Greenová veta}
+\paragraph{}
+Greenová veta bude použitá v práci opäť nepriamo. Bude ju používať OpenCV knižnica napríklad na výpočet veľkosti nejakej kontúry. Greenová veta nám umožnuje previesť výpočet krivkového integrálu druhého druhu po jednoduchej uzavretej krivke na výpočet dvojného integrálu.
+	\begin{itemize}
+	  \item 
+	  	\textbf{Prvá formulácia} - \emph{Nech \begin{math}D \subset R^2 \end{math} je regulárna uzavrená oblasť, \begin{math}\partial \vv{D} \end{math} kladne orientovaná hranica oblasti}
+	  \item 
+	  	\textbf{Druhá formulácia} - Funkcia \emph{f(x)} a jej aproximácia majú pri tomto type aproximácie podobný obsah pod krivkou.
+	\end{itemize}
+\cite{mat_an_2}
 \subsection{Funkcionalita OpenCV}
 \paragraph{}
 OpenCV je open source knižnica počítačového videnia. Knižnica je napísaná v programovacích jazykoch C a C++. Aktívne sa pracuje na
@@ -435,7 +483,7 @@ Funkcia je pomerne zložitá na parametre. Podrobnejšie je rozobratá v tabuľk
 \paragraph{}
 Jednoduchá funkcia, ktorá prepočítava veľkosť kontúry.
 Túto veľkosť sa dá jednoducho využiť pri eliminácii malých kontúr, ktoré pri rozpoznávaní dopravného značenia nevyužijeme.
-Pri výpočte sú použité greenové vzorce. Funkcia nám vracia počet pixelov, ktoré kontúra obsahuje. Sú to pixely ktoré nemajú nulovú hodnotu.
+Pri výpočte je použitá Greenová veta. Funkcia nám vracia počet pixelov, ktoré kontúra obsahuje. Sú to pixely ktoré nemajú nulovú hodnotu.
 Obsahuje len jeden parameter, ktorý je opísaný v tabuľke \ref{contourAreaPar}.
 %%Also, the function will most certainly give a wrong results for contours with self-intersections
 \cite{contourarea_doc}
