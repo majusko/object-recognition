@@ -4,6 +4,10 @@
 Song~Ho Ahn.
 \newblock Convolution, 2005.
 
+\bibitem{bmw}
+BMW Automobiles.
+\newblock Traffic sign recognition, 2010.
+
 \bibitem{num_metody}
 Slodička M. Weisz~J. Babušíková, J.
 \newblock {\em Numerické Metódy}.
@@ -78,6 +82,20 @@ OpenCV dev team.
 OpenCV dev team.
 \newblock inrange, March 2013.
 
+\bibitem{android_dev}
+Android Developers.
+\newblock Android dev team, 2013.
+
+\bibitem{tfs_pdf}
+Suthakorn~J. Lorsakul, A.
+\newblock Traffic sign recognition using neural network on opencv: Toward
+  intelligent vehicle/driver assistance system.
+\newblock 2012.
+
+\bibitem{mercedes}
+Mercedes-Benz.
+\newblock Road sign information, 2010.
+
 \bibitem{machine_vission}
 Rangachar K. Brian~S. Ramesh, J.
 \newblock {\em Machine Vision}.
@@ -86,6 +104,11 @@ Rangachar K. Brian~S. Ramesh, J.
 \bibitem{gaussianblur}
 Daniel Rákos.
 \newblock Gaussian blur, September 2010.
+
+\bibitem{object_rec_scene}
+Torralba A. Liu C. Fergus R. Freeman~W. Russell, B.
+\newblock Object recognition by scene alignment.
+\newblock July 2001.
 
 \bibitem{suzuky}
 S.~Suzuky.
@@ -103,5 +126,14 @@ OpenCV~Dev Team.
 \bibitem{OpenCVDoc}
 OpenCV~Dev Team.
 \newblock {\em Opencv documentation}, March 2013.
+
+\bibitem{object_detection_viola}
+Jones~M. Viola, P.
+\newblock Robust real-time object detection.
+\newblock July 2001.
+
+\bibitem{volvo}
+Volvo.
+\newblock Road sign information, 2010.
 
 \end{thebibliography}

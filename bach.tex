@@ -48,31 +48,20 @@ V praci sme sa zaoberali\ldots
 \clearpage
 
 %% zaciatok prace
-\section{Počítačové videnie}
-Nejaký obkec o počítačovom videní
-\subsection{História počítačového videnia}
-Niečo krátke o histórii počítačového videnia
-\subsection{Hlavné témy počítačového videnia}
-Obkec o rozdelení počítačového videnia a rôznych odvetviach venovania
-\subsubsection{Transformácia}
-Niečo o trnaformácii.
-\subsubsection{Filtrovanie a kompresia}
-Niečo o kompresii.
-\subsubsection{Vylepšovanie obrazu}
-Niečo o vylepšovaní obrazu.
-\subsubsection{Rozpoznávanie objektov}
-Niečo o rozpoznávaní objektov
-\subsubsection{Pozíciovanie}
-Niečo o rozpoznávaní poziciovani
-\subsection{Technológie}
-Niečo o o technológiách rozpoznávania vo všeobecnosti
-\subsubsection{OpenCV}
-Niečo o opencv - textik k tomu:
-http://simplecv.tumblr.com/post/19307835766/opencv-vs-matlab-vs-simplecv
-\subsubsection{Matlab}
-Niečo o matlabe
-\subsubsection{SimpleCV}
-Niečo o simplecv
+%%\section{Počítačové videnie}
+%%\subsection{História počítačového videnia}
+%%\subsection{Hlavné témy počítačového videnia}
+%%\subsubsection{Transformácia}
+%%\subsubsection{Filtrovanie a kompresia}
+%%\subsubsection{Vylepšovanie obrazu}
+%%\subsubsection{Rozpoznávanie objektov}
+%%\subsubsection{Pozíciovanie}
+%%\subsection{Technológie}
+%%\subsubsection{OpenCV}
+%% http://simplecv.tumblr.com/post/19307835766/opencv-vs-matlab-vs-simplecv
+%%\subsubsection{Matlab}
+%%\subsubsection{SimpleCV}
+
 \section{Rozpoznávanie objektov}
 \paragraph{}
 Rozpoznávanie objektov v počítačovom videní sa zaoberá problematikou rozpoznania už bežne známych objektov v reálnom svete, pomocou technológií.
@@ -94,9 +83,36 @@ Bol som donútený študovať prolematiku podrobne a vytvoriť riešenie, hlavne
 Popri tvorbe práce, vznikali rôzne ďaľšie práce a publikácie zaoberajúce sa konkrétne témou rozpoznávania dopravných značení.
 Nebolo však možné sledovať všetky nové objavy a zistenia v tejto oblasti, ktoré vznikali popri tvorbe tejto bakalárksej práci.
 Rozbor témy rozpoznávania dopravných značení je tak postavený hlavne na informáciách z jesene 2012.
+\paragraph{}
+Výskum témy rozpoznávania dopravných značení má v praxi silné uplatnenie. V oblasti dopravy, by to znamenalo pomoc vodičom vnímať a rozpoznávať, dopravné značenia, ktoré si vodič nevšimol, nepochopil poprípade im nerozumie.
+Napriek tomu, že máme k dispozícii už dlhý výskum v oblasti počítačového videnia a množstvo kvalitného hardwaru, je úloha rozpoznávania dopravných značení pomerne zložitá.
+Skutočnosť, že systém musí reagovať pomerne rýchlo na dynamické zmeny ktoré pri jazde autom nastávajú a taktiež s rôznorodým pozadím a viditeľnosťou, ktoré nám prostredie vytvára,
+nám vytvára komplexnú problematiku v počítačovom videní, ktorej sa oplatí venovať pozornosť.\cite{tfs_pdf}
+\paragraph{}
+Konkrétne, problematika rozpoznávania dopravných značiek obsahuje dve fázy, z ktorých sa celý proces skladá:
+\begin{enumerate}
+  \item \textbf{Detekcia dopravného značenia} - detekuje umiestnenie dopravného značenia v obraze.
+  \item \textbf{Rozpoznanie detekovaného dopravného značenia} - rozpoznáva významovú hodnotu dopravného značenia.
+\end{enumerate} 
+Existuje viac techník pre detekciu dopravných značení, ale ako najúčinnejšia metóda sa ukázalá farebná segmentácia a následné rozpoznanie podľa tvaru.
+Pri získavaní významovej hodnoty značky je najefektívnejšie využiť neurónové siete.
+\cite{tfs_pdf}
+\paragraph{}
+Prvý rozpoznávač dopravných značení bol do praxe nasadený v roku 2008, spoločnosťou BMW.\cite{bmw} Nasledujúci rok nasadila svoj prvý systém pre rozpoznávanie dopravných značení aj spoločnosť Mercedes.\cite{mercedes}
+Tieto prvé rozpoznávače dopravných značení vedeli rozpoznávať len značky ktoré hovorili o rýchlostnom obmedzení. Hneď na to boli tieto automobilky nasledované ďalšími konkurentami, ktorí systém rozpoznávania vylepšovali o rôzne funkcionality.
+Od roku 2012 vyvýja firma Volvo komplexný systém rozpoznávania dopravných značení pomocou počítačového videnia, ktorý nazvala Road Sign Information. Tento systém je implementovaný vo všetkých nových modeloch spomínanej automobilky.\cite{volvo}
 %%nieco odbornejsie este
 \subsection{Rozpoznávanie iných objektov}
+Rozpoznávanie jednotlivých objektov v obraze spočíva v tom, objaviť potrebné obrazové regióny hľadaného modelu, pričom sa snažiť ignorovať pozadie.
+Tieto regióny sú však pre každý objekt iné. Niekedy je potrebné sledovať farbu, inokedy tvary alebo pohyb. Pri niektorých špecifických objektoch je potrebné hľadať rôzne body a počítať uhly, ktoré zvierajú.
+Medzi tieto špecifickejšie objekty patrí napríklad problematika rozpoznávania tvárí.
+\cite{object_rec_scene}
 \subsubsection{Rozpoznávanie tvárí}
+Proces rozpoznávania tvárí je postavený na takom princípe, že sa snažíme hľadať už známe kontrasty medzi regiónmy na tváry a ich priestorových vzťahov ktoré vyjadrujú.
+Tieto vzťahy nie sú také jednoznačné a tak sa museli vypracovať algoritmy, a spôsoby ktoré problematiku riešia. 
+Najpoužívanejšia metóda je používať neurónovú sieť, ktorej posielame vzorky správnych a nesprávnych vzťahov a naučíme stroj rozpoznávať tváre sám.
+V súčasnosti už nie je problém nájsť takúto technológiu použítú kdekoľvek vo svete.
+\cite{object_detection_viola}
 \section{Výskum}
 \paragraph{}
 Cieľom práce je vypracovať komplexný návrh riešenia pre vyhľadávanie a rozpoznávanie dopravného značenia a taktiež vytvoriť funkčnú aplikáciu, ktorá
@@ -560,6 +576,14 @@ Na rozdiel od detekcie dopravného značenia, pre riešenie neurónových sietí
 Ako prvý algoritmus som si vybral detekciu červenej farby. Pre detekciu farieb sa v literatúre odporúča najprv previesť vstup na farebný model HSV. 
 Vstup prichádza vo farebnom formáte RGB. Farebný model HSV je jeden z dvoch najpoužívanejších valcovo súradnicových reprezentácii bodov pre RGB model.
 \cite{hsl_hsv_wiki_en}
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.3\textwidth,natwidth=160,natheight=586]{hladanie_farby.jpg}
+\vspace{-20pt}
+\caption{Algoritmus vyhľadávania farby v obraze}
+\vspace{-10pt}
+\label{hladanie_farby}
+\end{figure}
 \paragraph{}
 Na začiatok by sa mal vstup(bitmapa) konvertovať na binárnu maticu.
 \paragraph{}
@@ -610,7 +634,7 @@ no pri ich rozpoznávaní si je potrené uvedomiť, že na objekt sa pozeráme z
 \centering
 \includegraphics[width=0.38\textwidth,natwidth=318,natheight=1164]{hladanie_kruhov.jpg}
 \vspace{-20pt}
-\caption{Algoritmus vyhľadávania kruhov}
+\caption{Algoritmus vyhľadávania kruhov v obraze}
 \vspace{-10pt}
 \label{hladanie_kruhov}
 \end{figure}
@@ -622,8 +646,6 @@ je potrené spracovávať čo najrelevantnejšie výsledky. Tento úkon vykoná 
 \paragraph{}
 Vzhľadom na to, že výsledky, ktoré dostávame ešte nemôžeme nazvať elipsami, musíme si naše kontúry na elipsy upraviť.
 Tento úkon vykonáva metóda \emph{fitEllipse}, ktorá upraví kostrbaté kontúry, ktoré sa aspoň trochu podobajú elipse, na matematicky presnú elipsu.
-\linebreak
-\linebreak
 \paragraph{}
 Keď už máme detekované elipsy, nastáva posledný krok, a tým krokom je, určiť si toleranciu elipsy dopravného značenia, ktorú vyhľadávam.
 Táto tolerancia, je vlastne tolerancia nepresnosti, pri výpočte Ludolfovho čísla. 
@@ -656,18 +678,49 @@ Dva nežiaduce stavy tvaru dopravného značenia:
           \text{ 2.) }
           \frac{\frac{1}{2} y}{\frac{1}{2} x} > 2  \\
 \end{align*}
-\subsubsection{Návrh algoritmu pre detekciu trojuholnikov}
-\subsubsection{Návrh algoritmu pre detekciu štvorcov}
+%%\subsubsection{Návrh algoritmu pre detekciu trojuholnikov}
+%%\subsubsection{Návrh algoritmu pre detekciu štvorcov}
 \subsection{Návrh objektov - UML}
+\paragraph{}
+Algoritmy, ktoré boli navrhnuté, je potrebne správne zakomponovať do objektovo orientovaného modelu našej android aplikácie.
+Je potrebné si správne navrhnúť ako budú jednotlivé algoritmy a funkcionality rozdelené do tried a taktiež aj to, ako budú triedy medzi sebou spolupracovať.
+Celá štruktúra je najlepšie viditeľná na obrázku \ref{uml_objects_diagram}.
+\begin{itemize}
+  \item \textbf{SurfaceView} - Táto trieda je v jadre Android OS, ale je si potrebné vysvetliť jej probližnú funkcionalitu, keďže z nej priamo dedíme a upravujeme ju v ďalších triedach našej aplikácie.
+  Poskytuje špecializovanú kresliacu plochu. Podoba tejto plochy sa dá meniť, dá sa jednoducho meniť napríklad veľkosť alebo samotné umiestnenie. \cite{android_dev}
+  \item \textbf{Activity} - Táto trieda je taktiež priamo v jadre Android OS, ale keďže z nej taktiež dedíme, vasvetlíme si jej hlavný princíp.
+  Táto trieda má na starosti komunikáciu s užívateľom. Všetko čo užívateľ s aplikáciou spraví, napríklad čo sa stane s aplikáciou pokiaľ užívateľ pozastaví priebeh vykonávania, alebo čo sa bude diať po výbere jednotlivých položiek v menu. \cite{android_dev}
+  \item \textbf{BaseClass} - Táto trieda dedí z triedy \emph{SurfaceView} a nastavuje našu plochu. Keďže na našej aplikácii máme v pláne mať na ploche hlavne pohľad z kamery, v tejto triede sa staráme o všetky správne nastavenia kamery a zoprazenia pre hlavnú plochu aplikácie.
+  \item \textbf{ActivityView} - Trieda dedí z triedy \emph{Activity}. V tejto aplikácii sa nastavujú všetky akcie ktoré v našej android aplikácii môžu nastať a taktiež aj naše hlavné menu z ktorého si užívateľ vyberá akcie.
+  \item \textbf{Detection} - Je to hlavná trieda zodpovedná za rozpoznanie jednotlivých objektov, nastavujeme v nej taktiež rôzne parametre, ktoré sa použijú neskôr v triedach, ktoré z našej triedy \emph{Detection} dedia.
+  \item \textbf{Color} - Trieda \emph{Color} bude dediť z \emph{Detection}. Jej hlavná úloha je rozpoznávať jednotlivé farby.
+  \item \textbf{Shape} - Trieda \emph{Shape} bude dediť z \emph{Detection}. Jej hlavná úloha je rozpoznávať tvary z obrazu.
+  \item \textbf{Traffic} - Trieda \emph{Traffic} bude taktiež dediť z triedy \emph{Detection}. Jej hlavná úloha je rozpoznávať dopravné značenia. Využíva na to spoluprácu tried \emph{Shape} a \emph{Color}.
+\end{itemize}
+\begin{figure}[p]
+\centering
+\includegraphics[width=1\textwidth,natwidth=800,natheight=1000]{uml_objects.jpg}
+\vspace{-10pt}
+\caption{Návrh objektov Android aplikácie}
+\vspace{-10pt}
+\label{uml_objects_diagram}
+\end{figure}
 \subsection{Návrh užívteľského prostredia}
-
+\paragraph{}
+Prostredie aplikácie bude veľmi jednoduché. Celé rozhranie, bude pozostávať z dvoch častí. Jedna časť bude naša plocha, tam sa budú graficky znázorňovať nájdené objekty, v našom prípade dorpavné značenia, ale taktiež aj rôzne filtre, ktoré budeme chcieť prezentovať ako ukážku.
+Druhá časť bude menu, v ktorom si užívateľ bude vyberať z možností ktoré tam budú a následne sa budú vykonávať rôzne. V menu bude napríklad prepínanie rôznych filtrov alebo spôsobov vyhľadávania dopravných značení.
 \section{Implementácia}
-\subsection{Inštalácia Opencv pre Android}
-\subsection{Android aplikácia a GUI}
-\subsection{Objekty}
-\subsubsection{Trieda 1}
-\subsubsection{Trieda 2}
-\subsubsection{Trieda 3}
+\paragraph{}
+V tejto sekcii sa budem snažiť popísať implementáciu a správne nastavenie technológií, ktoré sa v aplikácii využijú.
+\subsection{Android}
+\subsection{Implementácia Opencv}
+\subsection{Postup}
+\subsubsection{BaseClass}
+\subsubsection{ActivityView}
+\subsubsection{Detection}
+\subsubsection{Color}
+\subsubsection{Shape}
+\subsubsection{Traffic}
 
 \section{Výsledky aplikácie}
 \subsection{Detekcia kruhových značiek}
