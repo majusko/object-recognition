@@ -59,12 +59,16 @@ public class Color extends Detection {
 		Mat mTemp=new Mat();
 		List<Mat> lHSV=new ArrayList<Mat>();
 		
-		//Get data from Bitmap
+		//konverzia vstupneho obrazu
 		Utils.bitmapToMat(image, mRGBA);
+		//rozmazanie obrazu
 		Imgproc.GaussianBlur(mRGBA,mRGBA,new Size(5, 5),1.5,1.5);
-	    Imgproc.cvtColor(mRGBA,mRGB,Imgproc.COLOR_RGBA2RGB);
-	    Imgproc.cvtColor(mRGB,mTemp,Imgproc.COLOR_RGB2HSV);
-	    Core.split(mTemp,lHSV);
+		//prevedenie RGBA na RGB
+		Imgproc.cvtColor(mRGBA,mRGB,Imgproc.COLOR_RGBA2RGB);
+		//prevedenie RGB na HSV
+		Imgproc.cvtColor(mRGB,mTemp,Imgproc.COLOR_RGB2HSV);
+		//rozdelenie
+		Core.split(mTemp,lHSV);
 	    
 	    //Filter the 3 channels HSV to get blue mask
 	    

@@ -43,7 +43,7 @@ public class Shape extends Detection {
 		    	//dostaneme celkový poèet kontúr
 		    	int num = (int)contour.total();
 		    	
-		    	//vytvoríme si pole o dvojnásobnej ve¾kosti
+		    	//vytvoríme si pole o dvojnásobnej ve¾kosti samotnej kontury
 		    	int temp[] = new int[num * 2];
 		    	
 		    	//naèítame si kontúru do doèasnej premennej

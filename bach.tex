@@ -15,9 +15,42 @@
 \usepackage{wrapfig}
 \usepackage{setspace}
 \usepackage{esvect}
+\usepackage{listings}
+\usepackage{color}
 \usepackage[top=2.54cm, bottom=2.54cm, left=3.5cm, right=2.0cm]{geometry}
 
 \setstretch{1.5}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
 
 \begin{document}
 
@@ -43,8 +76,23 @@
 \clearpage
 %% astrakt
 \begin{abstract}
-V praci sme sa zaoberali\ldots
+Cieľom bakalárskej práce je podrobne informovať čitateľa s problematikou rozpoznávania dopravného značenia.
+Predstaviť vývoj a aktuálny stav v tejto oblasti a dôkladne oboznámiť s momentálne najlepšou technológiou rozpoznávania objektov pomocou počítačového videnia.
+V práci je predstavený návrh a taktiež implementácia technológie podľa existujúceho algoritmu rozpoznávania dopravného značenia, upravený pre naše potreby.
+Súčasťou je plne funkčná Android aplikácia, ktorá dokáže vyhľadať príkazové a zákazové dopravné značenia. Funkčnosť a úspešnosť hľadania aplikácie bola otestovaná a zdokumentovaná.
+\\\\
+\textbf{Kľúčové slová:} dopravné značky, počítačové videnie, rozpoznávanie objektov, detekcia, Android, OpenCV
 \end{abstract}
+\clearpage
+
+\centerline{\textbf{Abstract}}
+\paragraph{}
+Cieľom bakalárskej práce je podrobne informovať čitateľa s problematikou rozpoznávania dopravného značenia.
+Predstaviť vývoj a aktuálny stav v tejto oblasti a dôkladne oboznámiť s momentálne najlepšou technológiou rozpoznávania objektov pomocou počítačového videnia.
+V práci je predstavený návrh a taktiež implementácia technológie podľa existujúceho algoritmu rozpoznávania dopravného značenia, upravený pre naše potreby.
+Súčasťou je plne funkčná Android aplikácia, ktorá dokáže vyhľadať príkazové a zákazové dopravné značenia. Funkčnosť a úspešnosť hľadania aplikácie bola otestovaná a zdokumentovaná.
+\\\\
+\textbf{Kľúčové slová:} traffic signes, computer vision, object recognition, detection, Android, OpenCV
 \clearpage
 
 %% zaciatok prace
@@ -61,7 +109,8 @@ V praci sme sa zaoberali\ldots
 %% http://simplecv.tumblr.com/post/19307835766/opencv-vs-matlab-vs-simplecv
 %%\subsubsection{Matlab}
 %%\subsubsection{SimpleCV}
-
+\section{Úvod}
+\clearpage
 \section{Rozpoznávanie objektov}
 \paragraph{}
 Rozpoznávanie objektov v počítačovom videní sa zaoberá problematikou rozpoznania už bežne známych objektov v reálnom svete, pomocou technológií.
@@ -561,7 +610,7 @@ Obkec o Fitzgibbon95 algoritme.
 \section{Návrh riešenia}
 \paragraph{}
 Po dôkladnom naštudovaní literatúry a potrebných algoritmov je našim cieľom vyhotoviť riešenie, ktoré by dokázalo detekovať zvislé dopravné značenia.
-Návrh bude pozostávať z návrhu algoritmov, návrhu objektov a návrhu užívateľského prostredia.
+Návrh bude pozostávať z návrhu algoritmov, návrhu objektov a návrhu užívateľského prostredia. Všetky algoritmy boli navrhnuté na základe práce \cite{tfs_pdf} z ktorej sme sa inšpirovali.
 \subsection{Návrh algoritmov}
 \paragraph{}
 Ako metódu rozpoznávania som si zvolil detekciu dopravného značenia podľa tvaru a farby. 
@@ -690,7 +739,7 @@ Celá štruktúra je najlepšie viditeľná na obrázku \ref{uml_objects_diagram
   Poskytuje špecializovanú kresliacu plochu. Podoba tejto plochy sa dá meniť, dá sa jednoducho meniť napríklad veľkosť alebo samotné umiestnenie. \cite{android_dev}
   \item \textbf{Activity} - Táto trieda je taktiež priamo v jadre Android OS, ale keďže z nej taktiež dedíme, vasvetlíme si jej hlavný princíp.
   Táto trieda má na starosti komunikáciu s užívateľom. Všetko čo užívateľ s aplikáciou spraví, napríklad čo sa stane s aplikáciou pokiaľ užívateľ pozastaví priebeh vykonávania, alebo čo sa bude diať po výbere jednotlivých položiek v menu. \cite{android_dev}
-  \item \textbf{BaseClass} - Táto trieda dedí z triedy \emph{SurfaceView} a nastavuje našu plochu. Keďže na našej aplikácii máme v pláne mať na ploche hlavne pohľad z kamery, v tejto triede sa staráme o všetky správne nastavenia kamery a zoprazenia pre hlavnú plochu aplikácie.
+  \item \textbf{BaseClass} - Táto trieda dedí z triedy \emph{SurfaceView} a nastavuje našu plochu. Keďže na našej aplikácii máme v pláne mať na ploche hlavne pohľad z kamery, v tejto triede sa staráme o všetky správne nastavenia kamery a zobrazenia pre hlavnú plochu aplikácie.
   \item \textbf{ActivityView} - Trieda dedí z triedy \emph{Activity}. V tejto aplikácii sa nastavujú všetky akcie ktoré v našej android aplikácii môžu nastať a taktiež aj naše hlavné menu z ktorého si užívateľ vyberá akcie.
   \item \textbf{Detection} - Je to hlavná trieda zodpovedná za rozpoznanie jednotlivých objektov, nastavujeme v nej taktiež rôzne parametre, ktoré sa použijú neskôr v triedach, ktoré z našej triedy \emph{Detection} dedia.
   \item \textbf{Color} - Trieda \emph{Color} bude dediť z \emph{Detection}. Jej hlavná úloha je rozpoznávať jednotlivé farby.
@@ -709,25 +758,199 @@ Celá štruktúra je najlepšie viditeľná na obrázku \ref{uml_objects_diagram
 \paragraph{}
 Prostredie aplikácie bude veľmi jednoduché. Celé rozhranie, bude pozostávať z dvoch častí. Jedna časť bude naša plocha, tam sa budú graficky znázorňovať nájdené objekty, v našom prípade dorpavné značenia, ale taktiež aj rôzne filtre, ktoré budeme chcieť prezentovať ako ukážku.
 Druhá časť bude menu, v ktorom si užívateľ bude vyberať z možností ktoré tam budú a následne sa budú vykonávať rôzne. V menu bude napríklad prepínanie rôznych filtrov alebo spôsobov vyhľadávania dopravných značení.
+%%TODO fotografie alebo navrh
 \section{Implementácia}
 \paragraph{}
 V tejto sekcii sa budem snažiť popísať implementáciu a správne nastavenie technológií, ktoré sa v aplikácii využijú.
-\subsection{Android}
-\subsection{Implementácia Opencv}
-\subsection{Postup}
+\subsection{Android implementácia}
+\paragraph{}
+Pri aplikácii pre android je potrebné upraviť v triedach aj samotnú spoluprácu s mobilom a jadrom Androidu. Rozdelil som túto spoluprácu do dvoch logických celkov. Rozdelil som to na triedu \emph{BaseClass} a triedu \emph{ActivityView}.
 \subsubsection{BaseClass}
-\subsubsection{ActivityView}
-\subsubsection{Detection}
-\subsubsection{Color}
-\subsubsection{Shape}
-\subsubsection{Traffic}
+\paragraph{}
+V tejto triede nastavujeme plochu našej android aplikácie.
+Trieda obsahuje mnoho metód ktoré sa venujú napríklad otváraniu kamery a nastaveniam kamery. Metóda zaoberajúca sa otvorením kamery je \emph{openCamera}.
+V tejto metóde sa zisťuje či sa kamera dá otvoriť, pokiaľ áno, tak ju samozrejme otvoríme a pokiaľ nie, tak ukončíme aplikáciu a dáme vedieť užívateľovi čo sa stalo.
+\lstset{language=Java,caption={Spustenie kamery},label=camera_code}
+\begin{lstlisting}
+	public boolean openCamera() {
+        Log.i(TAG, "openCamera");
+        releaseCamera();
+        mCamera = Camera.open();
+        if(mCamera == null) {
+        	Log.e(TAG, "Nemozem otvorit kameru");
+        	return false;
+        }
 
+        mCamera.setPreviewCallbackWithBuffer(new PreviewCallback() {
+            public void onPreviewFrame(byte[] data, Camera camera) {
+                synchronized (BaseClass.this) {
+                    System.arraycopy(data, 0, mFrame, 0, data.length);
+                    BaseClass.this.notify(); 
+                }
+                camera.addCallbackBuffer(mBuffer);
+            }
+        });
+        return true;
+    }
+\end{lstlisting}
+Ďalšia metóda \emph{releaseCamera} uvoľní, alebo reštartne kameru. V metóde \emph{setupCamera} nastavíme potrebné nastavenia kamery a obrazu v ktorom sa bude zobrazovať.
+My si kameru nastavíme na celú plochu aplikácie a taktiež jej nastavíme automatické ostrenie.
+\subsubsection{ActivityView}
+\paragraph{}
+Trieda \emph{ActivityView} rieši všetky aktivity vykonávané v aplikácii. \emph{onPause} metóda zastaví kameru a reštartne ju. Metóda \emph{onResume} nám rieši situáciu, keď sa k aplikácii vrátime.
+Spúšta znovu kameru a overuje či je možné ďalej pokračovať. Pri negatívnom stave upozorní užívateľa o ukončení aplikácie. Pri metóde \emph{onCreate} načítavame OpenCV a zistujeme, aktuálnu verziu OpenCV v zariadení.
+Pokiaľ je zastaralá, alebo vôbec neexistuje, vyzveme užívateľa aby si ju dodatočne stiahol. Samozrejme mu pomôžeme s nájdením správnej verzie a pokiaľ má záujem ďalej pokračovať, dovedieme ho ku správnej verzii my.
+Samozrejme pokiaľ aj tu nastane nejaká chyba, je potrebné aplikáciu ukončiť a upozorniť na to užívateľa. V metóde \emph{onCreateOptionsMenu} nastavíme položky v menu a texty ktoré sa majú vypisovať. 
+Samotná aktivita po kliku na menu sa rieši v metóde \emph{onOptionsItemSelected}.
+\subsubsection{ActivityFunctionality}
+\paragraph{}
+V tejto triede sa rieši logika prepájania interakcie s jadrom rospoznávania. Taktiež sa tu rieši to, čo sa stane počas načítavania samotnej aplikácie.
+Je dobŕe si čo najviac vecí načítať práve v tejto fáze, aby sme sa odbremenili od záťaže pri behu samotnej aplikácie. Práve toto sa rieši v metóde \emph{onPreviewStarted}, kde si načítame všetky rozmery obrazu pre rôzne filtre.
+To čo sa stane pokiaľ aplikácia zastane sa rieši v metóde \emph{onPreviewStopped}. Tu je potrebné všetky premenné, polia a zoznamy uvoľniť. Veľmi dôležitá robota sa vykonáva v metóde \emph{processFrame}.
+Tu komunikujeme s menu a rozdelujeme čo sa stane po zvolení jednotlivých položiek. Technika prepínania bola zvolená pomocou funkcie \emph{switch}, ktorá nás rozdeľuje do rôznych stavov. Pri detekovaní dopravných značení, je to práve tu, kde spúštame vyhľadávanie a následne vykesľujeme na plochu štvorce s nájdenými objektami.
+\lstset{language=Java,caption={Výber z menu - hľadanie dopravných značiek},label=menu_search_code}
+\begin{lstlisting}
+	Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_YUV420sp2RGB, 4);
+	//nastavene dat
+	traffic.setData(mRgba);
+	//najdene cervenych objektov
+	traffic.detectRedCircleSign();
+	//vycistenie zoznamu so stvorcami
+	boxList.clear();
+	//naplnenie zoznamu so stvorcami
+	boxList = traffic.getBoxList();
+	//vycistenie zoznamu so znackami
+	signList.clear();
+	//naplnenie zoznamu so znackami
+	signList = traffic.getSignList();
+	//kreslenie stvorcov
+	for(int i = 0; i < boxList.size(); i++){
+		Rect r=boxList.get(i);
+		Core.rectangle(mRgba, r.tl(), r.br(), new Scalar(0, 255, 0, 255), 3);
+	}
+\end{lstlisting}
+\subsection{Rozpoznávacie jadro}
+\paragraph{}
+Rozpoznávacie jadro je rozdelené do logických celkov do tried, podľa druhu objektov ktoré rozpoznávajú.
+\subsubsection{Detection}
+\paragraph{}
+Je to hlavná trieda z ktorej všetky ďalšie triedy ktoré rozpoznávajú konkrétne objekty dedia.
+V tejto triede sa nastavujú základné informácie potrebné pre rozpoznávanie.
+Obsahuje dva konštruktory, ktoré sa spúštajú na základe parametrov a pri každom spustení reštartuje všetky objavené dopravné značenia.
+Keďže aplikácia potrebuje rôzne vstupy, je potrebné nastaviť pre jednotlivé ukážky rôzne vstupné premenné obsahujúce vstupný obraz.
+\subsubsection{Color}
+\paragraph{}
+Trieda \emph{Color} je zodpovedná za rozpoznávanie farieb na dopravných značeniach. Obsahuje metódy, ktoré sú pomenované podľa farby ktorú vie daná metóda rozpoznávať.
+Už ako z názvu vyplíva, metóda \emph{Red} bude rozpoznávať červenú farbu v obraze. V metóde si najprv nastavíme potrebné premenné s ktorými budeme neskôr pracovať.
+Ako prvé potrebujeme previesť obraz z bitmapy do binárnej matice typu \emph{Mat}, pomocou funkcie \emph{bitmapToMat}.
+Ďaľej sa pokúsime rozmazať obraz, pomocou \emph{GaussianBlur}. Táto funkcia nám vracia formát obrazu ako RGBA, no pre ďalšiu prácu budeme potrebovať RGB a taktiež HSV.
+Toto docielime použitím \emph{cvtColor}. Funkcia \emph{split} nám docieli to, že náš obraz rozdelí na 3 kanály, ktoré filter HSV obsahuje a ktoré potrebujeme pre ďalšie filtrovanie obrazu.
+H kanál budeme filtrovať pomocou funkcie \emph{inRange}, keďže vstup môže byť aj vektor.
+\lstset{language=Java,caption={Konverzia obrazu cez rôzne filtre},label=filter_h_chanel_code}
+\begin{lstlisting}
+	//konverzia vstupneho obrazu
+	Utils.bitmapToMat(image, mRGBA);
+	//rozmazanie obrazu
+	Imgproc.GaussianBlur(mRGBA,mRGBA,new Size(5, 5),1.5,1.5);
+	//prevedenie RGBA na RGB
+	Imgproc.cvtColor(mRGBA,mRGB,Imgproc.COLOR_RGBA2RGB);
+	//prevedenie RGB na HSV
+	Imgproc.cvtColor(mRGB,mTemp,Imgproc.COLOR_RGB2HSV);
+	//rozdelenie
+	Core.split(mTemp,lHSV);
+	//filtrovanie kanalu H
+	mTemp=new Mat();
+	Core.inRange(lHSV.get(0), new Scalar(90), new Scalar(130), mTemp);
+	lHSV.set(0, mTemp);
+\end{lstlisting}
+Pre ďalšie dva kanály bude stačiť použiť funkciu \emph{threshold}.
+Funkcia \emph{Canny} nám prekonvertuje obraz na 8-bitový čierny obraz, na ktorom sa nachádza mnoho bielych objektov. Tieto biele objekty predstavujú červenú farbu. 
+Na záver je potrebné získať všetky červené objekty len ako kontúry. S týmto problémom nám pomôže funkcia \emph{findContours}, ktorá získa z nájdených objektov červenej farby len ich kontúry.
+Metóda na záver vracia zoznam všetkých nájdených kontúr, ktoré považujeme za okraje za červených objektov.
+Pri metóde \emph{Blue} a taktiež v prípade vyhľadávania iných farieb, by stačilo zmeniť parametre fo funkciách, ktoré spracovávajú jednotlivé kanály HSV filtra.
+\subsubsection{Shape}
+\paragraph{}
+V tejto triede sa venujeme problematike rozpoznávania tvarov. Tvary nerozpoznávame priamo z obrazu, ale zo zoznamu kontúr ktoré sme pri rozpoznaní farby už dostali.
+Rovnako ako v predchádzajúcej triede, sme pomenovali jednotlivé metódy podľa objektu aký rozpoznáva. Vznikli tak metódy \emph{Circle} a \emph{Triangle}.
+Síce spracovávame už existujúce kontúry budeme potrebovať aj samotný snímaný obraz a tak je potrebné si tento obraz opäť previesť na binárny obraz typu \emph{Mat}, pomocou funkcie \emph{bitmapToMat}.
+Nasleduje cyklus s podmienkou na konci, kedy zisťujeme, či už sme na konci, alebo, či nie sme len v dieťati nejakej rodičovskej kontúry. Vytvoríme si buffer, do ktorého načítame dodatočné informácie kontúr, ktoré sa nachádzajú v premennej \emph{hierarchy}.
+Načítame si potrebnú kontúru s ktorou ideme pracovať. Ako prvé, ju overíme, či je veľkosť kontúry dostatočne veľká, aby malo zmysel sa s ňou zaoberať. Tu sme sa rozhodli, pracovať s kontúrami, ktoré su väčšie ako 500 pixelov.
+Veľkosť kontúry sa nám podarí získať pomocou funkcie \emph{contourArea}.
+\lstset{language=Java,caption={Načítanie a overenie veľkosti kontúry},label=contourArea_code}
+\begin{lstlisting}
+	int buff[] = new int[4];
+	//i sme dostali so vstupu
+	hierarchy.get(0, i, buff);
+	Mat contour = contours.get(i);
+	int id = i;
+	i = buff[0];
+	if(Imgproc.contourArea(contour) > 500){
+\end{lstlisting}
+Po tento bod je každá metóda v triede \emph{Shape} rovnaká, od tadeto sa mení spôsob rozpoznania jednotlivých tvarov. 
+Pre rozpoznanie kruhov, je našou úlohou nastaviť si najmenšiu možnú elipsu pre danú kontúru.
+Nie je to však tak jednoduchá úloha. Ako prvé je potrebné konvertovať naše kontúry na maticu typu \emph{MatOfPoint2f}.
+Toto prevedieme pomocou cyklu, v ktorom iba rozširujeme počet bitov a následne konvertujeme pomocou \emph{toArray}.
+Hneď ako sa nám konverzia podarí, môžeme použiť našu funkciu \emph{fitEllipse}, ktorá nám vykreslí najmenšiu možnú elipsu.
+\lstset{language=Java,caption={Konverzia do MatOfPoint2f a použitie fitEllipse},label=fitEllipse_code}
+\begin{lstlisting}
+	//pocet kontur
+	int num = (int)contour.total();
+	//vytvorime si pole o dvojnasobnej velkosti samotnej kontury
+	int temp[] = new int[num * 2];
+	//nacitame si konturu do docasnej premennej
+	contour.get(0, 0, temp);
+	//konvertujeme  List<Point> do MatOfPoint2f pre pouzitie fitEllipse
+	for(int j = 0; j < num * 2; j = j + 2){
+		points.add(new Point(temp[j], temp[j+1]));
+	}
+	MatOfPoint2f specialPointMtx = new MatOfPoint2f(points.toArray(new Point[0])); 
+	//do premennej bound ukladame dokonalu - najmensiu moznu elipsu
+	RotatedRect bound = Imgproc.fitEllipse(specialPointMtx);
+\end{lstlisting}
+Je potrebné si vypočítať a overiť toleranciu k hodnote PI. Výpočet sa spraví podľa vzorca opísaného v časti 3.1.2, a následne sa overí tolerancia.
+\lstset{language=Java,caption={Vypočet PI},label=pi_code}
+\begin{lstlisting}
+	//vypocita sa hodnota pi
+	double pi = Imgproc.contourArea(contour) / ((bound.size.height / 2) * (bound.size.width / 2));
+\end{lstlisting}
+Spraví sa ešte jedno overenie pre elipsu a následne sa vyreže obraz okolo značky a ukladá sa do zoznamu \emph{boxList} s ktorým neskôr môžeme ďalej pracovať.
+\lstset{language=Java,caption={Overenie oválnosti našej elipsy},label=axis_code}
+\begin{lstlisting}
+	double longAxis;
+	double shortAxis;
+	//ziska dve osy elipsy
+	if (bound.size.height < bound.size.width){
+		shortAxis = bound.size.height / 2;
+		longAxis = bound.size.width / 2;
+	} else {
+		shortAxis = bound.size.width / 2;
+		longAxis = bound.size.height / 2;
+	}
+	//this could stop the searching when is elipse too oval 
+	if ((longAxis / shortAxis) < 2.0){
+		signList.add(roi);
+		boxList.add(box);
+	}
+\end{lstlisting}
+\subsubsection{Traffic}
+V triede sa nachádzajú jednotlivé metódy rozpoznávania spojené po logických celkoch. Napríklad rozpoznanie kruhových červených značení, alebo všetkých značení.
+V takej metóde \emph{detectRCS} sa použijú len metódy z tried \emph{Color} a \emph{Shape}.
+\lstset{language=Java,caption={Detekcia červených okrúhlich dopravných značení},label=traffic_code}
+\begin{lstlisting}
+	//vypocita sa hodnota pi
+	List<MatOfPoint> contours = Color.Red(i);
+	if(contours.size()>0){
+		Shape.Circle(contours, 0);
+	}
+\end{lstlisting}
 \section{Výsledky aplikácie}
 \subsection{Detekcia kruhových značiek}
 \subsubsection{Značky modrej farby}
 \subsubsection{Značky červenej farby}
 
+\clearpage
 \section{Záver}
+\clearpage
 
 \bibliography{bach}
 \bibliographystyle{plain}

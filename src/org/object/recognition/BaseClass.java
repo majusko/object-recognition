@@ -56,7 +56,7 @@ public abstract class BaseClass extends SurfaceView implements SurfaceHolder.Cal
         releaseCamera();
         mCamera = Camera.open();
         if(mCamera == null) {
-        	Log.e(TAG, "Can't open camera!");
+        	Log.e(TAG, "NemÙûem otvoriù kameru");
         	return false;
         }
 

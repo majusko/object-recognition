@@ -59,8 +59,8 @@ public class Detection {
 	}
 		
 	public void reset(){
-		signList=new ArrayList<Mat>();
-		boxList=new ArrayList<Rect>();
+		signList = new ArrayList<Mat>();
+		boxList = new ArrayList<Rect>();
 	}
 	
 	public List<Mat> getSignList(){
@@ -71,7 +71,7 @@ public class Detection {
 		return boxList;
 	}
 	
-	
+	/*
 	public double[] toData(Bitmap bm) throws Exception {
 		if(bm.getHeight()!=30||bm.getWidth()!=30)
 			throw new Exception("Image size must be 30*30");
@@ -131,4 +131,5 @@ public class Detection {
 		
 		return result;
 	}
+	*/
 }
