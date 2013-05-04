@@ -1,8 +1,3 @@
-
-%%This is a very basic article template.
-
-%%There is just one section and two subsections.
-
 \documentclass[12pt]{article}
 
 \usepackage[slovak]{babel}
@@ -95,21 +90,7 @@ Súčasťou je plne funkčná Android aplikácia, ktorá dokáže vyhľadať pr�
 \textbf{Kľúčové slová:} traffic signes, computer vision, object recognition, detection, Android, OpenCV
 \clearpage
 
-%% zaciatok prace
-%%\section{Počítačové videnie}
-%%\subsection{História počítačového videnia}
-%%\subsection{Hlavné témy počítačového videnia}
-%%\subsubsection{Transformácia}
-%%\subsubsection{Filtrovanie a kompresia}
-%%\subsubsection{Vylepšovanie obrazu}
-%%\subsubsection{Rozpoznávanie objektov}
-%%\subsubsection{Pozíciovanie}
-%%\subsection{Technológie}
-%%\subsubsection{OpenCV}
-%% http://simplecv.tumblr.com/post/19307835766/opencv-vs-matlab-vs-simplecv
-%%\subsubsection{Matlab}
-%%\subsubsection{SimpleCV}
-\section{Úvod}
+\section*{Úvod}
 \clearpage
 \section{Rozpoznávanie objektov}
 \paragraph{}
@@ -124,7 +105,34 @@ Pri rozpoznávaní objektov je veľmi dôležité aj umiestnenie kamery. Tam pla
 \paragraph{}
 Problematika rozpoznávania objektov sa ďaľej delí na konkrétnejšie problémy. V našom prípade sa jedná o problematiku rozpoznávania dopravných značení.
 \cite{machine_vission}
-%%http://www.cse.usf.edu/~r1k/MachineVisionBook/MachineVision.files/MachineVision_Chapter15.pdf
+\subsection{Spôsoby detekcie naučených vzorov v obraze}
+\paragraph{}
+Existuje mnoho spôsobov, akými môžeme rozpoznávať objekty v obraze.
+\begin{enumerate}
+  \item \textbf{Metódy založené na vzhľade} - Rozpoznávanie objektov pri týchto je postavené na princípe podobnosti vzhľadu.
+  Pri tomto princípe si všímame celý objekt. Problémy pri tomto druhu rozpoznávania je nepríklad pri zmene svetelnosti, alebo uhlu. Medzi najpoužívanejšie patria aj nasledujúce metódy.
+	\cite{computer_vission_aaa}
+	\begin{itemize}
+	  \item \textbf{Porovnávanie hrán} - Metóda porovnávania hrán sa môže vykonávať napríklad cez algoritmus ktorý navrhol profesor Canny.
+	  Výhoda pri tejto metóde je tá, že svetelnosť zvyčajne nemá vplyv na výsledky. Postup je nasledovný: 
+	  Nájdu sa hrany v našom vzore a našom obraze, následne sa tieto dva výsledky porovnajú a nakoniec sa vyhodnotí tolerancia ktorú akceptujeme.
+	  \item \textbf{Metóda rozdeľ a panuj} - Táto metóda vyhľadávania je jedna z najúspešnejších. Zaručene nájdete všetky zhody ktoré spĺňajú kritérium, ktoré si určíte ne začiatku.
+	  \item \textbf{Porovnávanie podľa odtieňu šedej} - Táto metóda jednoducho porovnáva odtien šedi v obraze. Je veľmi citlivá na svetelné zmeny.
+	\end{itemize}
+  \item \textbf{Metódy založené na znakoch v obraze} - Metódy sú postavené na konkrétnych znakoch v obraze, ktoré spĺňajú podmienky.
+  	\begin{itemize}
+  	  \item \textbf{Interpretačné stromy} - Zoraďuje jedotlivé zhody a potom nimi prehľadáva pomocou stromových technýk. Málo používaná metóda.
+  	  \item \textbf{Pozičná konzistencia} - Porovnáva jednotlivé znaky v obraze podľa pozícií v ktorých sa nachádzajú medzi sebou.
+  	  \item \textbf{Geometrická konzistencia} - Zisťuje zodpovedajúce geomtrické znaky v obraze. Túto metódu v podstate využívame pri vyhľadávaní dopravného značenia.
+  	\end{itemize}
+\end{enumerate}
+\paragraph{}
+V našej téme sa zaoberáme rozpoznávaním dopravných značení. Aj pri tomto type rozpoznávania sa môžeme venovať rôznym oblastiam detekcie naučených vzorov, no my sme si vybrali cestu rozpoznávania podľa farby a tvaru.
+V podstate sa však stále jedná o metódu porovnávania hrán. V našom prípade budeme musieť nájsť hrany farieb a zistiť či dané hrany sú pre nás geometrickým tvarom akceptovateľné, alebo nie.
+Táto metóda je podľa literatúry veľmi obľúbená pri rozpoznavaní nie len dopravných značení, ale aj iných objektov.
+\cite{computer_vission_aaa}
+\subsection{Neurónové siete}
+\paragraph{}
 \subsection{Rozpoznávanie dopravných značení}
 \paragraph{}
 Problematika rozpoznávania dopravných značení je pomerne nová a pri písaní práce som tak mohol čerpať len z veľmi malého počtu literatúry, zaoberajúcou sa touto témou.
@@ -262,7 +270,6 @@ Pri problematike rozpoznávania zvislích dopravných značení sme niektoré z 
 \paragraph{}
 Funkcia \emph{cvtColor} prevedie obraz z jedného farebného spektra do iného. Je to jedna z najpoužívanejších funkcií, keďže na rozpoznávanie objektov je potrené si obraz pripraviť
 cez mnohé farebné filtre. Vstupné parametre je možné pozorovať pri tabuľke \ref{cvtColorPar}.
-\cite{cvtColor}
 \cite{OpenCVDoc}
 \begin{table}
 	\centering
@@ -281,11 +288,9 @@ cez mnohé farebné filtre. Vstupné parametre je možné pozorovať pri tabuľk
 Pri používaní funkcie \emph{cvtColor}, je potrebné si určiť o akú konverziu ide. OpenCV, už má k dispozícii predpripravené konštanty, ktoré konverziu lepšie vyjadrujú.
 Matematický prepočet si OpenCV už spraví v jadre. Konverzií je v OpenCV naprogramovaných už mnoho, my si predstavíme matematický model konverzie,
 ktorú v našom prípade rálne využijeme. Jedná sa o konverziu z BGR(pri OpenCV je poradie kanálov pre model RGB zoradený opačne) do farebného modelu HSV a späť.
-\cite{cvtColor}
 \cite{OpenCVDoc}
 \paragraph{} 
 V prípade 8 a 16 bitového obrazu je potrené jednotlivé kanály R,G a B previesť do formátu s plávajúcou desatinou čiarkou a zmenšiť rozsah od 0 do 1.
-\begin{table}
 \begin{align*}
 BGR \leftrightarrow HSV
 \end{align*}
@@ -304,15 +309,11 @@ H \leftarrow \begin{cases} \frac{60(G - B)}{V - min(R,G,B)}, & \text{ pokiaľ } 
 \begin{align*}
 \text{ Na výstup pôjde } 0 \le V \le 1, 0 \le S \le 1, 0 \le H \le 1
 \end{align*}
-\caption{Konverzia RGB modelu na HSV\cite{hsv_wiki_cz}\cite{cvtColor}\cite{OpenCVDoc}}
-\label{cvtColorEquals}
-\end{table}
 \subsubsection{Canny}
 \paragraph{}
 Hlavná úloha funkcie \emph{Canny} je vyhľadávať okraje, kontúry a hrany všetkých objektov. Pri kombinácii s rôznymi filtrami, môžeme docieliť, vyhľadanie hrán úmyselného objektu.
 Na rozoznávanie sa využíva algoritmus \emph{Canny86}.
-\cite{canny}
-\cite{OpenCVDoc}
+\cite{canny, OpenCVDoc}
 \paragraph{}
 Kontúrový alebo hranový detektor by mal spĺňať tri kritéria, ktoré určil John Canny.
 \begin{enumerate}
@@ -338,14 +339,11 @@ Pre silu hrany platí:
 |G_n * f| = |\bigtriangledown (G * f)|
 \end{align*}
 Kritérium jednej odozvy sa dosahuje následne prahovaním. 
-\cite{DIP}
-\cite{JCanny}
-\cite{canny_wiki_en}
+\cite{DIP, JCanny}
 \paragraph{}
 Vstupné parametre je možné pozorovať pri tabuľke \ref{cannyPar}.
 Najmenšia hodnota medzi \emph{threshold1} a \emph{threshold2} je použitá na prepájanie kontúr. Tá najväčšia hodnota je použitá ako začínajúci segment najsilnejších kontúr.
 Pri správnom nastavení, sa dá dosiahnuť pomerne kvalitné odstránenie nepotrených kontúr.
-\cite{canny}
 \cite{OpenCVDoc}
 \begin{table}
 	\centering
@@ -366,7 +364,6 @@ Pri správnom nastavení, sa dá dosiahnuť pomerne kvalitné odstránenie nepot
 \subsubsection{GaussianBlur}
 \paragraph{}
 Vyhladzuje obraz pomocou \emph{GaussianBlur} filtra.
-\cite{gaussianblur_doc}
 \cite{OpenCVDoc}
 \paragraph{}
 \emph{GaussianBlur} filter funguje na princípe \emph{N * N} konvolúcie pri ktorej sa každý pixel prehodnotí na základe \emph{Gaussian} funkcie.
@@ -384,7 +381,6 @@ Konvolúcia sa často používa pri spracovávaní obrazu, ako je vyhladzovanie 
 Vstupné parametre pre \emph{GaussianBlur} je možné pozorovať pri tabuľke \ref{gaussianblurPar}. 
 Pri premennej \emph{ksize} si môžeme napríklad nastaviť veľkosť matice, ktorá sa bude pri konvolúcii používať.
 Veľkosť matice pri konvolúcii ovplivní rozostrenie. Čím väčšiu maticu používame, tím väčšie rozostrenie dostaneme.
-\cite{gaussianblur_doc}
 \cite{OpenCVDoc}
 \begin{table}
 	\centering
@@ -419,7 +415,6 @@ Funkcia kontroluje rozsah nasledujúco:
 \end{itemize}
 \paragraph{}
 Vstupné parametre pre \emph{inRange} je možné pozorovať pri tabuľke \ref{inRangePar}. 
-\cite{inrange_doc}
 \cite{OpenCVDoc}
 \begin{table}
 	\centering
@@ -438,7 +433,6 @@ Vstupné parametre pre \emph{inRange} je možné pozorovať pri tabuľke \ref{in
 \subsubsection{bitwise\_not}
 \paragraph{}
 Je jednoduchá funkcia, ktorá invertuje všetky bity v poli ktoré jej pošlete. Taktiež má aj jednoduché vstupné parametre, ktoré vidieť aj v tauľke \ref{bitwisePar}.
-\cite{bitwise_not_doc}
 \cite{OpenCVDoc}
 \begin{table}
 	\centering
@@ -479,7 +473,6 @@ Funkcia \emph{treshold} funguje na princípe filtrovania pixelov ktoré majú pr
 	\end{align*}
 \end{itemize}
 Parametre ktoré táto funkcia akceptuje a s ktorými pracuje sú viditeľné v tauľke \ref{thresholdPar}
-\cite{bitwise_not_doc}
 \cite{OpenCVDoc}
 \begin{table}
 	\centering
@@ -498,13 +491,11 @@ Parametre ktoré táto funkcia akceptuje a s ktorými pracuje sú viditeľné v 
 \end{table}
 \subsubsection{findContours}
 \paragraph{}
-Funkcia \emph{findContours} je prepracovaná metóda hľadania obrysov. Jednoducho nájde obrysy, aleo kontúry v binárnom obraze pomocou algoritmu od Satoshi Suzukiho pre vyhľadávanie čiar v binárnom obraze.
+Funkcia \emph{findContours} je prepracovaná metóda hľadania obrysov. Jednoducho nájde obrysy, aleo kontúry v binárnom obraze pomocou algoritmu od Satoshi Suzukiho pre vyhľadávanie najkrajnejších čiar v binárnom obraze.
 Vyhľadané obrysy sú veľmi užitočné pri rozpoznávaní tvarov a objektov. Pri rozpoznávaní dopravných značení je našou snahou taktiež rozpoznať napríklad kruhové tvary zákazových dopravných značení.
-\cite{findContours_doc}
 \cite{OpenCVDoc}
 \paragraph{}
-%%suzuky algoritmus
-obkec o suzuky algoritme - musim si nastudovat jeho pracu
+Algoritmus pre vyhľadanie najkrajnejších čiar je postavený na algoritme vyhľadávania čiar v v binárnom obraze. Popisuje sa v ňom 
 \cite{suzuky}
 \paragraph{}
 Parametre funkcie vidiet v tabuľke \ref{findContoursPar}
@@ -527,7 +518,6 @@ Parametre funkcie vidiet v tabuľke \ref{findContoursPar}
 \paragraph{}
 Funkcia \emph{boundingRect} je ďalšia jednoduchá funkcia. Dokáže jednoducho vypočítať a ohraničiť nejaké zoskupenie bodov do odĺžnika.
 V našom prípade funkciu využijeme na to, aby sme vedeli získať výrez dopravného značenia. Vstup pre funkciu je len samotné zoskupenie bodov, ako vidieť aj na tabuľke \ref{boundingRectPar}.
-\cite{boundingrect_doc}
 \cite{OpenCVDoc}
 \begin{table}
 	\centering
@@ -543,7 +533,6 @@ V našom prípade funkciu využijeme na to, aby sme vedeli získať výrez dopra
 \subsubsection{drawContours}
 \paragraph{}
 Funkcia \emph{drawContours} je vykreslovacia funkcia. Kreslenie kontúr pracuje s maticami. Dokáže vykresliť akýkoľvek tvar, ktorý je definovaný vektorom.
-\cite{drawcontours_doc}
 \cite{OpenCVDoc}
 \paragraph{}
 Funkcia je pomerne zložitá na parametre. Podrobnejšie je rozobratá v tabuľke \ref{drawcontoursPar}
@@ -571,9 +560,7 @@ Funkcia je pomerne zložitá na parametre. Podrobnejšie je rozobratá v tabuľk
 Jednoduchá funkcia, ktorá prepočítava veľkosť kontúry.
 Túto veľkosť sa dá jednoducho využiť pri eliminácii malých kontúr, ktoré pri rozpoznávaní dopravného značenia nevyužijeme.
 Pri výpočte je použitá Greenová veta. Funkcia nám vracia počet pixelov, ktoré kontúra obsahuje. Sú to pixely ktoré nemajú nulovú hodnotu.
-Obsahuje len jeden parameter, ktorý je opísaný v tabuľke \ref{contourAreaPar}.
-%%Also, the function will most certainly give a wrong results for contours with self-intersections
-\cite{contourarea_doc}
+Obsahuje len jeden parameter, ktorý je opísaný v tabuľke \ref{contourAreaPar}. Táto funkcia Často vráti zlé výsledky pre kontúry s vlastnými prepojeniami.
 \cite{OpenCVDoc}
 \begin{table}
 	\centering
@@ -594,7 +581,6 @@ Parametre funkcie je vidieť v tabuľke \ref{fitEllipsePar}.
 \paragraph{}
 Obkec o Fitzgibbon95 algoritme.
 %%Fitzgibbon95
-\cite{fitellipse_doc}
 \cite{OpenCVDoc}
 \begin{table}
 	\centering
@@ -620,11 +606,10 @@ Na cestách prevládajú dopravné značenia, ktoré sú červenej a modrej farb
 Samotné rozpoznanie bolo uskutočnené pomocou neurónových sietí. Táto metóda je najlepšia na počítačové učenie objektov.
 Na rozdiel od detekcie dopravného značenia, pre riešenie neurónových sietí použijeme už existujúcu knižnicu.
 \subsubsection{Návrh algoritmu pre detekciu farby}
-%%TODO Spravenie vyvojoveho/stavoveho diagramu
 \paragraph{}
 Ako prvý algoritmus som si vybral detekciu červenej farby. Pre detekciu farieb sa v literatúre odporúča najprv previesť vstup na farebný model HSV. 
 Vstup prichádza vo farebnom formáte RGB. Farebný model HSV je jeden z dvoch najpoužívanejších valcovo súradnicových reprezentácii bodov pre RGB model.
-\cite{hsl_hsv_wiki_en}
+\cite{hsl_hsv}
 \begin{figure}[p]
 \centering
 \includegraphics[width=0.3\textwidth,natwidth=160,natheight=586]{hladanie_farby.jpg}
@@ -652,7 +637,7 @@ Keďže na väčšine mobilných zariadení prichádza do zariadenia obraz vo fo
 Primárne sa začína na stupni 0$^\circ$, čo predstavuje zelenú farbu, postupne prechádza do modrej,
 ktorá sa nachádza na 120$^\circ$ stupňoch z kade prechádza cez červenú na 240$^\circ$ a keďže je to model kruhový, vracia sa do zelenej na 360$^\circ$.
 Pomocou funkcie \emph{inRange} by nemal byť problém určiť rozhranie stupňov, ktoré sme schopný akceptovať ako hľadanú farbu pre hľadané naše dopravné značenia.
-Ďalší kanál je \emph{Saturation}, ktorý predstavuje sýtosť farby. Táto sýtosť sa vyjadruje v percentách, kde 0\% predstavuje šedú a 100\% je plne sýta farba.\cite{hsv_wiki_cz} 
+Ďalší kanál je \emph{Saturation}, ktorý predstavuje sýtosť farby. Táto sýtosť sa vyjadruje v percentách, kde 0\% predstavuje šedú a 100\% je plne sýta farba.\cite{hsl_hsv} 
 V našom prípade je postacuje metóda \emph{threshold}. Posledný kanál \emph{Value} vyjadruje hodnotu jasu.
 Keďže v praxi znamená znižovanie jasu pridávanie čiernej do základnej farby,
 pre hľadanie červenej farby na dopravnom značení nie je potrebné s týmto kanálom pracovať, lebo červená farba použitá na dopravných značeniach je pomerne svetlá.
@@ -668,17 +653,6 @@ S týmito kontúrami potom ďalej pracujeme a rozoznávame z nich hľadané útv
 Pri detekcii dopravného značenia v tvare kruhu, je dôležité počítať s tým, že nehľadáme úplný kruh. Kruhové dopravné značenia sú vyrábané ako dokonalý kruh,
 no pri ich rozpoznávaní si je potrené uvedomiť, že na objekt sa pozeráme z rôznych uhlov. Táto skutočnosť nám prináša do prolematiky dôležitý fakt,
 že v skutočnosti to nie sú kruhy čo hľadáme, ale sú to elipsy. Celý algoritmus je možné vidieť na orázku č. \ref{hladanie_kruhov}
-
-%% otekanie textu
-%%\begin{wrapfigure}{r}{0.55\textwidth}
-%%	\begin{center}
-%%		\includegraphics[width=0.4\textwidth,natwidth=318,natheight=1164]{hladanie_kruhov.jpg}
-%%	\end{center}
-%%	\vspace{-20pt}
-%%  	\caption{Algoritmus vyhľadávania kruhov}
-%%  	\vspace{-10pt}
-%%  	\label{hladanie_kruhov}
-%%\end{wrapfigure}
 \begin{figure}[p]
 \centering
 \includegraphics[width=0.38\textwidth,natwidth=318,natheight=1164]{hladanie_kruhov.jpg}
@@ -687,7 +661,6 @@ no pri ich rozpoznávaní si je potrené uvedomiť, že na objekt sa pozeráme z
 \vspace{-10pt}
 \label{hladanie_kruhov}
 \end{figure}
-
 \paragraph{}
 Keďže v predchádzajúcej kapitole sme si navrhli riešenie, ktoré nám vracia len kontúry hľadanej farby, môžeme pokračovať od tohto bodu.
 Ako prvé si spravíme cyklus, ktorým budeme prechádzať všetky naše vyhľadané kontúry farieb. Aby sme eliminovali počet prebytočných kontúr, 
@@ -713,8 +686,6 @@ Získanie tolerancie:
 \begin{align*}
           \pi - p < 0.03 \\
 \end{align*}
-%%vzorec
-%%citacie z knih matematiky
 \paragraph{}
 Pre určovanie tolerancie elipsy, je možné použiť ešte jednu metódu, a tou je overovanie podľa osí. 
 Pokiaľ je x-ová os dvoj-násobne väčšia ako y-ová, ide už o elipsu, ktorú by sme ďalej len ťažko identifikovali. 
@@ -727,8 +698,6 @@ Dva nežiaduce stavy tvaru dopravného značenia:
           \text{ 2.) }
           \frac{\frac{1}{2} y}{\frac{1}{2} x} > 2  \\
 \end{align*}
-%%\subsubsection{Návrh algoritmu pre detekciu trojuholnikov}
-%%\subsubsection{Návrh algoritmu pre detekciu štvorcov}
 \subsection{Návrh objektov - UML}
 \paragraph{}
 Algoritmy, ktoré boli navrhnuté, je potrebne správne zakomponovať do objektovo orientovaného modelu našej android aplikácie.
@@ -949,7 +918,7 @@ V takej metóde \emph{detectRCS} sa použijú len metódy z tried \emph{Color} a
 \subsubsection{Značky červenej farby}
 
 \clearpage
-\section{Záver}
+\section*{Záver}
 \clearpage
 
 \bibliography{bach}

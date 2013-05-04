@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{hsl_hsv}
+M.~Agoston.
+\newblock {\em Computer Graphics and Geometric Modeling: Implementation and
+  Algorithms}.
+\newblock Springer, Londýn, UK, 2005.
+
 \bibitem{convolution}
 Song~Ho Ahn.
 \newblock Convolution, 2005.
@@ -34,53 +40,9 @@ J.~Canny.
 \newblock A computational approach to edge detection.
 \newblock 1986.
 
-\bibitem{canny_wiki_en}
-Wikipedia Contributors.
-\newblock Canny edge detector, March 2013.
-
-\bibitem{hsl_hsv_wiki_en}
-Wikipedia Contributors.
-\newblock Hsl and hsv, February 2013.
-
-\bibitem{hsv_wiki_cz}
-Wikipedia Contributors.
-\newblock Hsv, March 2013.
-
 \bibitem{aproximacia}
 Claudia Csollárová.
 \newblock Aproximácia, July 2005.
-
-\bibitem{bitwise_not_doc}
-OpenCV dev team.
-\newblock bitwise\_not, March 2013.
-
-\bibitem{boundingrect_doc}
-OpenCV dev team.
-\newblock boundingrect, March 2013.
-
-\bibitem{contourarea_doc}
-OpenCV dev team.
-\newblock contourarea, March 2013.
-
-\bibitem{drawcontours_doc}
-OpenCV dev team.
-\newblock drawcontours, March 2013.
-
-\bibitem{findContours_doc}
-OpenCV dev team.
-\newblock findcontours, March 2013.
-
-\bibitem{fitellipse_doc}
-OpenCV dev team.
-\newblock fitellipse, March 2013.
-
-\bibitem{gaussianblur_doc}
-OpenCV dev team.
-\newblock gaussianblur, March 2013.
-
-\bibitem{inrange_doc}
-OpenCV dev team.
-\newblock inrange, March 2013.
 
 \bibitem{android_dev}
 Android Developers.
@@ -115,13 +77,10 @@ S.~Suzuky.
 \newblock A computational approach to edge detection.
 \newblock 1983.
 
-\bibitem{canny}
-OpenCV~Dev Team.
-\newblock canny, March 2013.
-
-\bibitem{cvtColor}
-OpenCV~Dev Team.
-\newblock cvtcolor, March 2013.
+\bibitem{computer_vission_aaa}
+R.~Szeliski.
+\newblock {\em Computer Vision: Algorithms and Applications}.
+\newblock Springer, USA, November 2010.
 
 \bibitem{OpenCVDoc}
 OpenCV~Dev Team.

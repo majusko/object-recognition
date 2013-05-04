@@ -3,46 +3,21 @@ The style file: plain.bst
 Database file #1: bach.bib
 Warning--entry type for "aproximacia" isn't style-file defined
 --line 42 of file bach.bib
-Warning--entry type for "hsl_hsv_wiki_en" isn't style-file defined
---line 66 of file bach.bib
-Warning--entry type for "hsv_wiki_cz" isn't style-file defined
---line 74 of file bach.bib
-Warning--entry type for "canny_wiki_en" isn't style-file defined
---line 82 of file bach.bib
-Warning--entry type for "cvtColor" isn't style-file defined
---line 98 of file bach.bib
-Warning--entry type for "canny" isn't style-file defined
---line 106 of file bach.bib
-Warning--entry type for "inrange_doc" isn't style-file defined
---line 114 of file bach.bib
 Warning--entry type for "convolution" isn't style-file defined
---line 122 of file bach.bib
-Warning--entry type for "gaussianblur_doc" isn't style-file defined
---line 129 of file bach.bib
-Warning--entry type for "bitwise_not_doc" isn't style-file defined
---line 137 of file bach.bib
-Warning--entry type for "findContours_doc" isn't style-file defined
---line 145 of file bach.bib
+--line 95 of file bach.bib
 Warning--entry type for "gaussianblur" isn't style-file defined
---line 153 of file bach.bib
-Warning--entry type for "drawcontours_doc" isn't style-file defined
---line 161 of file bach.bib
-Warning--entry type for "boundingrect_doc" isn't style-file defined
---line 169 of file bach.bib
-Warning--entry type for "contourarea_doc" isn't style-file defined
---line 177 of file bach.bib
-Warning--entry type for "fitellipse_doc" isn't style-file defined
---line 185 of file bach.bib
+--line 102 of file bach.bib
 Warning--entry type for "DIP" isn't style-file defined
---line 193 of file bach.bib
+--line 110 of file bach.bib
 Warning--entry type for "bmw" isn't style-file defined
---line 201 of file bach.bib
+--line 118 of file bach.bib
 Warning--entry type for "volvo" isn't style-file defined
---line 208 of file bach.bib
+--line 125 of file bach.bib
 Warning--entry type for "mercedes" isn't style-file defined
---line 215 of file bach.bib
+--line 132 of file bach.bib
 Warning--entry type for "android_dev" isn't style-file defined
---line 222 of file bach.bib
+--line 139 of file bach.bib
+Warning--I didn't find a database entry for "canny"
 Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
