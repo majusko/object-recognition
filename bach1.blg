@@ -1,0 +1,105 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: bach1.aux
+The style file: plain.bst
+Database file #1: bach.bib
+Warning--entry type for "aproximacia" isn't style-file defined
+--line 42 of file bach.bib
+Warning--entry type for "convolution" isn't style-file defined
+--line 104 of file bach.bib
+Warning--entry type for "gaussianblur" isn't style-file defined
+--line 111 of file bach.bib
+Warning--entry type for "DIP" isn't style-file defined
+--line 119 of file bach.bib
+Warning--entry type for "bmw" isn't style-file defined
+--line 127 of file bach.bib
+Warning--entry type for "volvo" isn't style-file defined
+--line 134 of file bach.bib
+Warning--entry type for "mercedes" isn't style-file defined
+--line 141 of file bach.bib
+Warning--entry type for "android_dev" isn't style-file defined
+--line 148 of file bach.bib
+Warning--entry type for "neural_network" isn't style-file defined
+--line 181 of file bach.bib
+Warning--I didn't find a database entry for "canny"
+Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Stergiou, C.,Siganos, D." for entry neural_network
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Lorsakul, A., Suthakorn, J." for entry tfs_pdf
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Viola, P., Jones, M." for entry object_detection_viola
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
+while executing---line 1049 of file plain.bst
+Name 1 in "Brabec J., Hrůza B.," has a comma at the end for entry mat_an_2
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Bradski, G., Kaehler, A." for entry learning_opencv
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Fitzgibbon, A., Fisher, R." for entry fitzgibbo95
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
+while executing---line 1090 of file plain.bst
+Name 1 in "Brabec J., Hrůza B.," has a comma at the end for entry mat_an_2
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Bradski, G., Kaehler, A." for entry learning_opencv
+while executing---line 1090 of file plain.bst
+Warning--empty journal in JCanny
+Too many commas in name 1 of "Fitzgibbon, A., Fisher, R." for entry fitzgibbo95
+while executing---line 1090 of file plain.bst
+Warning--empty journal in fitzgibbo95
+Too many commas in name 1 of "Lorsakul, A., Suthakorn, J." for entry tfs_pdf
+while executing---line 1090 of file plain.bst
+Warning--empty journal in tfs_pdf
+Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
+while executing---line 1090 of file plain.bst
+Warning--empty journal in object_rec_scene
+Too many commas in name 1 of "Stergiou, C.,Siganos, D." for entry neural_network
+while executing---line 1090 of file plain.bst
+Warning--empty journal in suzuky
+Too many commas in name 1 of "Viola, P., Jones, M." for entry object_detection_viola
+while executing---line 1090 of file plain.bst
+Warning--empty journal in object_detection_viola
+(There were 38 error messages)

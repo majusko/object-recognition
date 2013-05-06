@@ -1,0 +1,107 @@
+\begin{thebibliography}{10}
+
+\bibitem{hsl_hsv}
+M.~Agoston.
+\newblock {\em Computer Graphics and Geometric Modeling: Implementation and
+  Algorithms}.
+\newblock Springer, Londýn, UK, 2005.
+
+\bibitem{convolution}
+Song~Ho Ahn.
+\newblock Convolution, 2005.
+
+\bibitem{bmw}
+BMW Automobiles.
+\newblock Traffic sign recognition, 2010.
+
+\bibitem{num_metody}
+Slodička M. Weisz~J. Babušíková, J.
+\newblock {\em Numerické Metódy}.
+\newblock Univerzita Komenského v Bratislave, Bratislava, SK, 1998.
+
+\bibitem{DIP}
+Gábor Blázsovit.
+\newblock Digital image processing - interaktívna učebnica spracovania
+  obrazu, February 2006.
+
+\bibitem{mat_an_2}
+Hrůza~B. Brabec~J.
+\newblock {\em Matematická analýza II}.
+\newblock SNTL, Praha, 1986.
+
+\bibitem{learning_opencv}
+Kaehler~A. Bradski, G.
+\newblock {\em Learning OpenCV: Computer Vision with the OpenCV Library}.
+\newblock O’Reilly Media, Inc., Gravenstein Highway North, Sebastopol, CA,
+  2008.
+
+\bibitem{JCanny}
+J.~Canny.
+\newblock A computational approach to edge detection.
+\newblock 1986.
+
+\bibitem{aproximacia}
+Claudia Csollárová.
+\newblock Aproximácia, July 2005.
+
+\bibitem{android_dev}
+Android Developers.
+\newblock Android dev team, 2013.
+
+\bibitem{fitzgibbo95}
+Fisher~R. Fitzgibbon, A.
+\newblock Buyer’s guide to conic fitting.
+\newblock 1995.
+
+\bibitem{tfs_pdf}
+Suthakorn~J. Lorsakul, A.
+\newblock Traffic sign recognition using neural network on opencv: Toward
+  intelligent vehicle/driver assistance system.
+\newblock 2012.
+
+\bibitem{mercedes}
+Mercedes-Benz.
+\newblock Road sign information, 2010.
+
+\bibitem{machine_vission}
+Rangachar K. Brian~S. Ramesh, J.
+\newblock {\em Machine Vision}.
+\newblock MIT Press and McGraw-Hill, Inc., USA, 1995.
+
+\bibitem{gaussianblur}
+Daniel Rákos.
+\newblock Gaussian blur, September 2010.
+
+\bibitem{object_rec_scene}
+Torralba A. Liu C. Fergus R. Freeman~W. Russell, B.
+\newblock Object recognition by scene alignment.
+\newblock July 2001.
+
+\bibitem{neural_network}
+Siganos~D. Stergiou, C.
+\newblock Neural networks, 1996.
+
+\bibitem{suzuky}
+S.~Suzuky.
+\newblock A computational approach to edge detection.
+\newblock 1983.
+
+\bibitem{computer_vission_aaa}
+R.~Szeliski.
+\newblock {\em Computer Vision: Algorithms and Applications}.
+\newblock Springer, USA, November 2010.
+
+\bibitem{OpenCVDoc}
+OpenCV~Dev Team.
+\newblock {\em Opencv documentation}, March 2013.
+
+\bibitem{object_detection_viola}
+Jones~M. Viola, P.
+\newblock Robust real-time object detection.
+\newblock July 2001.
+
+\bibitem{volvo}
+Volvo.
+\newblock Road sign information, 2010.
+
+\end{thebibliography}

@@ -1,7 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.4)  6 MAY 2013 00:26
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.4)  6 MAY 2013 02:25
 entering extended mode
-**bach.tex
-(D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.tex
+**D:/skola/AI-3Bc-Sem-5-Z/bc-project/android-opencv/object-recognition/bach1.te
+x
+
+(D:/skola/AI-3Bc-Sem-5-Z/bc-project/android-opencv/object-recognition/bach1.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -339,10 +341,18 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (D:\miktex\tex\latex\00miktex\graphics.cfg
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: dvips.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(D:\miktex\tex\latex\graphics\dvips.def
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+(D:\miktex\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(D:\miktex\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(D:\miktex\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count101
 ))
 \Gin@req@height=\dimen113
 \Gin@req@width=\dimen114
@@ -353,50 +363,10 @@ Package: bmpsize 2009/09/04 v1.6 Extract size/resolution from bitmap files (HO)
 
 (D:\miktex\tex\generic\oberdiek\ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(D:\miktex\tex\generic\oberdiek\pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+Package bmpsize Info: Superseded by pdfTeX in PDF mode on input line 41.
 )
-
-(D:\miktex\tex\generic\oberdiek\infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(D:\miktex\tex\generic\oberdiek\ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(D:\miktex\tex\generic\oberdiek\ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
-)
-(D:\miktex\tex\latex\oberdiek\bmpsize-base.sty
-Package: bmpsize-base 2009/09/04 v1.6 Basic part of bmpsize (HO)
-
-(C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-basic.sty
-Package: fp-basic 1996/05/13
-
-`Basic Fixed Point Arithmetic',  Version 1.2d (C) Michael Mehlich             
-\FP@xs=\count101
-\FP@xia=\count102
-\FP@xib=\count103
-\FP@xfa=\count104
-\FP@xfb=\count105
-\FP@rega=\count106
-\FP@regb=\count107
-\FP@regs=\count108
-\FP@times=\count109
-) (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-snap.sty
-Package: fp-snap 1995/04/05
-
-`Fixed Point Snap Off',          Version 1.0a (C) Michael Mehlich             )
-) (D:\miktex\tex\latex\oberdiek\bmpsize-dvips.def
-File: bmpsize-dvips.def 2009/09/04 v1.6 Graphics bitmap driver for dvips (HO)
-))
 (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pdfpages.sty
 Package: pdfpages 2012/08/31 v0.4t Insert pages of external PDF documents (AM)
 
@@ -404,15 +374,15 @@ Package: pdfpages 2012/08/31 v0.4t Insert pages of external PDF documents (AM)
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 ) (D:\miktex\tex\latex\tools\calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count110
-\calc@Bcount=\count111
+\calc@Acount=\count102
+\calc@Bcount=\count103
 \calc@Adimen=\dimen115
 \calc@Bdimen=\dimen116
 \calc@Askip=\skip46
 \calc@Bskip=\skip47
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count112
+\calc@Ccount=\count104
 \calc@Cskip=\skip48
 )
 (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
@@ -427,8 +397,9 @@ Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 (D:\miktex\tex\latex\00miktex\color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
@@ -439,24 +410,16 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
 (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pppdftex.def
 File: pppdftex.def 2012/08/31 v0.4t Pdfpages driver for pdfTeX (AM)
-
-(C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\ppnull.def
-File: ppnull.def 2012/08/31 v0.4t Pdfpages dummy driver (AM)
-
-
-Package pdfpages Warning: I will use a dummy \includepdf command
-(pdfpages)                which will NOT insert any pages, because
-(pdfpages)                you are producing DVI output.
-
-))
+)
 \AM@pagebox=\box28
 \AM@toc@title=\toks22
-\c@AM@survey=\count113
+\c@AM@survey=\count105
 \AM@templatesizebox=\box29
-) (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
+)
+(C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
 \wrapoverhang=\dimen117
 \WF@size=\dimen118
-\c@WF@wrappedlines=\count114
+\c@WF@wrappedlines=\count106
 \WF@box=\box30
 \WF@everypar=\toks23
 Package: wrapfig 2003/01/31  v 3.6
@@ -469,23 +432,23 @@ Package: esvect
 \symesvector=\mathgroup4
 )
 (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
-\lst@mode=\count115
+\lst@mode=\count107
 \lst@gtempboxa=\box31
 \lst@token=\toks24
-\lst@length=\count116
+\lst@length=\count108
 \lst@currlwidth=\dimen119
-\lst@column=\count117
-\lst@pos=\count118
+\lst@column=\count109
+\lst@pos=\count110
 \lst@lostspace=\dimen120
 \lst@width=\dimen121
-\lst@newlines=\count119
-\lst@lineno=\count120
+\lst@newlines=\count111
+\lst@lineno=\count112
 \lst@maxwidth=\dimen122
 
 (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count121
-\lst@skipnumbers=\count122
+\c@lstnumber=\count113
+\lst@skipnumbers=\count114
 \lst@framebox=\box32
 )
 (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
@@ -503,9 +466,9 @@ Package ifvtex Info: VTeX not detected.
 (D:\miktex\tex\generic\ifxetex\ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count123
-\Gm@cntv=\count124
-\c@Gm@tempcnt=\count125
+\Gm@cnth=\count115
+\Gm@cntv=\count116
+\c@Gm@tempcnt=\count117
 \Gm@bindingoffset=\dimen123
 \Gm@wd@mp=\dimen124
 \Gm@odd@mp=\dimen125
@@ -520,7 +483,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach.aux)
+(D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach1.aux
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
@@ -533,12 +497,27 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
-\AtBeginShipoutBox=\box33
-\c@lstlisting=\count126
+ (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count118
+\scratchdimen=\dimen131
+\scratchbox=\box33
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen132
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks27
+)
+\AtBeginShipoutBox=\box34
+\c@lstlisting=\count124
+
 *geometry* driver: auto-detecting
-*geometry* detected driver: dvips
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: dvips
+* driver: pdftex
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -569,28 +548,345 @@ LaTeX Font Info:    ... okay on input line 50.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+esvect on input line 56.
+LaTeX Font Info:    Try loading font information for U+esvect on input line 57.
 
 (C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\esvect\uesvect.fd
 File: uesvect.fd 
 )
 [1
-! I can't write on file `bach.dvi'.
-Please type another file name for output
-! Emergency stop.
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.58 \clearpage
-               
-*** (job aborted, file error in nonstop mode)
 
- 
+{C:/Users/majko/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach1.toc
+[2
+
+])
+\tf@toc=\write3
+ [3]
+(D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach1.lot
+)
+\tf@lot=\write4
+ [4
+
+]
+(D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach1.lof
+)
+\tf@lof=\write5
+ [5
+
+]
+Overfull \hbox (0.71454pt too wide) in paragraph at lines 86--92
+ [] \OT1/cmr/m/n/12 Ciel[]om ba-kalarskej prace je pod-robne in-for-mo-vat[] 
+citatel[]a s prob-le-ma-ti-kou roz-poznavania
+ []
+
+
+Overfull \hbox (3.88634pt too wide) in paragraph at lines 86--92
+\OT1/cmr/m/n/12 do-pravneho znacenia. Pred-sta-vit[] vyvoj a aktualny stav 
+v tejto ob-lasti a d^okladne oboznamit[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--92
+
+ []
+
+[6
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
+
+ []
+
+
+Overfull \hbox (7.93619pt too wide) in paragraph at lines 96--99
+\OT1/cmr/bx/n/12 Key words: \OT1/cmr/m/n/12 traf-fic sig-nes, com-pu-ter vi-sio
+n, ob-ject re-cog-ni-tion, de-tec-tion, An-droid, OpenCV 
+ []
+
+[7
+
+] [8
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 133.
+
+ (D:\miktex\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 133.
+
+Overfull \hbox (0.55989pt too wide) in paragraph at lines 133--136
+[]\OT1/cmr/bx/n/12 Porovnavanie hran \OT1/cmr/m/n/12 - Metoda po-rovnavania
+ hran sa m^oze vy-konavat[] naprklad
+ []
+
+
+Overfull \hbox (6.70514pt too wide) in paragraph at lines 136--137
+[]\OT1/cmr/bx/n/12 Metoda roz-del[] a pa-nuj \OT1/cmr/m/n/12 - Tato metoda v
+yhl[]adavania je jedna z najuspesnejsch.
+ []
+
+
+Overfull \hbox (10.49432pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/12 Zarucene najdete vsetky zhody ktore sp[]lnaju kriterium,
+ ktore si urcte ne zaciatku. 
+ []
+
+[9
+
+]
+Overfull \hbox (0.53656pt too wide) in paragraph at lines 153--155
+ [] \OT1/cmr/m/n/12 Umela Neuronova siet[] je zlozita pa-ra-digma spra-co-
+va-nia in-formaci ktora bola inspirovana
+ []
+
+[10]
+Overfull \hbox (0.8305pt too wide) in paragraph at lines 165--166
+ [] \OT1/cmr/m/n/12 Konkretne, prob-le-ma-tika roz-poznavania do-pravnych zn
+aciek ob-sa-huje dve fazy, z ktorych
+ []
+
+
+Overfull \hbox (5.67157pt too wide) in paragraph at lines 174--178
+\OT1/cmr/m/n/12 aj spolocnost[] Mercedes.[[]] Tieto prve roz-poznavace do-p
+ravnych znacen ve-deli roz-poznavat[]
+ []
+
+
+Overfull \hbox (2.04254pt too wide) in paragraph at lines 174--178
+\OT1/cmr/m/n/12 znacen po-mo-cou poctacoveho vi-de-nia, ktory na-zvala
+ Road Sign In-for-ma-tion. Tento system
+ []
+
+[11] [12]
+Overfull \hbox (11.96005pt too wide) in paragraph at lines 196--198
+ [] \OT1/cmr/m/n/12 Mnoho ma-te-ma-tickych metod sa bude priamo vy-svet-lo-va
+t[] pri pred-sta-vo-van da-nej OpenCV
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--211
+
+ []
+
+
+Overfull \hbox (11.2524pt too wide) in paragraph at lines 212--216
+\OT1/cmr/bx/n/12 Linearne metody \OT1/cmr/m/n/12 { novu ja-sovu hod-notu bo
+du poctaju ako linearnu kom-binaciu vstupnych
+ []
+
+[13] [14]
+Overfull \hbox (9.75285pt too wide) in paragraph at lines 244--247
+\OT1/cmr/m/n/12 vzore, co je vlastne zlozita fun-kcia, z kto-rej chceme do-s
+tat[] jed-no-duchsiu, naprklad
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
+
+ []
+
+[15]
+Underfull \hbox (badness 3281) in paragraph at lines 295--295
+\OT1/cmr/m/n/12 ob-raz alebo format csla
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--295
+\OT1/cmr/m/n/12 s plavajucou de-sa-ti-nou
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--296
+[]\OT1/cmr/m/n/12 Vystupny ob-raz s rov-
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 296--296
+\OT1/cmr/m/n/12 nakymi pa-ra-met-rami ako
+ []
+
+[16] [17]
+
+LaTeX Warning: Citation `canny' on page 18 undefined on input line 332.
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
+[]\OT1/cmr/m/n/12 Druha pra-hova hod-nota
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 406--406
+[]\OT1/cmr/m/n/12 Vstup je ob-raz s
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 406--406
+\OT1/cmr/m/n/12 l[]ubovolnym poctom fa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--408
+[]\OT1/cmr/m/n/12 Vel[]kost[] Gaus-sian jadra.
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
+[]\OT1/cmr/m/n/12 Vysledne pole, rov-nako
+ []
+
+[21] [22]
+Underfull \hbox (badness 2717) in paragraph at lines 501--501
+\OT1/cmr/m/n/12 m^oze pouzit[] na nie-ktore
+ []
+
+
+Underfull \hbox (badness 4217) in paragraph at lines 521--521
+[]\OT1/cmr/m/n/12 Vstup je 8-bitovy ob-raz
+ []
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 524--524
+\OT1/cmr/m/n/12 ktore bu-deme chciet[] roz-
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 541--542
+[]\OT1/cmr/m/n/12 Zoskupenie 2D bo-dov vo
+ []
+
+[23]
+Underfull \hbox (badness 5119) in paragraph at lines 558--558
+[]\OT1/cmr/m/n/12 Obraz do ktoreho budu
+ []
+
+
+Underfull \hbox (badness 6658) in paragraph at lines 559--559
+[]\OT1/cmr/m/n/12 Zoznam vsetkych kontur
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 559--559
+\OT1/cmr/m/n/12 ktore chceme vy-kres-lit[].
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 560--560
+\OT1/cmr/m/n/12 konturu chceme vy-kres-lit[].
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 560--560
+\OT1/cmr/m/n/12 Ne-gatvne cslo ho-vor o
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 560--560
+\OT1/cmr/m/n/12 tom, ze chceme vy-kres-lit[]
+ []
+
+
+Underfull \hbox (badness 7981) in paragraph at lines 565--565
+[]\OT1/cmr/m/n/12 Maximalny le-vel vy-kres-
+ []
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 565--565
+\OT1/cmr/m/n/12 lenych kontur. Tento pa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 584--585
+[]\OT1/cmr/m/n/12 Kontura ktoru chceme
+ []
+
+[24] [25]
+Underfull \hbox (badness 6236) in paragraph at lines 602--603
+[]\OT1/cmr/m/n/12 Vektor 2D bo-dov okolo
+ []
+
+[26] <hladanie_farby.jpg, id=98, 120.45pt x 441.14813pt>
+File: hladanie_farby.jpg Graphic file (type jpg)
+
+<use hladanie_farby.jpg>
+Package pdftex.def Info: hladanie_farby.jpg used on input line 627.
+(pdftex.def)             Requested size: 137.34285pt x 503.06891pt.
+ [27] [28 <D:/skola/AI-3Bc-Sem-5-Z/bc-project/android-opencv/object-recognition
+/hladanie_farby.jpg>]
+<hladanie_kruhov.jpg, id=105, 239.39438pt x 876.27374pt>
+File: hladanie_kruhov.jpg Graphic file (type jpg)
+
+<use hladanie_kruhov.jpg>
+Package pdftex.def Info: hladanie_kruhov.jpg used on input line 670.
+(pdftex.def)             Requested size: 173.96808pt x 636.7864pt.
+
+Overfull \hbox (8.03482pt too wide) in paragraph at lines 665--676
+\OT1/cmr/m/n/12 poznavan si je po-trene uve-do-mit[], ze na ob-jekt sa po-
+zerame z r^oznych uhlov. Tato skutocnost[]
+ []
+
+[29] [30] [31 <D:/skola/AI-3Bc-Sem-5-Z/bc-project/android-opencv/object-recogni
+tion/hladanie_kruhov.jpg>] [32]
+<uml_objects.jpg, id=119, 779.91376pt x 977.90344pt>
+File: uml_objects.jpg Graphic file (type jpg)
+ <use uml_objects.jpg>
+Package pdftex.def Info: uml_objects.jpg used on input line 732.
+(pdftex.def)             Requested size: 457.80486pt x 574.01848pt.
+
+[33] [34 <D:/skola/AI-3Bc-Sem-5-Z/bc-project/android-opencv/object-recognition/
+uml_objects.jpg>]
+(C:\Users\majko\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 756.
+
+[35] [36]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 808.
+
+ (D:\miktex\tex\latex\base\omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 808.
+ [37] [38] [39] [40] [41]
+[42] [43
+
+]
+(D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach1.bbl
+[44
+
+]) [45]
+(D:\skola\AI-3Bc-Sem-5-Z\bc-project\android-opencv\object-recognition\bach1.aux
+)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5537 strings out of 493922
- 73938 string characters out of 3154524
- 194679 words of memory out of 3000000
- 8745 multiletter control sequences out of 15000+200000
- 5856 words of font info for 24 fonts, out of 3000000 for 9000
+ 6223 strings out of 493921
+ 81571 string characters out of 3154501
+ 280233 words of memory out of 3000000
+ 9406 multiletter control sequences out of 15000+200000
+ 11102 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 37i,7n,39p,221b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-No pages of output.
+ 37i,21n,39p,1359b,1689s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/miktex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/miktex/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb><D:/miktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/miktex/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b><D:/miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/miktex/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+<D:/miktex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/miktex/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:
+/miktex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/miktex/fonts/type1/public/
+amsfonts/cm/cmti12.pfb><C:/Users/majko/AppData/Roaming/MiKTeX/2.9/fonts/type1/p
+ublic/esvect/vect10.pfb><C:/Users/majko/AppData/Roaming/MiKTeX/2.9/fonts/type1/
+public/esvect/vect8.pfb>
+Output written on bach1.pdf (45 pages, 642539 bytes).
+PDF statistics:
+ 215 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+

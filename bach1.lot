@@ -1,0 +1,12 @@
+\select@language {slovak}
+\contentsline {table}{\numberline {1}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie cvtColor}}{17}
+\contentsline {table}{\numberline {2}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie canny}}{19}
+\contentsline {table}{\numberline {3}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie GaussianBlur}}{20}
+\contentsline {table}{\numberline {4}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie inRange}}{21}
+\contentsline {table}{\numberline {5}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie bitwise\_not}}{21}
+\contentsline {table}{\numberline {6}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie threshold}}{23}
+\contentsline {table}{\numberline {7}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie findContours}}{24}
+\contentsline {table}{\numberline {8}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie boundingRect}}{24}
+\contentsline {table}{\numberline {9}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie drawcontours}}{25}
+\contentsline {table}{\numberline {10}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie contourArea}}{26}
+\contentsline {table}{\numberline {11}{\ignorespaces Tabulka zn\IeC {\'a}zor\IeC {\v n}uje vstupy funkcie fitEllipse}}{26}
