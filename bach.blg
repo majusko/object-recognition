@@ -1,94 +1,285 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: bach.aux
-The style file: plain.bst
+The style file: stn690.bst
+"<" can't start a style-file command---line 2 of file stn690.bst
+ : 
+ : <!-- saved from url=(0098)https://bitbucket.org/jbub/bachelor-thesis/raw/f6359d7557c4efab2cb74b616ed201af43bae4b6/stn690.bst -->
+(Error may have been on previous line)
+&lt; is an unknown function---line 212 of file stn690.bst
+&gt; is an unknown function---line 441 of file stn690.bst
+&gt; is an unknown function---line 448 of file stn690.bst
+&gt; is an unknown function---line 453 of file stn690.bst
+&gt; is an unknown function---line 458 of file stn690.bst
+&gt; is an unknown function---line 493 of file stn690.bst
+&gt; is an unknown function---line 499 of file stn690.bst
+&gt; is an unknown function---line 501 of file stn690.bst
+&gt; is an unknown function---line 531 of file stn690.bst
+&lt; is an unknown function---line 725 of file stn690.bst
+&gt; is an unknown function---line 726 of file stn690.bst
+&gt; is an unknown function---line 966 of file stn690.bst
+&lt; is an unknown function---line 972 of file stn690.bst
 Database file #1: bach.bib
 Warning--entry type for "aproximacia" isn't style-file defined
---line 42 of file bach.bib
+--line 104 of file bach.bib
+Warning--entry type for "OpenCVDoc" isn't style-file defined
+--line 112 of file bach.bib
 Warning--entry type for "convolution" isn't style-file defined
---line 95 of file bach.bib
-Warning--entry type for "gaussianblur" isn't style-file defined
---line 102 of file bach.bib
-Warning--entry type for "DIP" isn't style-file defined
---line 110 of file bach.bib
-Warning--entry type for "bmw" isn't style-file defined
 --line 118 of file bach.bib
-Warning--entry type for "volvo" isn't style-file defined
+Warning--entry type for "gaussianblur" isn't style-file defined
 --line 125 of file bach.bib
-Warning--entry type for "mercedes" isn't style-file defined
+Warning--entry type for "DIP" isn't style-file defined
 --line 132 of file bach.bib
-Warning--entry type for "android_dev" isn't style-file defined
+Warning--entry type for "bmw" isn't style-file defined
 --line 139 of file bach.bib
+Warning--entry type for "volvo" isn't style-file defined
+--line 145 of file bach.bib
+Warning--entry type for "mercedes" isn't style-file defined
+--line 151 of file bach.bib
+Warning--entry type for "android_dev" isn't style-file defined
+--line 157 of file bach.bib
+Warning--entry type for "neural_network" isn't style-file defined
+--line 163 of file bach.bib
 Warning--I didn't find a database entry for "canny"
-Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Lorsakul, A., Suthakorn, J." for entry tfs_pdf
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Viola, P., Jones, M." for entry object_detection_viola
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
-while executing---line 1049 of file plain.bst
-Name 1 in "Brabec J., Hrůza B.," has a comma at the end for entry mat_an_2
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Bradski, G., Kaehler, A." for entry learning_opencv
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Babušíková, J., Slodička, M., Weisz, J." for entry num_metody
-while executing---line 1090 of file plain.bst
-Name 1 in "Brabec J., Hrůza B.," has a comma at the end for entry mat_an_2
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Bradski, G., Kaehler, A." for entry learning_opencv
-while executing---line 1090 of file plain.bst
-Warning--empty journal in JCanny
-Too many commas in name 1 of "Lorsakul, A., Suthakorn, J." for entry tfs_pdf
-while executing---line 1090 of file plain.bst
-Warning--empty journal in tfs_pdf
-Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Ramesh, J., Rangachar, K., Brian, S." for entry machine_vission
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Russell, B., Torralba, A., Liu, C., Fergus, R., Freeman, W." for entry object_rec_scene
-while executing---line 1090 of file plain.bst
-Warning--empty journal in object_rec_scene
-Warning--empty journal in suzuky
-Too many commas in name 1 of "Viola, P., Jones, M." for entry object_detection_viola
-while executing---line 1090 of file plain.bst
-Warning--empty journal in object_detection_viola
-(There were 34 error messages)
+&gt; is an unknown function---line 1429 of file stn690.bst
+&gt; is an unknown function---line 1433 of file stn690.bst
+&gt; is an unknown function---line 1438 of file stn690.bst
+1 is an integer literal, not a string, for entry machine_vission
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry machine_vission
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry computer_vission_aaa
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry computer_vission_aaa
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry neural_network
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry neural_network
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry tfs_pdf
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry tfs_pdf
+while executing---line 1554 of file stn690.bst
+Warning--to sort, need author or key in bmw
+Warning--to sort, need author or key in mercedes
+Warning--to sort, need author or key in volvo
+1 is an integer literal, not a string, for entry object_rec_scene
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry object_rec_scene
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry object_detection_viola
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry object_detection_viola
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry DIP
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry DIP
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry aproximacia
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry aproximacia
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry num_metody
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry num_metody
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry mat_an_2
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry mat_an_2
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry learning_opencv
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry learning_opencv
+while executing---line 1554 of file stn690.bst
+Warning--to sort, need author or key in OpenCVDoc
+1 is an integer literal, not a string, for entry JCanny
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry JCanny
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry gaussianblur
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry gaussianblur
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry convolution
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry convolution
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry suzuky
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry suzuky
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry fitzgibbo95
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry fitzgibbo95
+while executing---line 1554 of file stn690.bst
+1 is an integer literal, not a string, for entry hsl_hsv
+while executing---line 1554 of file stn690.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry hsl_hsv
+while executing---line 1554 of file stn690.bst
+Warning--to sort, need author or key in android_dev
+&gt; is an unknown function---line 1566 of file stn690.bst
+ptr=1, stack=
+500
+---the literal stack isn't empty for entry mercedes
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+500
+---the literal stack isn't empty for entry volvo
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+500
+---the literal stack isn't empty for entry bmw
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+500
+---the literal stack isn't empty for entry android_dev
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+500
+---the literal stack isn't empty for entry OpenCVDoc
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+500
+---the literal stack isn't empty for entry suzuky
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+500
+---the literal stack isn't empty for entry JCanny
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+500
+---the literal stack isn't empty for entry mat_an_2
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+500
+---the literal stack isn't empty for entry fitzgibbo95
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry machine_vission
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry neural_network
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry num_metody
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry object_rec_scene
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry object_detection_viola
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry aproximacia
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry hsl_hsv
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry convolution
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry DIP
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry learning_opencv
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry computer_vission_aaa
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry gaussianblur
+while executing---line 1574 of file stn690.bst
+ptr=1, stack=
+1000
+---the literal stack isn't empty for entry tfs_pdf
+while executing---line 1574 of file stn690.bst
+1 is an integer literal, not a string, for entry suzuky
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry JCanny
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry mat_an_2
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry fitzgibbo95
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry machine_vission
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string or missing field, for entry neural_network
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry neural_network
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry num_metody
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry object_rec_scene
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry object_detection_viola
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string or missing field, for entry aproximacia
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry aproximacia
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry hsl_hsv
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string or missing field, for entry convolution
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry convolution
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string or missing field, for entry DIP
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry DIP
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry learning_opencv
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry computer_vission_aaa
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string or missing field, for entry gaussianblur
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry gaussianblur
+while executing---line 1601 of file stn690.bst
+1 is an integer literal, not a string, for entry tfs_pdf
+while executing---line 1601 of file stn690.bst
+(There were 96 error messages)

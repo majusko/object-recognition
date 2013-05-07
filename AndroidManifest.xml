@@ -10,9 +10,9 @@
                       android:largeScreens="true" 
                       android:anyDensity="true" />
 
-    <application android:label="Object Recognition" android:icon="@drawable/icon">
+    <application android:label="Rozpoznavanie znaciek" android:icon="@drawable/icon">
         <activity android:name="ActivityView"
-                  android:label="Object Recognition"
+                  android:label="Rozpoznavanie znaciek"
                   android:screenOrientation="landscape"
                   android:configChanges="keyboardHidden|orientation">
             <intent-filter>

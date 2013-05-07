@@ -37,12 +37,13 @@ Kaehler~A. Bradski, G.
 
 \bibitem{JCanny}
 J.~Canny.
-\newblock A computational approach to edge detection.
-\newblock 1986.
+\newblock {\em A Computational Approach to Edge Detection}.
+\newblock Massachusetts Institute of Technology, Cambridge, MA, 1986.
 
 \bibitem{aproximacia}
 Claudia Csollárová.
-\newblock Aproximácia, July 2005.
+\newblock Algoritmy numerickej matematiky: ich vizualizácia a implementácia,
+  July 2005.
 
 \bibitem{android_dev}
 Android Developers.
@@ -83,8 +84,8 @@ Siganos~D. Stergiou, C.
 
 \bibitem{suzuky}
 S.~Suzuky.
-\newblock A computational approach to edge detection.
-\newblock 1983.
+\newblock {\em A Computational Approach to Edge Detection}.
+\newblock Shizuoka University,, Hamamatsu, Japan, 1983.
 
 \bibitem{computer_vission_aaa}
 R.~Szeliski.
@@ -93,7 +94,7 @@ R.~Szeliski.
 
 \bibitem{OpenCVDoc}
 OpenCV~Dev Team.
-\newblock {\em Opencv documentation}, March 2013.
+\newblock Opencv documentation, March 2013.
 
 \bibitem{object_detection_viola}
 Jones~M. Viola, P.

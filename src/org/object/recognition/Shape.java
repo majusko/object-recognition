@@ -73,27 +73,25 @@ public class Shape extends Detection {
                 
                 //konvertujeme MatOfPoint2f do MatOfPoint  pre funckiu fitEllipse - rozdie¾ je len v 32-bit float a 32-bit int 
 		    	MatOfPoint  NewMtx = new MatOfPoint(specialPointMtx.toArray());
-                
                 //dostaneme súradnice najmenšieho možného štvorca
                 Rect box = Imgproc.boundingRect(NewMtx);
-                
-                //load image again
+                //nacita obrazok znova
                 Mat mat_for_count = new Mat();
                 Utils.bitmapToMat(image, mat_for_count);
-                //create clon of the rectangle (good candidate for being trafic sign)
+                //vytvori sa klon stvorca - dobry kandidat pre vyhladanie
                 Mat candidate = ((mat_for_count).submat(box)).clone();
-        	    //fill one mtx which is whole black
+        	    //napln maticu binarnou ciernou
         	    Mat mask = new Mat(box.size(), candidate.type(), new Scalar(0,0,0));
-        	    //fills the area bounded by the contours (white)  	    
+        	    //naplni ciernu plochu bielimi konturami	    
                 Imgproc.drawContours(mask, contours, id, new Scalar(255,255,255), -1 , 8, hierarchy, 0, new Point(-box.x,-box.y));
-                //save the whole candidate to the variable
+                //ulozi sa kandidat
                 Mat roi = new Mat(candidate.size(), candidate.type(), new Scalar(255,255,255));
-        	    //save just information of the candidate which we need to work for neuron network
+        	    //ulozia sa len informacie o kandidatovi
                 candidate.copyTo(roi, mask);
         	    
 		    	double longAxis;
                 double shortAxis;
-                //Get the 2 Axis of elipse
+                //ziska dve osy elipsy
 	            if (bound.size.height < bound.size.width){
 	            	shortAxis = bound.size.height / 2;
 	                longAxis = bound.size.width / 2;
@@ -102,7 +100,7 @@ public class Shape extends Detection {
 	                longAxis = bound.size.height / 2;
 	            }
 	            
-	            //this could stop the searching when is elipse too oval 
+	            //zastavi sa vyhladavanie pokial je elipsa prilis ovalna
 	            if ((longAxis / shortAxis) < 2.0){
 	            	signList.add(roi);
 	                boxList.add(box);
@@ -113,6 +111,12 @@ public class Shape extends Detection {
 	    }while(i != -1);
 	}
 	
+	/**
+	 * metoda Triangle vyhladava trojuholniky
+	 * - zatial nefunkcne
+	 */
+	
+	/*
 	public static void Triangle(List<MatOfPoint> contours, int index){
 		int i=index;
     	do
@@ -120,9 +124,7 @@ public class Shape extends Detection {
     		int buff[] = new int[4];
 		    hierarchy.get(0, i, buff);
 		    
-		    //Get contour form list
-		    //List<MatOfPoint> contours_spec = new ArrayList<MatOfPoint>();
-		    //contours_spec.add(contours.get(i));
+		    //ziska konturu zo zoznamu
 		    Mat contour = contours.get(i);
 		    MatOfPoint contour_spec = contours.get(i);
 		    int id=i;
@@ -138,7 +140,6 @@ public class Shape extends Detection {
 		    
 	    	//Approximate the contour
 	    	MatOfPoint2f aprox_contour = new MatOfPoint2f();
-	    	//TODO: this is again maybe bad convert
 	    	MatOfPoint2f  converted_countours = new MatOfPoint2f(contour_spec.toArray());
 	    	MatOfPoint2f special_point = new MatOfPoint2f(points.toArray(new Point[0]));
 		    
@@ -161,8 +162,6 @@ public class Shape extends Detection {
 			    	for(int j=0;j<6;j=j+2){
 			    		points.add(new Point(temp[j], temp[j+1]));
 			    	}
-		    		
-			    	//TODO: AGAIN
 			    	
 			    	MatOfPoint special_point_2 = new MatOfPoint(points.toArray(new Point[0]));
 		    		Rect box=Imgproc.boundingRect(special_point_2);
@@ -170,10 +169,10 @@ public class Shape extends Detection {
 		    		Utils.bitmapToMat(image, ret_val);
 	                Mat candidate=((ret_val).submat(box)).clone();
 	                                  
-	        	    //Get mask of contour
+	        	    //ziska masku kuntur
 	        	    Mat mask=new Mat(box.size(),candidate.type(), new Scalar(0,0,0));
-	        	    //Draw contour      
 	        	    
+	        	    //nakresli konturu
 	                Imgproc.drawContours(mask, contours, id, new Scalar(255,255,255), -1 , 8, hierarchy, 0, new Point(-box.x,-box.y));
 	                
 	                Mat roi=new Mat(candidate.size(), candidate.type(), new Scalar(255,255,255));
@@ -193,5 +192,6 @@ public class Shape extends Detection {
 		    
 	    }while(i!=-1);
 	}
+	*/
 
 }

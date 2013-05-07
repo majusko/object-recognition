@@ -1,0 +1,128 @@
+\select@language {slovak}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{}{4}
+\thispagestyle {empty}
+\contentsline {paragraph}{}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {section}{\numberline {1}Rozpozn\IeC {\'a}vanie objektov}{11}
+\contentsline {paragraph}{}{11}
+\contentsline {paragraph}{}{11}
+\contentsline {paragraph}{}{11}
+\contentsline {subsection}{\numberline {1.1}Sp\IeC {\^o}soby detekcie nau\IeC {\v c}en\IeC {\'y}ch vzorov v obraze}{11}
+\contentsline {paragraph}{}{11}
+\contentsline {paragraph}{}{12}
+\contentsline {subsection}{\numberline {1.2}Neur\IeC {\'o}nov\IeC {\'e} siete}{12}
+\contentsline {paragraph}{}{12}
+\contentsline {paragraph}{}{13}
+\contentsline {subsection}{\numberline {1.3}Rozpozn\IeC {\'a}vanie dopravn\IeC {\'y}ch zna\IeC {\v c}en\IeC {\'\i }}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{14}
+\contentsline {subsection}{\numberline {1.4}Rozpozn\IeC {\'a}vanie in\IeC {\'y}ch objektov}{14}
+\contentsline {subsubsection}{\numberline {1.4.1}Rozpozn\IeC {\'a}vanie tv\IeC {\'a}r\IeC {\'\i }}{14}
+\contentsline {section}{\numberline {2}V\IeC {\'y}skum}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {subsection}{\numberline {2.1}Matematick\IeC {\'e} met\IeC {\'o}dy}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {subsubsection}{\numberline {2.1.1}Konvol\IeC {\'u}cia}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {subsubsection}{\numberline {2.1.2}Aproxim\IeC {\'a}cia}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {subsubsection}{\numberline {2.1.3}Greenov\IeC {\'a} veta}{17}
+\contentsline {paragraph}{}{17}
+\contentsline {subsection}{\numberline {2.2}Funkcionalita OpenCV}{18}
+\contentsline {paragraph}{}{18}
+\contentsline {paragraph}{}{18}
+\contentsline {paragraph}{}{18}
+\contentsline {paragraph}{}{18}
+\contentsline {subsubsection}{\numberline {2.2.1}cvtColor}{18}
+\contentsline {paragraph}{}{18}
+\contentsline {paragraph}{}{19}
+\contentsline {paragraph}{}{19}
+\contentsline {subsubsection}{\numberline {2.2.2}Canny}{20}
+\contentsline {paragraph}{}{20}
+\contentsline {paragraph}{}{20}
+\contentsline {paragraph}{}{21}
+\contentsline {subsubsection}{\numberline {2.2.3}GaussianBlur}{21}
+\contentsline {paragraph}{}{21}
+\contentsline {paragraph}{}{22}
+\contentsline {paragraph}{}{22}
+\contentsline {paragraph}{}{22}
+\contentsline {subsubsection}{\numberline {2.2.4}inRange}{22}
+\contentsline {paragraph}{}{22}
+\contentsline {paragraph}{}{22}
+\contentsline {paragraph}{}{23}
+\contentsline {subsubsection}{\numberline {2.2.5}bitwise\_not}{23}
+\contentsline {paragraph}{}{23}
+\contentsline {subsubsection}{\numberline {2.2.6}threshold}{23}
+\contentsline {paragraph}{}{23}
+\contentsline {subsubsection}{\numberline {2.2.7}findContours}{25}
+\contentsline {paragraph}{}{25}
+\contentsline {paragraph}{}{25}
+\contentsline {subsubsection}{\numberline {2.2.8}boundingRect}{26}
+\contentsline {paragraph}{}{26}
+\contentsline {subsubsection}{\numberline {2.2.9}drawContours}{26}
+\contentsline {paragraph}{}{26}
+\contentsline {paragraph}{}{26}
+\contentsline {subsubsection}{\numberline {2.2.10}contourArea}{28}
+\contentsline {paragraph}{}{28}
+\contentsline {subsubsection}{\numberline {2.2.11}fitEllipse}{28}
+\contentsline {paragraph}{}{28}
+\contentsline {paragraph}{}{28}
+\contentsline {section}{\numberline {3}N\IeC {\'a}vrh rie\IeC {\v s}enia}{28}
+\contentsline {paragraph}{}{28}
+\contentsline {subsection}{\numberline {3.1}N\IeC {\'a}vrh algoritmov}{29}
+\contentsline {paragraph}{}{29}
+\contentsline {subsubsection}{\numberline {3.1.1}N\IeC {\'a}vrh algoritmu pre detekciu farby}{29}
+\contentsline {paragraph}{}{29}
+\contentsline {paragraph}{}{29}
+\contentsline {paragraph}{}{29}
+\contentsline {paragraph}{}{29}
+\contentsline {paragraph}{}{31}
+\contentsline {paragraph}{}{31}
+\contentsline {paragraph}{}{31}
+\contentsline {subsubsection}{\numberline {3.1.2}N\IeC {\'a}vrh algoritmu pre detekciu kruhov}{31}
+\contentsline {paragraph}{}{31}
+\contentsline {paragraph}{}{32}
+\contentsline {paragraph}{}{32}
+\contentsline {paragraph}{}{32}
+\contentsline {paragraph}{}{32}
+\contentsline {paragraph}{}{34}
+\contentsline {paragraph}{}{34}
+\contentsline {subsection}{\numberline {3.2}N\IeC {\'a}vrh objektov - UML}{34}
+\contentsline {paragraph}{}{34}
+\contentsline {subsection}{\numberline {3.3}N\IeC {\'a}vrh u\IeC {\v z}\IeC {\'\i }vte\IeC {\v l}sk\IeC {\'e}ho prostredia}{35}
+\contentsline {paragraph}{}{35}
+\contentsline {section}{\numberline {4}Implement\IeC {\'a}cia}{37}
+\contentsline {paragraph}{}{37}
+\contentsline {subsection}{\numberline {4.1}Android implement\IeC {\'a}cia}{37}
+\contentsline {paragraph}{}{37}
+\contentsline {subsubsection}{\numberline {4.1.1}BaseClass}{37}
+\contentsline {paragraph}{}{37}
+\contentsline {subsubsection}{\numberline {4.1.2}ActivityView}{38}
+\contentsline {paragraph}{}{38}
+\contentsline {subsubsection}{\numberline {4.1.3}ActivityFunctionality}{38}
+\contentsline {paragraph}{}{38}
+\contentsline {subsection}{\numberline {4.2}Rozpozn\IeC {\'a}vacie jadro}{39}
+\contentsline {paragraph}{}{39}
+\contentsline {subsubsection}{\numberline {4.2.1}Detection}{40}
+\contentsline {paragraph}{}{40}
+\contentsline {subsubsection}{\numberline {4.2.2}Color}{40}
+\contentsline {paragraph}{}{40}
+\contentsline {subsubsection}{\numberline {4.2.3}Shape}{41}
+\contentsline {paragraph}{}{41}
+\contentsline {subsubsection}{\numberline {4.2.4}Traffic}{43}
+\contentsline {section}{\numberline {5}V\IeC {\'y}sledky aplik\IeC {\'a}cie}{44}
+\contentsline {paragraph}{}{44}
+\contentsline {paragraph}{}{44}
+\contentsline {paragraph}{}{44}
+\contentsline {paragraph}{}{46}
+\contentsline {paragraph}{}{46}
+\contentsline {paragraph}{}{46}
+\contentsline {paragraph}{}{46}
+\contentsline {paragraph}{}{46}

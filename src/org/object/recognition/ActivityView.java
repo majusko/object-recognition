@@ -123,14 +123,12 @@ public class ActivityView extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         Log.i(TAG, "onCreateOptionsMenu");
-        mItemPreviewRGBA = menu.add("Preview RGBA");
-        mItemPreviewGray = menu.add("Preview GRAY");
-        mItemPreviewCanny = menu.add("Preview Canny");
-        mItemPreviewLines = menu.add("Preview Lines");
-        mItemPreviewRedCircleTS = menu.add("Red Circle TS");
-        mItemPreviewRedTrianglelTS = menu.add("Red Triangle TS");
-        mItemPreviewBlueCircleTS = menu.add("Blue Circle TS");
-        mItemPreviewAllTS = menu.add("All TS");;
+        mItemPreviewRGBA = menu.add("Zobraz RGBA");
+        mItemPreviewGray = menu.add("Zobraz GRAY");
+        mItemPreviewCanny = menu.add("Zobraz Canny");
+        mItemPreviewLines = menu.add("Zobraz Èiary");
+        mItemPreviewRedCircleTS = menu.add("Zákazové znaèky");
+        mItemPreviewBlueCircleTS = menu.add("Príkazové znaèky");
         return true;
     }
     

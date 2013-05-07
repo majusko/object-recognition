@@ -12,6 +12,8 @@
 \usepackage{esvect}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{multicol}
+\usepackage[hyphens]{url}
 \usepackage[top=2.54cm, bottom=2.54cm, left=3.5cm, right=2.0cm]{geometry}
 
 \setstretch{1.5}
@@ -48,12 +50,118 @@
 }
 
 \begin{document}
+\newgeometry{top=2.54cm, bottom=2.54cm, left=2.5cm, right=1.5cm}
+\begin{titlepage}
 
-\title{Rozpoznávanie dopravných značiek}
+\begin{center}
 
-\author{Mário Kapusta}
-%% titulka s informaciami
-\maketitle
+\begin{spacing}{1.5}
+{\Large \bfseries UNIVERZITA MATEJA BELA V BANSKEJ BYSTRICI\\
+FAKULTA PRÍRODNÝCH VIED}\\[9cm]
+\end{spacing}
+
+\begin{spacing}{1.5} 
+{\Large \bfseries Rozpoznávanie dopravných značiek}\\
+\end{spacing}
+
+{\large Bakalárska práca}\\
+\bfseries a2be97b0-c490-496c-9839-8e8fbe87a05a\\[5cm]
+\end{center}
+
+\vfill
+
+\begin{minipage}{0.5\textwidth}
+\begin{flushleft}
+\textbf{2013}
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{flushright}
+\textbf{Mário Kapusta}
+\end{flushright}
+\end{minipage}
+
+\end{titlepage}
+
+\thispagestyle{empty}
+
+\begin{titlepage}
+
+\begin{center}
+
+\begin{spacing}{1.5} 
+{\Large \bfseries UNIVERZITA MATEJA BELA V BANSKEJ BYSTRICI\\
+FAKULTA PRÍRODNÝCH VIED}\\[5cm]
+\end{spacing}
+
+\begin{spacing}{1.5} 
+{\Large \bfseries Rozpoznávanie dopravných značiek}\\
+\end{spacing}
+
+{\large Bakalárska práca}\\
+\bfseries a2be97b0-c490-496c-9839-8e8fbe87a05a\\[5cm]
+\end{center}
+
+\begin{flushleft}
+Študijný program: Aplikovaná informatika\\
+Študijný odbor: 9.2.9 Aplikovaná informatika\\
+Pracovisko: KIN FPV – Katedra informatiky\\
+Vedúci bakalárskej práce: Mgr. Michal Vagač, PhD.\\
+
+\end{flushleft}
+
+\vfill
+
+\begin{minipage}{0.5\textwidth}
+\begin{flushleft}
+\textbf{Banská Bystrica, 2013}
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{flushright}
+\textbf{Mário Kapusta}
+\end{flushright}
+\end{minipage}
+\end{titlepage}
+\thispagestyle{empty}
+\restoregeometry
+\null
+\vfill
+\textbf{Čestné prehlásenie}
+Čestne prehlasujem, že som túto bakalársku prácu vypracoval samostatne s použitím
+uvedených zdrojov.
+\begin{multicols}{2}
+V Banskej Bystrici, dňa 7.5.2013
+\columnbreak
+\flushright \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots
+\end{multicols}
+\thispagestyle{empty}
+\clearpage
+\null
+\vfill
+
+\textbf{Poďakovanie}
+
+Touto cestou chcem poďakovať Mgr. Michalovi Vagačovi, PhD., vedúcemu mojej bakalárskej práce za pomoc, čas a inšpiráciu pri písaní práce.
+
+\thispagestyle{empty}
+\clearpage
+\centerline{\textbf{Abstrakt}}
+\paragraph{}
+Cieľom bakalárskej práce je podrobne informovať čitateľa s problematikou rozpoznávania dopravného značenia.
+Predstaviť vývoj a aktuálny stav v tejto oblasti a dôkladne oboznámiť s momentálne najlepšou technológiou rozpoznávania objektov pomocou počítačového videnia.
+V práci je predstavený návrh a taktiež implementácia technológie podľa existujúceho algoritmu rozpoznávania dopravného značenia, upravený pre naše potreby.
+Súčasťou je plne funkčná Android aplikácia, ktorá dokáže vyhľadať príkazové a zákazové dopravné značenia. Funkčnosť a úspešnosť hľadania aplikácie bola otestovaná a zdokumentovaná.
+\\\\
+\textbf{Kľúčové slová:} dopravné značky, počítačové videnie, rozpoznávanie objektov, detekcia, Android, OpenCV
+\thispagestyle{empty}
+\clearpage
+
+\centerline{\textbf{Abstract}}
+\paragraph{}
+The goal of this work is to inform a reader in detail of the issue of recognition of the traffic signs. At beginning to present the development and the current state in the field of the traffic signs and after properly to acquaint with the momentary best technology of the distinguishing objects by use the computer vision. In the paper is presented the design and also implementation of technology in accordance with existing the traffic sign recognition algorithm adapted for our needs. It includes a fully functional Android application that can locate the command and prohibition traffic signs. Functionality and success of the search of application have been tested and documented.
+\\\\
+\textbf{Key words:} traffic signes, computer vision, object recognition, detection, Android, OpenCV
 \thispagestyle{empty}
 \clearpage
 %% obsah
@@ -69,27 +177,21 @@
 \listoffigures
 \thispagestyle{empty}
 \clearpage
-%% astrakt
-\begin{abstract}
-Cieľom bakalárskej práce je podrobne informovať čitateľa s problematikou rozpoznávania dopravného značenia.
-Predstaviť vývoj a aktuálny stav v tejto oblasti a dôkladne oboznámiť s momentálne najlepšou technológiou rozpoznávania objektov pomocou počítačového videnia.
-V práci je predstavený návrh a taktiež implementácia technológie podľa existujúceho algoritmu rozpoznávania dopravného značenia, upravený pre naše potreby.
-Súčasťou je plne funkčná Android aplikácia, ktorá dokáže vyhľadať príkazové a zákazové dopravné značenia. Funkčnosť a úspešnosť hľadania aplikácie bola otestovaná a zdokumentovaná.
-\\\\
-\textbf{Kľúčové slová:} dopravné značky, počítačové videnie, rozpoznávanie objektov, detekcia, Android, OpenCV
-\end{abstract}
-\clearpage
-
-\centerline{\textbf{Abstract}}
-\paragraph{}
-Cieľom bakalárskej práce je podrobne informovať čitateľa s problematikou rozpoznávania dopravného značenia.
-Predstaviť vývoj a aktuálny stav v tejto oblasti a dôkladne oboznámiť s momentálne najlepšou technológiou rozpoznávania objektov pomocou počítačového videnia.
-V práci je predstavený návrh a taktiež implementácia technológie podľa existujúceho algoritmu rozpoznávania dopravného značenia, upravený pre naše potreby.
-Súčasťou je plne funkčná Android aplikácia, ktorá dokáže vyhľadať príkazové a zákazové dopravné značenia. Funkčnosť a úspešnosť hľadania aplikácie bola otestovaná a zdokumentovaná.
-\\\\
-\textbf{Kľúčové slová:} traffic signes, computer vision, object recognition, detection, Android, OpenCV
+% list of listings
+\lstlistoflistings
+\thispagestyle{empty}
 \clearpage
 \section*{Úvod}
+\paragraph{}
+Dopravné značky v dnešnom svete predstavujú prostreidok ako vyjadriť informácie o cestnej premávke, situácii, obmedzeniach, výhodách, zákazoch, príkazoch a mnoho iných užitočných informácíi. Vďaka legislatíve máme dnes jednotný štandart výroby dopravných značiek, čo nám značne uľahčuje ich spracovanie či už voľným pozorovaním alebo pomocou počítačového videnia. S vývojom informačných technológií sa neustále snažíme zasahovať do nových oblastí v ktorých si myslíme, že by mohli byť technológie prínosom. Vzhľadom na vysokú nehodovosť v automobilovej doprave existuje motivácia  tento fakt vďaka technológiám zvrátiť. Jedným z účinných metód by mohol byť a v podstate už v niektorých modeloch aj je, systém rozpoznávania dopravných značiek. Takýmito systémami by sa mohlo predísť niektorým druhom nehôd, ktoré sú spôsobené napríklad z nepozornosti. Systém rozpoznávania dopravných značiek by taktiež mohol byť užitočný v oblasti autonomných vozidiel. Vozidlá ktoré sú schopné jazdiť len s pomocou technológie. Jedným z problémov s ktorým sa v tejto oblasti musia zaoberať je aj to, aby technológie vedeli dostatočne reagovať na dopravné značenia.
+\paragraph{}
+Problematika rozpoznávania dopravných značení je pomerne nová a pri písaní práce som tak mohol čerpať len z veľmi malého počtu literatúry, zaoberajúcou sa touto témou.
+Bol som donútený študovať prolematiku podrobne a vytvoriť riešenie, hlavne na poznatkoch z rozpoznávania iných objektov.
+Popri tvorbe práce, vznikali rôzne ďaľšie práce a publikácie zaoberajúce sa konkrétne témou rozpoznávania dopravných značení.
+Nebolo však možné sledovať všetky nové objavy a zistenia v tejto oblasti, ktoré vznikali popri tvorbe tejto bakalárksej práci.
+Rozbor témy rozpoznávania dopravných značení je tak postavený hlavne na informáciách z jesene 2012.
+\paragraph{}
+V práci sa zaoberáme jedným zo spôsobov detekcie naučených vzorov v obraze, ktorý aj neskôr aplikujeme v Android aplikácii. Taktiež je však v práci venované množstvo priestoru práve rozboru danej problematiky a opisu momentálne najlepšiej voľne dostupnej technológii orientovanej v oblasti počítačového videnia. V aplikácii bude našim cieľom rozpoznať zákazové a príkazové značky.
 \clearpage
 \section{Rozpoznávanie objektov}
 \paragraph{}
@@ -131,13 +233,13 @@ V podstate sa však stále jedná o metódu porovnávania hrán. V našom prípa
 Táto metóda je podľa literatúry veľmi obľúbená pri rozpoznavaní nie len dopravných značení, ale aj iných objektov.
 \cite{computer_vission_aaa}
 \subsection{Neurónové siete}
-\subsection{Rozpoznávanie dopravných značení}
 \paragraph{}
-Problematika rozpoznávania dopravných značení je pomerne nová a pri písaní práce som tak mohol čerpať len z veľmi malého počtu literatúry, zaoberajúcou sa touto témou.
-Bol som donútený študovať prolematiku podrobne a vytvoriť riešenie, hlavne na poznatkoch z rozpoznávania iných objektov.
-Popri tvorbe práce, vznikali rôzne ďaľšie práce a publikácie zaoberajúce sa konkrétne témou rozpoznávania dopravných značení.
-Nebolo však možné sledovať všetky nové objavy a zistenia v tejto oblasti, ktoré vznikali popri tvorbe tejto bakalárksej práci.
-Rozbor témy rozpoznávania dopravných značení je tak postavený hlavne na informáciách z jesene 2012.
+Umelá Neurónová sieť je zložitá paradigma spracovania informácií ktorá bola inšpirovaná nervovým systémom, ktorý spracováva informácie akým je napríklad mozog. Kľúčovým prvkom tohto vzoru je nová štruktúra spracovania informácií. Je poskladaná s veľkého počtu silno prepojených prvkov spracovania dát(neuróny), ktoré pracujú spoločne pri riešení špecifických problémov. Každá neurónová sieť sa konfiguruje špecificky pre aplikácie ako rozpoznávanie vzorov alebo špecifikácia dát. Učenie v biologických systémoch sa týka úpravy synaptických spojení, ktoré existujú medzi neurónmi. To isté platí aj pri neurónových sieťach.
+\cite{neural_network}
+\paragraph{}
+Neurónové siete s ich pozoruhodnou schopnosťou odvodzovať význam z komplikovaných alebo nepresných údajov, môže byť použitá na získanie vzorov a odhaliť trendy, ktoré sú príliš zložité, aby si ich všimol človek alebo iná počítačová technika. Vyškolenú neurónovú sieť si je možné predstaviť ako experta v kategórii informácii, ktoré mu boli dané na analýzu. Tento expert môže byť použitý na projekciu situácii s ktorými sa na začiatku nepočítalo. 
+\cite{neural_network}
+\subsection{Rozpoznávanie dopravných značení}
 \paragraph{}
 Výskum témy rozpoznávania dopravných značení má v praxi silné uplatnenie. V oblasti dopravy, by to znamenalo pomoc vodičom vnímať a rozpoznávať, dopravné značenia, ktoré si vodič nevšimol, nepochopil poprípade im nerozumie.
 Napriek tomu, že máme k dispozícii už dlhý výskum v oblasti počítačového videnia a množstvo kvalitného hardwaru, je úloha rozpoznávania dopravných značení pomerne zložitá.
@@ -279,7 +381,7 @@ cez mnohé farebné filtre. Vstupné parametre je možné pozorovať pri tabuľk
     code & int & Farebné spektrum ktoré do ktorého požadujeme obraz previesť. \\
     \hline
     \end{tabular}
-  	\caption{Tabulka znázorňuje vstupy funkcie cvtColor}
+  	\caption{Tabuľka znázorňuje vstupy funkcie cvtColor}
   	\label{cvtColorPar}
 \end{table}
 \paragraph{}
@@ -354,7 +456,7 @@ Pri správnom nastavení, sa dá dosiahnuť pomerne kvalitné odstránenie nepot
     threshold2 & double & Druhá prahová hodnota (threshold). \\
     \hline
     \end{tabular}
-  	\caption{Tabulka znázorňuje vstupy funkcie canny}
+  	\caption{Tabuľka znázorňuje vstupy funkcie canny}
   	\label{cannyPar}
 \end{table}
 %%\subsubsection{HoughLinesP}
@@ -373,8 +475,7 @@ H(x,y) = \frac{1}{2\pi\sigma^2}e^{\frac{(x^2)+(y^2)}{2\sigma^2}}
 \paragraph{}
 Princíp konvolúcie 2D obrazu je postavený na tom, že sa systematicky snažíme spracovávať okolie pixelu a dostať výslednú hodnotu z okolia reprezentatívneho bodu.
 Konvolúcia sa často používa pri spracovávaní obrazu, ako je vyhladzovanie obrazu, ostrenie, detekcia hrán a obrázkov.
-\cite{convolution}
-\cite{DIP}
+\cite{convolution, DIP}
 \paragraph{}
 Vstupné parametre pre \emph{GaussianBlur} je možné pozorovať pri tabuľke \ref{gaussianblurPar}. 
 Pri premennej \emph{ksize} si môžeme napríklad nastaviť veľkosť matice, ktorá sa bude pri konvolúcii používať.
@@ -392,7 +493,7 @@ Veľkosť matice pri konvolúcii ovplivní rozostrenie. Čím väčšiu maticu p
     sigmaY & double & Smerodajná odchýlka Gaussian jadra v smere Y. \\
     \hline
     \end{tabular}
-  	\caption{Tabulka znázorňuje vstupy funkcie GaussianBlur}
+  	\caption{Tabuľka znázorňuje vstupy funkcie GaussianBlur}
   	\label{gaussianblurPar}
 \end{table}
 \subsubsection{inRange}
@@ -425,7 +526,7 @@ Vstupné parametre pre \emph{inRange} je možné pozorovať pri tabuľke \ref{in
     dst & Mat & Výsledné pole, rovnako veľké ako vstup. \\
     \hline
     \end{tabular}
-  	\caption{Tabulka znázorňuje vstupy funkcie inRange}
+  	\caption{Tabuľka znázorňuje vstupy funkcie inRange}
   	\label{inRangePar}
 \end{table}
 \subsubsection{bitwise\_not}
@@ -441,7 +542,7 @@ Je jednoduchá funkcia, ktorá invertuje všetky bity v poli ktoré jej pošlete
     dst & Array & Výstupné pole plné invetovaných bitov \\
     \hline
     \end{tabular}
-  	\caption{Tabulka znázorňuje vstupy funkcie bitwise\_not}
+  	\caption{Tabuľka znázorňuje vstupy funkcie bitwise\_not}
   	\label{bitwisePar}
 \end{table}
 \subsubsection{threshold}
@@ -484,19 +585,17 @@ Parametre ktoré táto funkcia akceptuje a s ktorými pracuje sú viditeľné v 
     type & int & Typ výpočtu \\
     \hline
     \end{tabular}
-  	\caption{Tabulka znázorňuje vstupy funkcie threshold}
+  	\caption{Tabuľka znázorňuje vstupy funkcie threshold}
   	\label{thresholdPar}
 \end{table}
 \subsubsection{findContours}
 \paragraph{}
-Funkcia \emph{findContours} je prepracovaná metóda hľadania obrysov. Jednoducho nájde obrysy, aleo kontúry v binárnom obraze pomocou algoritmu od Satoshi Suzukiho pre vyhľadávanie najkrajnejších čiar v binárnom obraze.
-Vyhľadané obrysy sú veľmi užitočné pri rozpoznávaní tvarov a objektov. Pri rozpoznávaní dopravných značení je našou snahou taktiež rozpoznať napríklad kruhové tvary zákazových dopravných značení.
+Funkcia \emph{findContours} je prepracovaná metóda hľadania obrysov. Jednoducho nájde obrysy, alebo kontúry v binárnom obraze pomocou algoritmu od Satoshi Suzukiho pre vyhľadávanie najkrajnejších čiar v binárnom obraze.
+Vyhľadané obrysy sú veľmi užitočné pri rozpoznávaní tvarov a objektov. Pri rozpoznávaní dopravných značení je našou snahou taktiež rozpoznať napríklad kruhové tvary zákazových dopravných značení. Parametre funkcie vidiet v tabuľke \ref{findContoursPar}
 \cite{OpenCVDoc}
 \paragraph{}
-Algoritmus pre vyhľadanie najkrajnejších čiar je postavený na algoritme vyhľadávania čiar v v binárnom obraze. Popisuje sa v ňom 
-\cite{suzuky}
-\paragraph{}
-Parametre funkcie vidiet v tabuľke \ref{findContoursPar}
+Algoritmus pre vyhľadanie najkrajnejších čiar je postavený na algoritme vyhľadávania čiar v binárnom obraze. Popisuje sa v ňom vzťah medzi okrajovou čiarou a takzvanými dierami ktoré pri binárnych obrazoch vznikajú. Celý algoritmus je precízne opísaný v tejto práci
+\cite{suzuky}.
 \begin{table}
 	\centering
     \begin{tabular}{ | l | l | p{5cm} |}
@@ -509,7 +608,7 @@ Parametre funkcie vidiet v tabuľke \ref{findContoursPar}
     method & int & Metóda aproximácie. \\
     \hline
     \end{tabular}
-  	\caption{Tabulka znázorňuje vstupy funkcie findContours}
+  	\caption{Tabuľka znázorňuje vstupy funkcie findContours}
   	\label{findContoursPar}
 \end{table}
 \subsubsection{boundingRect}
@@ -525,7 +624,7 @@ V našom prípade funkciu využijeme na to, aby sme vedeli získať výrez dopra
     points & MatOfPoint & Zoskupenie 2D bodov vo vektore. \\ 
     \hline
     \end{tabular}
-  	\caption{Tabulka znázorňuje vstupy funkcie boundingRect}
+  	\caption{Tabuľka znázorňuje vstupy funkcie boundingRect}
   	\label{boundingRectPar}
 \end{table}
 \subsubsection{drawContours}
@@ -550,7 +649,7 @@ Funkcia je pomerne zložitá na parametre. Podrobnejšie je rozobratá v tabuľk
     offset & Point & Voliteľný parameter posunov. Posunie všetky kontúry podľa zadaných súradníc. \\
     \hline
     \end{tabular}
-  	\caption{Tabulka znázorňuje vstupy funkcie drawcontours}
+  	\caption{Tabuľka znázorňuje vstupy funkcie drawcontours}
   	\label{drawcontoursPar}
 \end{table}
 \subsubsection{contourArea}
@@ -568,18 +667,16 @@ Obsahuje len jeden parameter, ktorý je opísaný v tabuľke \ref{contourAreaPar
     contour & Mat & Kontúra ktorú chceme prepočítať. \\ 
     \hline
     \end{tabular}
-  	\caption{Tabulka znázorňuje vstupy funkcie contourArea}
+  	\caption{Tabuľka znázorňuje vstupy funkcie contourArea}
   	\label{contourAreaPar}
 \end{table}
 \subsubsection{fitEllipse}
 \paragraph{}
 Funkcia \emph{fitEllipse} opäť patrí medzi ľahšie použiteľné funkcie. Jej hlavnou úlohou je vykresliť elipsu okolo skupiny 2D bodov.
-Pri vykreslení sa snaží o to, aby bola vykreslená najmenšia možná elipsa pri čom využíva algoritmus Fitzgibbon95.
-Parametre funkcie je vidieť v tabuľke \ref{fitEllipsePar}.
+Pri vykreslení sa snaží o to, aby bola vykreslená najmenšia možná elipsa pri čom využíva algoritmus B2AC ktorý navrhol Andrew W. Fitzgibbon.
+Parametre funkcie je vidieť v tabuľke \ref{fitEllipsePar}.\cite{OpenCVDoc}
 \paragraph{}
-Obkec o Fitzgibbon95 algoritme.
-%%Fitzgibbon95
-\cite{OpenCVDoc}
+Algoritmus B2AC pracuje so vzdialenosťami bodov ktoré dostal a snaží sa identifikovať tvar elipsy v obraze. Detailne opísanie algoritmu sa nachádza v nasledujúcej práci \cite{fitzgibbo95}.
 \begin{table}
 	\centering
     \begin{tabular}{ | l | l | p{5cm} |}
@@ -588,7 +685,7 @@ Obkec o Fitzgibbon95 algoritme.
     points & MatOfPoint2f & Vektor 2D bodov okolo ktorých chceme elipsu vykresliť. \\ 
     \hline
     \end{tabular}
-  	\caption{Tabulka znázorňuje vstupy funkcie fitEllipse}
+  	\caption{Tabuľka znázorňuje vstupy funkcie fitEllipse}
   	\label{fitEllipsePar}
 \end{table}
 \section{Návrh riešenia}
@@ -650,7 +747,7 @@ S týmito kontúrami potom ďalej pracujeme a rozoznávame z nich hľadané útv
 \paragraph{}
 Pri detekcii dopravného značenia v tvare kruhu, je dôležité počítať s tým, že nehľadáme úplný kruh. Kruhové dopravné značenia sú vyrábané ako dokonalý kruh,
 no pri ich rozpoznávaní si je potrené uvedomiť, že na objekt sa pozeráme z rôznych uhlov. Táto skutočnosť nám prináša do prolematiky dôležitý fakt,
-že v skutočnosti to nie sú kruhy čo hľadáme, ale sú to elipsy. Celý algoritmus je možné vidieť na orázku č. \ref{hladanie_kruhov}
+že v skutočnosti to nie sú kruhy čo hľadáme, ale sú to elipsy. Celý algoritmus je možné vidieť na obrázku č. \ref{hladanie_kruhov}
 \begin{figure}[p]
 \centering
 \includegraphics[width=0.38\textwidth,natwidth=318,natheight=1164]{hladanie_kruhov.jpg}
@@ -725,7 +822,14 @@ Celá štruktúra je najlepšie viditeľná na obrázku \ref{uml_objects_diagram
 \paragraph{}
 Prostredie aplikácie bude veľmi jednoduché. Celé rozhranie, bude pozostávať z dvoch častí. Jedna časť bude naša plocha, tam sa budú graficky znázorňovať nájdené objekty, v našom prípade dorpavné značenia, ale taktiež aj rôzne filtre, ktoré budeme chcieť prezentovať ako ukážku.
 Druhá časť bude menu, v ktorom si užívateľ bude vyberať z možností ktoré tam budú a následne sa budú vykonávať rôzne. V menu bude napríklad prepínanie rôznych filtrov alebo spôsobov vyhľadávania dopravných značení.
-%%TODO fotografie alebo navrh
+\begin{figure}[p]
+\centering
+\includegraphics[width=1\textwidth,natwidth=400,natheight=240]{gui.png}
+\vspace{-10pt}
+\caption{Návrh objektov Android aplikácie}
+\vspace{-10pt}
+\label{uml_objects_diagram}
+\end{figure}
 \section{Implementácia}
 \paragraph{}
 V tejto sekcii sa budem snažiť popísať implementáciu a správne nastavenie technológií, ktoré sa v aplikácii využijú.
@@ -874,8 +978,8 @@ Hneď ako sa nám konverzia podarí, môžeme použiť našu funkciu \emph{fitEl
 	//do premennej bound ukladame dokonalu - najmensiu moznu elipsu
 	RotatedRect bound = Imgproc.fitEllipse(specialPointMtx);
 \end{lstlisting}
-Je potrebné si vypočítať a overiť toleranciu k hodnote PI. Výpočet sa spraví podľa vzorca opísaného v časti 3.1.2, a následne sa overí tolerancia.
-\lstset{language=Java,caption={Vypočet PI},label=pi_code}
+Je potrebné si vypočítať a overiť toleranciu k hodnote $\pi$. Výpočet sa spraví podľa vzorca opísaného v časti 3.1.2, a následne sa overí tolerancia.
+\lstset{language=Java,caption={Vypočet $\pi$},label=pi_code}
 \begin{lstlisting}
 	//vypocita sa hodnota pi
 	double pi = Imgproc.contourArea(contour) / ((bound.size.height / 2) * (bound.size.width / 2));
@@ -911,15 +1015,66 @@ V takej metóde \emph{detectRCS} sa použijú len metódy z tried \emph{Color} a
 	}
 \end{lstlisting}
 \section{Výsledky aplikácie}
-\subsection{Detekcia kruhových značiek}
-\subsubsection{Značky modrej farby}
-\subsubsection{Značky červenej farby}
+\paragraph{}
+Testovanie aplikácie prebiehalo na dvoch miestach. Prvé miesto bolo v budove, za ideálnych svetelných a uhlových podmienok a potom za bežných prevádzkových podmienok počas denného svetla na cestných komunikáciách. Použitý bol Samsung Galaxy S II s operačným systémom Android 2.3. Pri testovaní sa merala úspešnosť detekovať hľadanú dopravnú značku. Hľadané boli príkazové a zákazové dopravné značky.
+\paragraph{}
+Z výsledkov v tabuľke \ref{idealtest} vyplíva, že pri hľadaní dopravnych značiek za ideálnych podmienok, sme dosialhli vynikajúce výsledky. Úspešnosť 98.3\% je veľmi uspokojivá a nie je pri nej dôvod diskutovať o zásadných zlepšeniach. To sa však netýka výsledkov pri hľadaní dopravných značení za bežných prevádzkových podmienok. Tu bola úspešnosť menšia a percento 75\% úspešnosti jasne poukazuje na to, že metóda vyhľadávania dopravných značiek podľa nami zvolenej metódy je pomerne úspešná, no má svoje nedostatky na ktorých je možné stále pracovať. Výsledky je možné vidieť v tabuľke \ref{nonidealtest}.
+\paragraph{}
+Najväčši problém pri detekcii sme pozorovali hlavne pri pohľade na dopravnú značku z rôznych uhlov, najčastejšie v čase keď sme sa nachádzali v tesnej blízkosti pod dopravnou značkou. Tento problém by sa musel riešiť špecificky a napríklad by sa mohol riešit zvýšením tolerancie pre elimináciu oválnych elíps.
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | l | l | l |}
+    \hline
+    Druh & Počet značiek & Správne detekovanie & Nesprávne detekované & Nedetekované  \\ \hline
+    Zákazové & 30 & 30(100\%) & 0(0\%)  & 0(0\%) \\ \hline
+    Príkazové & 30 & 29(96.7\%) & 1(3.3\%)  & 0(0\%) \\ \hline
+    Spolu & 60 & 59(98.3\%) & 1(1.7\%)  & 0(0\%) \\ 
+    \hline
+    \end{tabular}
+  	\caption{Výsledky detekcie za ideálnych svetelných a uhlových podmienok}
+  	\label{idealtest}
+\end{table}
 
+\begin{table}
+	\centering
+    \begin{tabular}{ | l | l | l | l | l |}
+    \hline
+    Druh & Počet značiek & Správne detekovanie & Nesprávne detekované & Nedetekované  \\ \hline
+    Zákazové & 30 & 25(83.3\%) & 3(10\%)  & 2(6.7\%) \\ \hline
+    Príkazové & 30 & 20(66.7\%) & 9(30\%)  & 1(3.3\%) \\ \hline
+    Spolu & 60 & 45(75\%) & 12(20\%)  & 3(5\%) \\ 
+    \hline
+    \end{tabular}
+  	\caption{Výsledky detekcie za bežných prevádzkových podmienok}
+  	\label{nonidealtest}
+\end{table}
 \clearpage
 \section*{Záver}
+\paragraph{}
+V bakalárskej práci sme sa na začiatku práce venovali obšírnemu pohľadu na problematiku počítačového videnia, konkrétne na rozpoznávanie objektov podľa vzorov v obraze. Pre rozpoznanie dopravných značiek je ideálne získavať vstupné dáta zo snímania obrazu a následne ich spracovávať pomocou voľne dostupnej knižnice OpenCV, ktorá sa špecializuje na počítačové videnie. Bol opísaný jeden zo základných postupov rozpoznávania objektov a to segmentácia objektov podľa farby a následne podľa tvaru. Identifikácia kandidáta by v ideálnom prípade prebiehala pomocou strojového učenia, no v práci sme sa tejto téme nevenovali.
+\paragraph{}
+V práci sme navrhli riešenie pre systém rozpoznávania dopravných značiek. Segmentácia farieb v obraze prebehla pomocou konverzii cez rôzne filtre, najdôležitejší však bol farebný model HSV, s ktorým sa pri farebnej segmentácii pracuje najlepšie. Zložitejšou úlohou bol algoritmus pre vyhľadanie tvarov v obraze. Bolo potrebné vyriešiť napríklad rôznorodosť tvaru vyhľadávanej elipsy.
+\paragraph{}
+Vďaka navrhnutému riešeniu sme mohli vytvoriť funkčnú Android aplikáciu pre rozpoznanie príkazových a zákazových dopravných značiek. Pri samotnej implementácií si bolo potrebné obširne naštudovať dokumentáciu knižnce OpenCV, aby sme boli schopný navrhnuté riešenia uviesť aj do praxe.
+\paragraph{}
+Výsledky naprogramovanej Android aplikácie boli pomerne úspešné, čo je možné sledovať v niekoľkých tabuľkách. Aplikácia vedela rozpoznať umiestnenie väčšiny testovaných vzoriek, no mala značný problém s výkonom. Výpočtová záťaž aplikácie je príliž náročná na to, aby sa Android aplikácia mohla využivať aj reálne v čase. Práve v tejto oblasti by mohol pokračovať ďalší výskum a snažiť sa o plynulé spracovávanie dopravného značenia v reálnom čase.
+\paragraph{}
+Popri práci som sa okrem OpenCV naučil pracovať aj s vynikajúcim formatovacím jazykom na spracovávanie dokumentov LaTeX.
+\clearpage
+\bibliographystyle{stn690}
+\bibliography{bach}
+
 \clearpage
 
-\bibliography{bach}
-\bibliographystyle{plain}
+\section*{Zoznam príloh}
+Príloha A: Sprievodné CD so zdrojovým kódom
+\clearpage
+
+\section*{Príloha A}
+Sprievodné CD so zdrojovým kódom a Android aplikáciou
+
+\clearpage
+
+\end{document}
 
 \end{document}

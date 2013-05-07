@@ -17,7 +17,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.Log;
 
-import org.object.recognition.DetectionCore;
 import org.object.recognition.Traffic;
 
 /**
@@ -54,7 +53,6 @@ class ActivityFunctionality extends BaseClass {
 	private int lineGap;
 	private int minLineSize;
 	private int threshold;
-	private DetectionCore detect;
 	private Traffic traffic;
 
 
@@ -66,7 +64,7 @@ class ActivityFunctionality extends BaseClass {
 	@Override
 	protected void onPreviewStarted(int previewWidth, int previewHeight) {
 	    synchronized (this) {
-        	// initialize Mats before usage
+        	// incializuju sa matice pred zacatim
         	mYuv = new Mat(getFrameHeight() + getFrameHeight() / 2, getFrameWidth(), CvType.CV_8UC1);
         	mGraySubmat = mYuv.submat(0, getFrameHeight(), 0, getFrameWidth());
         	
@@ -79,8 +77,6 @@ class ActivityFunctionality extends BaseClass {
         	contours = new ArrayList<MatOfPoint>();
         	boxList = new ArrayList<Rect>();
         	signList = new ArrayList<Mat>();
-        	
-        	detect = new DetectionCore();
         	
         	traffic = new Traffic();
         	
@@ -113,12 +109,8 @@ class ActivityFunctionality extends BaseClass {
 
 	
 	/**
-	 * major functionality
-	 * processFrame method
-	 * - it depends on selected value from menu
-	 * - work intime, with camera view
-	 * lines detect :
-	 * http://docs.opencv.org/modules/imgproc/doc/feature_detection.html#houghlinesp
+	 * hlavna funkcionalita
+	 * - zavisla na vybere v menu
 	 */
 	
     @Override
@@ -128,19 +120,20 @@ class ActivityFunctionality extends BaseClass {
         final int viewMode = mViewMode;
 
         switch (viewMode) {
+        //spusti sa farebny mod
         case VIEW_MODE_GRAY:
             Imgproc.cvtColor(mGraySubmat, mRgba, Imgproc.COLOR_GRAY2RGBA, 4);
             break;
-            
+            //spusti sedu
         case VIEW_MODE_RGBA:
             Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_YUV420sp2RGB, 4);
             break;
-            
+            //spusti canny
         case VIEW_MODE_CANNY:
             Imgproc.Canny(mGraySubmat, mIntermediateMat, 80, 100);
             Imgproc.cvtColor(mIntermediateMat, mRgba, Imgproc.COLOR_GRAY2BGRA, 4);
             break;
-            
+            //vyhlada ciary
         case VIEW_LINES_MODE:
         	threshold = 50;
         	minLineSize = 10;
@@ -155,11 +148,11 @@ class ActivityFunctionality extends BaseClass {
                 Core.line(mRgba, start, end, new Scalar(255,0,0,255), 3);
             }
             break;
-            
+            //vyhlada zakazove znacky
         case DETECT_RED_CIRCLE_TS:
         	Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_YUV420sp2RGB, 4);
 	        traffic.setData(mRgba);
-	        traffic.detectRedCircleSign();
+	        traffic.prohibSign();
 		    boxList.clear();
 	    	boxList = traffic.getBoxList();
 	    	signList.clear();
@@ -169,47 +162,31 @@ class ActivityFunctionality extends BaseClass {
 			  Rect r=boxList.get(i);
 			  Core.rectangle(mRgba, r.tl(), r.br(), new Scalar(0, 255, 0, 255), 3);
 			}
-            //Core.putText(mRgba, "SOME TEXT", new Point(10, 100), 3/* CV_FONT_HERSHEY_COMPLEX */, 2, new Scalar(255, 0, 0, 255), 3);
             break;
-            
-        case DETECT_RED_TRIANGLE_TS:
-        	Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_YUV420sp2RGB, 4);
-	        detect.setData(mRgba);
-		    detect.detectRedTriangleSign();
-		    boxList.clear();
-	    	boxList = detect.getBoxList();
-	    	signList.clear();
-	    	signList = detect.getSignList();
-		    //draw 
-			for(int i = 0; i < boxList.size(); i++){
-			  Rect r=boxList.get(i);
-			  Core.rectangle(mRgba, r.tl(), r.br(), new Scalar(0, 255, 0, 255), 3);
-			}
-            break;
-            
+            //vyhlada prikazove znacky
         case DETECT_BLUE_CIRCLE_TS:
         	Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_YUV420sp2RGB, 4);
-	        detect.setData(mRgba);
-		    detect.detectBlueCircleSign();
+        	traffic.setData(mRgba);
+	        traffic.commandSign();
 		    boxList.clear();
-	    	boxList = detect.getBoxList();
+	    	boxList = traffic.getBoxList();
 	    	signList.clear();
-	    	signList = detect.getSignList();
+	    	signList = traffic.getSignList();
 		    //draw 
 			for(int i = 0; i < boxList.size(); i++){
 			  Rect r=boxList.get(i);
 			  Core.rectangle(mRgba, r.tl(), r.br(), new Scalar(0, 255, 0, 255), 3);
 			}
             break;
-            
+            //vyhlada  vsetky znacky
     	case DETECT_ALL_TS:
     		Imgproc.cvtColor(mYuv, mRgba, Imgproc.COLOR_YUV420sp2RGB, 4);
-	        detect.setData(mRgba);
-		    detect.detectAllSign();
+    		traffic.setData(mRgba);
+	        traffic.detectAllSign();
 		    boxList.clear();
-	    	boxList = detect.getBoxList();
+	    	boxList = traffic.getBoxList();
 	    	signList.clear();
-	    	signList = detect.getSignList();
+	    	signList = traffic.getSignList();
 		    //draw 
 			for(int i = 0; i < boxList.size(); i++){
 			  Rect r=boxList.get(i);

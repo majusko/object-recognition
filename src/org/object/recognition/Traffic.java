@@ -16,12 +16,15 @@ public class Traffic extends Detection {
 	 */
 	
 	public void detectAllSign(){
- 		detectRedCircleSign();
- 		detectBlueCircleSign();
- 		//detectRedTriangleSign();
+		prohibSign();
+ 		commandSign();
 	}
 	
-	public void detectRedCircleSign(){
+	/**
+	 * prohibSign - zakazove znacky
+	 */
+	
+	public void prohibSign(){
 		for(int i=30;i<=145;i=i+10){
 			List<MatOfPoint> contours = Color.Red(i);
 			if(contours.size()>0){
@@ -34,17 +37,14 @@ public class Traffic extends Detection {
 		}
 	}
 	
-	public void detectBlueCircleSign(){
+	/**
+	 * commandSign - prikazove znacky
+	 */
+	
+	public void commandSign(){
 		List<MatOfPoint> contours = Color.Blue();
 		if(contours.size()>0){
 			Shape.Circle(contours, 0);
-		}
-	}
-	
-	public void detectRedTriangleSign(){
-		List<MatOfPoint> contours = Color.Red(60);
-		if(contours.size()>0){
-			Shape.Triangle(contours, 0);
 		}
 	}
 

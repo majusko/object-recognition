@@ -1,98 +1,105 @@
-\begin{thebibliography}{10}
-
-\bibitem{hsl_hsv}
-M.~Agoston.
-\newblock {\em Computer Graphics and Geometric Modeling: Implementation and
-  Algorithms}.
-\newblock Springer, Londýn, UK, 2005.
-
-\bibitem{convolution}
-Song~Ho Ahn.
-\newblock Convolution, 2005.
-
-\bibitem{bmw}
-BMW Automobiles.
-\newblock Traffic sign recognition, 2010.
-
-\bibitem{num_metody}
-Slodička M. Weisz~J. Babušíková, J.
-\newblock {\em Numerické Metódy}.
-\newblock Univerzita Komenského v Bratislave, Bratislava, SK, 1998.
-
-\bibitem{DIP}
-Gábor Blázsovit.
-\newblock Digital image processing - interaktívna učebnica spracovania
-  obrazu, February 2006.
-
-\bibitem{mat_an_2}
-Hrůza~B. Brabec~J.
-\newblock {\em Matematická analýza II}.
-\newblock SNTL, Praha, 1986.
-
-\bibitem{learning_opencv}
-Kaehler~A. Bradski, G.
-\newblock {\em Learning OpenCV: Computer Vision with the OpenCV Library}.
-\newblock O’Reilly Media, Inc., Gravenstein Highway North, Sebastopol, CA,
-  2008.
-
-\bibitem{JCanny}
-J.~Canny.
-\newblock A computational approach to edge detection.
-\newblock 1986.
-
-\bibitem{aproximacia}
-Claudia Csollárová.
-\newblock Aproximácia, July 2005.
-
-\bibitem{android_dev}
-Android Developers.
-\newblock Android dev team, 2013.
-
-\bibitem{tfs_pdf}
-Suthakorn~J. Lorsakul, A.
-\newblock Traffic sign recognition using neural network on opencv: Toward
-  intelligent vehicle/driver assistance system.
-\newblock 2012.
+\begin{thebibliography}{}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{Dostupný na internete: }
+\providecommand{\urlsuffix}{ [cit. 2013-04-12] }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\selectlanguage}[1]{\relax}
+\providecommand{\eprint}[2][]{\url{#2}}
 
 \bibitem{mercedes}
-Mercedes-Benz.
-\newblock Road sign information, 2010.
-
-\bibitem{machine_vission}
-Rangachar K. Brian~S. Ramesh, J.
-\newblock {\em Machine Vision}.
-\newblock MIT Press and McGraw-Hill, Inc., USA, 1995.
-
-\bibitem{gaussianblur}
-Daniel Rákos.
-\newblock Gaussian blur, September 2010.
-
-\bibitem{object_rec_scene}
-Torralba A. Liu C. Fergus R. Freeman~W. Russell, B.
-\newblock Object recognition by scene alignment.
-\newblock July 2001.
-
-\bibitem{suzuky}
-S.~Suzuky.
-\newblock A computational approach to edge detection.
-\newblock 1983.
-
-\bibitem{computer_vission_aaa}
-R.~Szeliski.
-\newblock {\em Computer Vision: Algorithms and Applications}.
-\newblock Springer, USA, November 2010.
-
-\bibitem{OpenCVDoc}
-OpenCV~Dev Team.
-\newblock {\em Opencv documentation}, March 2013.
-
-\bibitem{object_detection_viola}
-Jones~M. Viola, P.
-\newblock Robust real-time object detection.
-\newblock July 2001.
+Road Sign Information. [online]. 2010.
+\urlprefix\url{<http://www5.mercedes-benz.com>}\urlsuffix
 
 \bibitem{volvo}
-Volvo.
-\newblock Road sign information, 2010.
+Road Sign Information. [online]. 2010.
+\urlprefix\url{<http://www.volvocars.com>}\urlsuffix
+
+\bibitem{bmw}
+Traffic Sign Recognition. [online]. 2010.
+\urlprefix\url{<http://www.bmw.com>}\urlsuffix
+
+\bibitem{android_dev}
+Android Developers. [online]. 2013.
+\urlprefix\url{<http://developer.android.com>}\urlsuffix
+
+\bibitem{OpenCVDoc}
+Opencv Documentation. [online]. 2013.
+\urlprefix\url{<http://docs.opencv.org>}\urlsuffix
+
+\bibitem{suzuky}
+Suzuky, S.: \emph{A Computational Approach to Edge Detection}. Hamamatsu,
+  Japan: Shizuoka University,, 1983.
+
+\bibitem{JCanny}
+Canny, J.: \emph{A Computational Approach to Edge Detection}. Cambridge, MA:
+  Massachusetts Institute of Technology, 1986, ISBN 978-0-596-51613-0.
+
+\bibitem{mat_an_2}
+Brabec J., Hrůza B.: \emph{Matematická analýza II}. Praha: SNTL, 1986.
+
+\bibitem{fitzgibbo95}
+FITZIBBON, A., FISHER, R.: \emph{Buyer’s Guide to Conic Fitting}. Birmingham,
+  UK: British Machine Vision Conference, 1995.
+
+\bibitem{machine_vission}
+Ramesh, J., Rangachar, K., Brian, S.: \emph{Machine Vision}. USA: MIT Press and
+  McGraw-Hill, Inc., 1995, ISBN 0-07-032018-7.
+
+\bibitem{neural_network}
+STERGIOU, C., SIGANOS, D.,: Neural networks. [online]. 1996.
+\urlprefix\url{<http://www.doc.ic.ac.uk/\~nd/surprise\_96/journal/vol4/cs11/report.html>}\urlsuffix
+
+\bibitem{num_metody}
+Babušíková, J., Slodička, M., Weisz, J.: \emph{Numerické Metódy}.
+  Bratislava, SK: Univerzita Komenského v Bratislave, 1998.
+
+\bibitem{object_rec_scene}
+RUSSELL, B., TORRALBA, A., LIU, C., FERGUS, R., FREEMAN, W.: \emph{Object
+  Recognition by Scene Alignment}. Cambrige, MA, USA: Massachusetts Institute
+  of Technology, 2001.
+
+\bibitem{object_detection_viola}
+VIOLA, P., JONES, M.: \emph{Robust Real-time Object Detection}. Vancouver,
+  Canada: Second International Workshop on Statistical and Computational
+  Theories of Vision, 2001.
+
+\bibitem{aproximacia}
+CSOLLÁROVÁ, C.,: Algoritmy numerickej matematiky: ich vizualizácia a
+  implementácia. [online]. Júl 2005.
+\urlprefix\url{<http://www.math.chytrak.cz/math/polynomy/aproximacia.php>}\urlsuffix
+
+\bibitem{hsl_hsv}
+AGOSTON, M.: \emph{Computer Graphics and Geometric Modeling: Implementation and
+  Algorithms}. Londýn, UK: Springer, 2005, ISBN 1-85233-818-0.
+
+\bibitem{convolution}
+AHN, S.,: Convolution. [online]. 2005.
+\urlprefix\url{<http://www.songho.ca/dsp/convolution/convolution.html>}\urlsuffix
+
+\bibitem{DIP}
+BLÁZSOVITS, G.: Digital Image Processing - Interaktívna Učebnica Spracovania
+  Obrazu. [online]. 2006.
+\urlprefix\url{<http://dip.sccg.sk/predspra/predspra.htm>}\urlsuffix
+
+\bibitem{learning_opencv}
+Bradski, G., Kaehler, A.: \emph{Learning OpenCV: Computer Vision with the
+  OpenCV Library}. Gravenstein Highway North, Sebastopol, CA: O’Reilly Media,
+  Inc., 2008, ISBN 978-0-596-51613-0.
+
+\bibitem{computer_vission_aaa}
+Szeliski, R.: \emph{Computer Vision: Algorithms and Applications}. USA:
+  Springer, 2010, ISBN 1848829345.
+
+\bibitem{gaussianblur}
+RÁKOS, D.,: Gaussian Blur. [online]. 2010.
+\urlprefix\url{<http://rastergrid.com/blog/2010/09/efficient-gaussian-blur-with-linear-sampling>}\urlsuffix
+
+\bibitem{tfs_pdf}
+LORSAKUL, A., SUTHAKORN, J.: \emph{Traffic Sign Recognition Using Neural
+  Network on OpenCV: Toward Intelligent Vehicle/Driver Assistance System}.
+  Thailand: Mahidol University, 2012.
 
 \end{thebibliography}
